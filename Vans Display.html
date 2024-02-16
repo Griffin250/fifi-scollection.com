@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fifi's Collection</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="website icon" type="png" href="Images/FC-icon.png">
+    <script src="https://kit.fontawesome.com/969f6c4469.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-----------------------------------Navigation bar-------------------------------------------------->
+<header>
+    <nav class="navbar" id="Navbar" role="navigation">
+
+    <div class="menu" id="Menu" onclick="openMenu()"> 
+        <i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="nav-elements">
+        <a href="index.html"> <img class="website-logo" src="Images/Fifi's-Collection.jpg"> </a>
+        
+    <div class="shoppingcart" title="Your Cart" id="Cart" onclick="openCart()">
+            <i class="fa-solid fa-cart-shopping" title="Your Cart"></i>  
+    </div> 
+
+    <form action=""> 
+        <label for="search">
+        <input type="search" name="search" id="search" placeholder="Search here...">
+        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i> </button>
+    </label>
+</form>
+        <a href="index.html" class="home navbar-link"> Home <br></a>
+        <a href="#footer" class="about navbar-link"> About<br> </a>
+        
+    <div class="languages">
+    <select class="languages" id="Languages"> 
+        <option>English</option>
+        <option> French </option>
+        <option>Swahili</option>
+        <option>Arabic</option>
+    </select>
+</div>
+    <a href="Account.html" class="user">  
+    <i class="fa-regular fa-user" title="Your Account" onclick="openPage()"></i> </a>
+</div>
+
+ <div class="nav-links">
+    <hr>
+    <a href="" class="link1"> SALE</a>
+    <a href="" class="link2"> MEN</a>
+    <a href="" class="link3"> WOMEN</a>
+    <a href="" class="link4"> T-SHIRTS</a>
+    <a href="" class="link5"> NEW-IN</a>
+    <a href="" class="link6"> BRANDS</a>
+
+    <!-------------------------------------------------------------------Shopping cart----------------------------->
+    <div class="icons">
+    <div class="cart" title="Your Cart" id="Cart" onclick="openCart()">
+        <i class="fa-solid fa-cart-shopping" title="Your Cart"> <span> 0 </span></i>  
+    </div> 
+    <div class="favourites">
+        <i class="fa-regular fa-heart" title="Favourites"></i>
+    </div></div>
+</div>
+</nav>
+<!-----------------------------------------------------------Menu --------------------------------------------------->
+<div class="menu-links" id="MenuLinks">
+<div class="account-link"> 
+    <hr>
+    <i class="fa-solid fa-x" id="closeButton" onclick="closeMenu()" title="Close Menu"></i>
+     <a href="Account.html"><i class="fa-regular fa-user"></i> 
+    <span>Login </span>  or  <span>  Create Account</span> </span></a></p>
+</div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#footer">About</a></li>
+        <li><a href="#Contact">Contact</a></li>
+        <li><a href="#" class="logout">Logout <i class="fa-solid fa-right-from-bracket"></i></a></li>
+        <hr>
+        <h2>Shop by Category</h2>
+            <li><a href="" class="link1 link"> Sale</a> </li>
+            <hr>
+            <li><a href="" class="link2 link"> Men</a> </li>
+            <hr>
+            <li> <a href="" class="link3 link"> Women</a> </li>
+            <hr>
+            <li><a href="" class="link2 link"> Kids</a> </li>
+            <hr>
+            <li><a href="" class="link4 link"> T-shirts</a> </li>
+            <hr>
+            <li> <a href="" class="link5 link"> New-In</a> </li>
+            <hr>
+            <li> <a href="" class="link6 link"> Brands</a> </li> 
+    </ul>
+</div>
+<!-----------------------------------------------------------------------Shopping Cart---------------------------->
+<div class="shopping-cart" id="shoppingCart">
+    <hr>
+    <h1>Your Shopping Cart</h1>
+    <div class="cart-list">
+<h2>..hmmm your cart is empty...</h2>
+    </div>
+    <div class="cart-btns">
+        <button class="close" id="closeButton" onclick="closeCart()">CLOSE</button>
+        <button class="checkout" id="checkoutButton"> CHECKOUT</button>
+    </div>
+</div>
+<!-------------------------------------------------------------------------------------------------------------->
+<section> 
+<div class="product-column">
+    <div class="product-image">
+        <img src="Images/Vans Old skool.png">
+    </div>
+    <div class="small-images">
+        <img src="Images/Vans Old skool.png" alt="" class="image">
+    </div>
+
+    <div class="product-description">
+        <h2>Vans Old Skool</h2>
+        <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"> </i> 
+        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star blackstar"></i> <a href="">(4.2) <br> <span> Write a Review </span></a></p>
+        <p>$ 159.99 VAT included</p>
+
+        <select>
+            <option value="">EU</option>
+            <option value="">UK</option>
+            <option value="">US</option>
+        </select>
+        <div class="product-size">
+            <p><span>Size:</span> Please Select</p>
+            <ul>
+                <li>30</li>
+                <li>31</li>
+                <li>32</li>
+                <li>34</li>
+                <li>35</li>
+                <li>36</li>
+                <li>37</li>
+                <li>38</li>
+                <li>39</li>
+                <li>40</li>
+            </ul><br>
+        </div>
+        <a href="" class="chart">Size Chart</a><br>
+        <button class="add-cart-btn"> <i class="fa-solid fa-cart-shopping"></i>Only Now 15% Off  <span> $159.99 </span>  $119.99</button>
+    </div>
+</div>
+
+<!---------------------------------------------------------------------------------------------------------------------->
+
+<!---------------------------------------------------------------------------------------------------------------------->
+<div class="product-details">
+    <div class="titles">
+        <ul>
+             <li class="title-1" onclick="openPage1()" id="Details"> Details</li>
+            <li class="title-2" onclick="openPage2()" id="Size"> Size & Fit</li>
+             <li onclick="openPage3()" id="Reviews" class="review">Reviews <span> (174)</span>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star blackstar"></i>
+            </li>
+        </ul>
+    </div><br><br><hr>
+    <div class="details-page" id="DetailsPage"> 
+    <p>Product #: 314101081504</p>
+    <p>Supplier-sku #: 314101081504</p>
+    <p >Created for the hardwood but taken to the streets, the Dunk returns with classic details and throwback hoops style.
+     Its padded, low-cut collar and vintage design lets you take your game anywhere—comfortably.<br>
+     Upper ages to soft perfection and features durable construction reminiscent of 80s Basketball.
+     Foam midsole offers lightweight, responsive cushioning.Low-cut, padded collar looks sleek and feels great.
+     Rubber outsole with classic hoops pivot circle adds durability, traction and heritage style.<br>
+     Nike Dunkb>Born from a series of mash-ups, hacks and tight deadlines, the Nike Dunk landed on US university basketball courts during the 85–86 season.
+      While the original College Colours designs helped fans stay true to their school, the Dunk didnt prove to be popular. <br>
+      But it was this humble sneakers lack of popularity—and flat, grippy soles—that helped it jump the rails to captivate skateboarders.
+     Decades later, this everyday favourite continues to be snatched up in countless colourways, proving its influence is undeniable.</p>
+    </div>
+    <div class="size-page" id="SizePage"> 
+        <p>We are committed to making your online shopping experience as easy as possible. 
+            Please use these charts to determine which size will fit you best. Your satisfaction is guaranteed.
+         We promise the items you order will fit right or you can return them for free. 
+         Learn more about our Fit Guarantee or view our Return Policy.</p>
+         <div class="size-choices"> 
+            <span>SIZE UK*</span>
+         <select>
+            <option value="">25</option>
+            <option value="">30</option>
+            <option value="">35</option>
+            <option value="">40</option>
+            <option value="">41</option>
+            <option value="">42</option>
+         </select>
+         <span>SIZE US*</span>
+         <select>
+            <option value="">30.5</option>
+            <option value="">35.5</option>
+            <option value="">40.0</option>
+            <option value="">45.5</option>
+            <option value="">50.0</option>
+         </select>
+         <span>SIZE EU*</span>
+         <select class="EU">
+            <option value="">3.5</option>
+            <option value="">4.0</option>
+            <option value="">5.5</option>
+            <option value="">6.5</option>
+            <option value="">7.5</option>
+         </select>
+         <span>SIZE CM*</span>
+         <select class="CM">
+            <option value="">21.4</option>
+            <option value="">24.5</option>
+            <option value="">28.3</option>
+            <option value="">31.2</option>
+            <option value="">33.4</option>
+         </select>
+</div></div>
+<div class="product-reviews" id="ReviewPage">
+    <h2 class="sub-title"> Product Rates and Reviews</h2>
+    <div class="row volume-bars">
+        <h3>Rating Snapshot</h3>
+  <!-- Review Section -->
+  <div class="volume-bars">
+    <div class="volume-bar">
+      <div class="bar-label">5 Stars</div>
+      <div class="bar">
+        <div class="fill-bar" style="width: 85%;"></div>
+      </div>
+    </div>
+
+    <div class="volume-bar">
+      <div class="bar-label">4 Stars</div>
+      <div class="bar">
+        <div class="fill-bar" style="width: 50%;"></div>
+      </div>
+    </div>
+
+    <div class="volume-bar">
+      <div class="bar-label">3 Stars</div>
+      <div class="bar">
+        <div class="fill-bar" style="width: 25%;"></div>
+      </div>
+    </div>
+
+    <div class="volume-bar">
+      <div class="bar-label">2 Stars</div>
+      <div class="bar">
+        <div class="fill-bar" style="width: 12%;"></div>
+      </div>
+    </div>
+
+    <div class="volume-bar">
+      <div class="bar-label">1 Star</div>
+      <div class="bar">
+        <div class="fill-bar" style="width: 5%;"></div>
+      </div>
+    </div>
+  </div>
+    </div>
+       
+    <div class="row summary-rates">
+        <h3>Overall Rating</h3>
+        <p class="bigtext">4.3</p>
+        <div class="small-text"> 
+        <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>  
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star black"></i> <br>
+        <a href=""> 103 Reviews</a></p>
+    </div>
+    </div>
+    <div class="row rate-product">
+        <h3>Rate this Product</h3>
+      <p><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+        <i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></p>
+        <p>Adding a review will require a valid email for verification</p>
+        <a href="##" class="btn41-43 btn-41 add-review-btn"> Add a Review</a>
+    </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<div class="review-comments"> 
+   <hr>
+   <h2 class="sub-title">Customer Reviews and Comments</h2>
+<p><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star blackstar"></i> <i class="fa-solid fa-star blackstar"></i><i class="fa-solid fa-star blackstar"></i> </p>
+         <h4> John K Paul</h4>
+         <p><span> 6 months ago.</span></p>
+         <p>Bought two pairs and both the quality on each pair is terrible, scratches on the leather and just general sloppiness of them isn't the standard I would expect. 
+            Makes you realise just how mass produced these are</p>
+        <p>This is an extremely bad quality shoe and I would highly recommend u don’t buy this. 
+            The Nike symbol on the shoe has back glue around it which is still sticky and fresh glue feeling and when trying 
+            to clean it it gets stuck on the white parts of the shoe which then permanently gets stained black!</p> 
+        <a href=""> <i class="fa-solid fa-x"></i>  No, I do not recommend this product.</a>
+        <p>Helpful? <i class="fa-solid fa-thumbs-up like" title="Like"></i> <span class="like deslike"> (0)</span> <i class="fa-solid fa-thumbs-down like" title="Deslike"></i> <span class="like deslike"> (2)</span> </p>
+        <p><a href="">Report</a></p>
+<hr>
+        <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"> <i class="fa-solid fa-star"></i></i><i class="fa-solid fa-star blackstar"></i><i class="fa-solid fa-star blackstar"></i> </p>
+         <h3>Modelo bonito. MAL ACABADO.</h3>
+        <h4> JavierA361035798 </h4>
+         <p><span> 2 months ago.</span></p>
+         <p> Son una silueta muy bonita pero todos los pares de nike vienen con algun defecto (mínimo), pero para el precio que se paga a mi oponión deberían venir perfectas. Por ejemplo,
+          en la foto adjunto el par que me he comprado y se puede apreciar que la parte delantera morada es mas grande en la zapatilla izquierda que en la derecha. En persona se ve mejor.
+          En resumen, si te gustan y te dan igual los pequeños fallos las puedes comprar agusto.</p>
+          <p><a href="https://translate.google.com/" class="translate"> Translate With Google</a></p>
+          <button class="nike"> <img src="Images/nike.png"> Originally posted on Nike </button><br>
+        
+        <a href=""> Yes, I recommend this product.</a>
+        <p>Helpful? <i class="fa-solid fa-thumbs-up like" title="Like"></i> <span class="like deslike"> (5)</span> <i class="fa-solid fa-thumbs-down like" title="Deslike"></i> <span class="like deslike"> (1)</span> </p>
+        <p><a href="">Report</a></p>
+        <a href="##" class="btn41-43 btn-41 load-more-btn"> Load more Reviews</a>
+</div></div></div>
+<!-------------------------------------------------------------------------------------------------------------------------->
+<h1> <span>Recentl</span>y Viewed</h1>        
+            <div class="column-2">
+                <div class="card"> 
+                <div class="item5"> 
+                        <img src="Images/Clothing/FC-hoodie.png">
+                        <h2>Fashion-Hoodies</h2>
+                        <p class="price">$14.99</p>
+                        <h4>Cotton T-shirt Man</h4>
+                        <p><button> <i class="fa-solid fa-cart-shopping"></i> Add to Cart</button></p>
+                        </div></div>
+                
+                <div class="card"> 
+                <div class="item2">
+                    <p class="sale">SALE</p>
+                            <img src="Images/Nike_-yellow_-removebg-preview.png" alt="Nike-Air" title="Nike-Air">
+                            <h2> Nike Airforce 1'07</h2>
+                            <p class="price">$24.99 <span>$34.99</span></p>
+                            <p class="discounts">15% Off</p>
+                            <p>Men's Fashion Shoes</p>
+                            <p><button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button></p>
+                </div> </div>
+                
+                <div class="card"> 
+                <div class="item3">
+                                <img src="Images/SB AIRFORCE.png" alt="Nike-Air" title="Best sneaker">
+                                <h2> Air Jordan 4 Green </h2>
+                                <p class="price">  $139.99</p>
+                                <h4>Men's shoes</h4>
+                                <p><button><i class="fa-solid fa-cart-shopping"></i>  Add to Cart</button></p>
+                    </div>  </div>
+                
+                    <div class="card"> 
+                    <div class="item4">
+                        <p class="sale">SALE</p>
+                                <img src="Images/Air jordan 4 Retro.png" alt="Nike-Air" title="Best sneaker">
+                                <h2>Air Jordan 4 Retro</h2>
+                                <p class="price">$34.99 <span>$50.45</span></p>
+                                <h4>1 color -Men's shoes</h4>
+                                <p class="discounts">15% Off</p>
+                                <p><button> <i class="fa-solid fa-cart-shopping"></i> Add to Cart</button></p>
+                    </div></div>
+                
+                        <div class="card"> 
+                            <div class="item3"> 
+                                 <a href="Product4.html"> <img src="Images/Nike_dunk_low_blue.png" alt="Nike-Air" title="Best sneaker"></a>
+                                                <div class="small-imgs">
+                                                    <img src="Images/Nike_dunk_low_blue.png" alt="">
+                                                    <img src="Images/Nik dunk low blue-black.png" alt="">
+                                                    <img src="Images/Nike_dunk_low_green.png" alt="">
+                                                    <img src="Images/Nike dunk low blue-black.webp" alt="">
+                                                </div>
+                                                <h2> Nike Dunk Low - Sky Blue</h2>
+                                                <p class="price">$150.00</p>
+                                                <h4> 3 Colours - Unisex shoes</h4>
+                                                <p><button> <i class="fa-solid fa-cart-shopping"></i> Add to Cart</button></p>
+                            </div> </div>
+                
+                </div>
+    
+</section>
+
+
+
+<!-----------------------------------------Footer section--------------------------------------------------->
+<footer class="product-footer" id="footer">
+    <div class="first-row">
+        <a href=""> <i class="fa-regular fa-circle-question"></i>  Help & Contact Us</a>
+        <a href=""> <i class="fa-solid fa-location-dot"></i> Track my Order</a>
+        <a href=""> <i class="fa-solid fa-truck"></i> Shipping & Delivery</a>
+        <a href=""> <i class="fa-solid fa-person-walking-arrow-loop-left"></i> Returns & Refunds</a>
+    </div>
+    <!-----------------------------------------------------Footer links------------------------------------------>
+<div class="footer-links">
+    <div class="footer-column">
+<h2 class="title-1">LEGAL INFORMATION</h2>
+<a href="">Refund Rules</a><br>
+<a href="">Return Rules</a><br>
+<a href=""> Terms & Conditions</a><br>
+<a href=""> Privacy Policy</a><br>
+<a href="">Transparency Act</a><br>
+<a href=""> Cookie Settings</a>
+    </div>
+    <div class="footer-column">
+<h2 class="title-2">ABOUT</h2>
+<a href="">Store Locator</a><br>
+<a href=""> All Stores</a><br>
+<a href="">  About Fifi's collection</a><br>
+<a href=""> Press Contacts</a><br>
+<a href="">Careers</a><br>
+<a href="">LEED</a>
+    </div>
+   
+    <div class="footer-column">
+<h2 class="title-3">FOLLOW US </h2>
+<div class="social-media">
+    <i class="fa-brands fa-facebook" title="Facebook"></i>
+    <i class="fa-brands fa-instagram" title="Instagram"></i>
+    <i class="fa-brands fa-x-twitter" title="Twitter"></i>
+    <i class="fa-brands fa-whatsapp" title="Whatsapp"></i>
+</div><br><br>
+<h2 class="title-4" id="Contact">CONTACT US</h2>
+<a href="mailto:fificollection@gmail.com"> E-mail: fifi'scollection@gmail.com</a><br><br>
+<h3>For Urgent Help:</h3>
+<a href="Tel:+122-4589-4599">Tel: +122-4589-4599</a>
+    </div>
+    <div class="footer-column">
+<div class="payment-methods">
+    <h2 class="title-5">PAYMENT METHODS</h2>
+    <img src="Images/Mastercard-logo.svg.webp" alt="">
+    <img src="Images/Paypal.jpeg" alt=""><br>
+    <img src="Images/Vizacard.png" alt="">
+    <img src="Images/Google-pay.png">
+  
+</div>
+    </div>
+    <div class="footer-column">
+    <div class="help-center">
+        <h2 class="title-6">Help Center</h2>
+        <a href="">Membership Policy</a><br>
+        <a href="">Privacy Policy</a><br>
+        <a href="">Customer services</a><br><br>
+        <a href="Account.html" class="account">Login</a><br>
+        <a href="Account.html" class="account">Register</a><br>
+       
+
+    
+        </div></div>
+    </div>
+    <div class="logos">
+        <img src="Images/3D-Logo.jpg">
+        <p>© 2024 Fifi'scollection.com, Inc. All Rights Reserved</p>
+    </div>
+    <div class="last-row">
+        <p>Prices subject to change without notice! Products shown may not be available in our stores!</p>
+        <p>The content of this site is copyright-protected and is the property of Fifi's Collection FC. FC is committed to accessibility.</p>
+        <p><span>TOLL-FREE support line (855-466-7467) for assistance</span></P>
+    </div>
+    </footer>
+    <!-----------------------------------------Javascript----------------------------------------------------->
+        <script src="index.js"> </script>
+</body>
+</html>

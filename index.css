@@ -1,0 +1,2672 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background:radial-gradient(#fff, #ffd6d6);
+}
+html{
+    scroll-behavior: smooth;
+}
+.navbar{
+    background: black;
+    height: 100px;
+    width: 100%;
+    margin-bottom:3.2% ;
+}
+.navbar .menu{
+    display: none;
+}
+.navbar .menu-links{
+    display: none;
+}
+.nav-elements{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+}
+.nav-elements a img{
+    height: 100px;
+    width: 300px;
+    mix-blend-mode: screen;
+}
+.nav-elements a{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+/*...............................Underline @home...............*/
+.nav-elements a.home::after{
+        content: '';
+        position: absolute;
+        background: linear-gradient(90deg,red, blue, orangered);
+        background-clip: content-box;
+        color: transparent;
+        border-radius: 1px;
+        height: 5px;
+        width: 0px;
+        margin-left: 10px;
+        top: 13.5%;
+        display: flex;
+        transition: 0.5s;
+        transition-duration: 0.2s;
+        animation: underline;
+        animation:infinite ease;
+}
+@keyframes underline{
+    from{
+    width: 0px;
+    }
+    to{
+        width: 100%;
+    }
+}
+.nav-elements a.home:hover::after{
+   width: 50px;
+}
+/*.................................................underline @ About ..................*/
+.nav-elements a.about::after{
+    content: '';
+    position: absolute;
+    background: linear-gradient(90deg, orangered, blue, brown);
+    background-clip: content-box;
+    color: transparent;
+    border-radius: 1px;
+    height: 5px;
+    width: 0px;
+    margin-left: 14px;
+    top: 13.5%;
+    display: flex;
+    transition: 0.2s;
+    transition-duration: 0.2s;
+    animation: underline;
+    animation:infinite ease;
+}
+@keyframes underline{
+    from{ width: 0px;}
+    to{ width: 100%;}
+}
+.nav-elements a.about:hover::after{
+    width: 50px;
+}
+.nav-elements a:hover{
+    color: brown;
+   opacity: 0.8;
+   transition: 0.2s;
+}
+
+.nav-elements input{
+    height:40px;
+    width: 380px;
+    border: none;
+    background: rgb(219, 203, 206);
+    border-radius: 4px;
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+}
+.nav-elements input:hover{
+    background: white;
+    color: black;
+}
+::placeholder{
+    font-weight: 600px;
+    color: black;
+    padding:8px ;
+    font-size: 18px;
+
+}
+.nav-elements a.user{
+    margin-right: -2%;
+}
+.nav-elements i.fa-user{
+    font-size: 30px;
+    margin-right: -2%;
+    color: brown;
+    border-radius: 50%;
+    box-shadow: 1px 1px 2px 0px grey;
+    padding: 10px;
+}
+
+.nav-elements i.fa-user:active{
+    color: orange;
+    opacity: 0.2;
+    border: orange 1px solid;
+}
+.nav-elements i.fa-user:hover{
+    opacity: 0.8;
+    transition: 0.5s;
+    background: radial-gradient(#fff, #ffd6d6);
+}
+.nav-elements button{
+    height: 38.4px;
+    width: 39px;
+    background:black;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    margin-left: -10.2%;
+}
+.nav-elements button i.fa-magnifying-glass{
+    font-size: 18px;
+    color: white;
+    text-align: center;
+}
+
+.nav-links{
+    margin-top: -7px;
+    background:black;
+    width: 100%;
+    height: 60px;
+}
+.nav-links a{
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+   margin-left: 20px;
+   color: white;
+   padding: 12px;
+   font-size: 18px;
+   font-weight: bold;
+   text-decoration: none;
+}
+.nav-links a:hover{
+    opacity: 0.5;
+    transition: 0.2s;
+}
+.nav-links a:active{
+    opacity: 0.4;
+    color: orangered;
+}
+
+select{
+    width: 100px;
+    height: 30px;
+    font-size: 16px;
+    outline: 0;
+    border-radius: 4px;
+    padding-left: 12px;
+}
+.icons{
+    color: brown;
+    float: right;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.icons i{
+    justify-content: space-between;
+    font-size: 28px;
+    padding: 9px;
+}
+.menu-links{
+    display: none;
+}
+/*............................................................//Cart............//Favourites.................................*/
+.icons .cart{
+    background:radial-gradient(#fff, #ffd6d6);
+    border-radius: 4px;
+    margin: 5px;
+    width: 120px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.icons .cart:hover{
+    opacity: 0.6;
+}
+.cart i.fa-solid{
+    border: none;
+    box-shadow: none;
+    margin:auto;
+    font-size: 30px;
+  
+}
+.cart i:hover{
+    background: none;
+}
+.cart i span{
+  color: white;
+  font-size: 20px;
+  background: black;
+  border-radius: 50%;
+  padding: 5px 8px;
+  margin-left: 18px;
+}
+.icons .favourites{
+    display: none;
+}
+.nav-elements .shoppingcart{
+    display: none;
+}
+/*-----------------------------------------------------------------------Shopping Cart----------------------------*/
+.shopping-cart{
+    background:black;
+    color: white;
+    width: 100%;
+    height: 70vh;
+    margin: auto;
+    position: relative;
+    margin-top: 3.8%;
+    right:0;
+    left: 0;
+    display: grid;
+    display: none;
+    transition: 1s ease;
+    transform: translateY(-200%);
+    transition: 0.8s ease-in-out;
+    grid-template-rows: 70px 1fr 70px;
+}
+.shopping-cart hr{
+    display: none;
+}
+.shopping-cart h1{
+    margin: 0;
+    padding: 20px;
+    font-weight: bold;
+    justify-content: center;
+    text-align: center;
+}
+/*.........................shopping Cart h1 underline......................*/
+.shopping-cart h1::after{
+    content: '';
+    position: absolute;
+   background: orangered;
+    border-radius: 1px;
+    height: 8px;
+    width: 100px;
+    left: 45%;
+    top: 16%;
+    display: flex;
+}
+.shopping-cart .cart-btns{
+    display: grid;
+    column-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+}
+.shopping-cart .cart-btns button{
+    background: orangered;
+    font-family:sans-serif;
+    font-size: 20px;
+    height: 50px;
+    font-weight: bold;
+    border: 0;
+    bottom: 0;
+    cursor: pointer;
+    border-radius: 5px 40px;
+}
+.shopping-cart .cart-btns button:hover{
+    opacity: 0.5;
+    transition: 0.2s;
+    border-radius: 5px;
+}
+.shopping-cart .cart-btns button.close{
+    background: radial-gradient(#fff, #ffd6d6);
+}
+.shopping-cart .cart-list h2{
+    text-align: center;
+ padding: 30px;
+}
+
+/*.............................................Animated Underlines in the Navbar.......................-......*/
+.nav-links a.link1::after{
+    content: '';
+    position: absolute;
+    background:white;
+    border-radius: 1px;
+    height: 5px;
+    width: 0px;
+    left: 2%;
+    top: 20.5%;
+    display: flex;
+    animation: underline;
+    animation: ease-in-out infinite;
+    animation-duration: 0.4s;
+    transition: 0.2s;
+}
+@keyframes underline{
+    from{ width: 0px;}
+    to{ width: 45px;}
+}
+.nav-links a.link1:hover::after{
+  width: 45px;
+}
+/*............................Link 2.............................*/
+.nav-links a.link2::after{
+    content: '';
+    position: absolute;
+    background: white;
+    border-radius: 1px;
+    height: 5px;
+    width: 0px;
+    left: 8.2%;
+    top: 20.5%;
+    display: flex;
+    animation: underline;
+    animation-duration: 0.4s;
+    animation: ease-in-out;
+    transition: 0.2s;
+}
+@keyframes underline{
+    from{ width: 0%;}
+    to{width: 45px;}
+}
+.nav-links a.link2:hover::after{
+    width: 45px;
+}
+/*............................Link 3.............................*/
+.nav-links a.link3::after{
+    content: '';
+    position: absolute;
+   background: white;
+    border-radius: 1px;
+    height: 5px;
+    width: 0px;
+    left: 15%;
+    top: 20.5%;
+    display: flex;
+    transition: 0.2s;
+    animation: ease-in-out;
+}
+.nav-links a.link3:hover::after{
+  width: 50px;
+}
+/*............................Link 4.............................*/
+.nav-links a.link4::after{
+    content: '';
+    position: absolute;
+    background: white;
+    border-radius: 1px;
+    height: 5px;
+    width: 0px;
+    left: 23%;
+    top: 20.5%;
+    display: flex;
+    transition: 0.2s;
+}
+.nav-links a.link4:hover::after{
+  width: 60px;
+}
+/*............................Link 5.............................*/
+.nav-links a.link5::after{
+    content: '';
+    position: absolute;
+    background: white;
+    border-radius: 1px;
+    height: 5px;
+    width: 0px;
+    left: 31.2%;
+    top: 20.5%;
+    display: flex;
+    transition: 0.2s;
+}
+.nav-links a.link5:hover::after{
+ width: 50px;
+}
+/*............................Link 6.............................*/
+.nav-links a.link6::after{
+    content: '';
+    position: absolute;
+   background: white;
+    border-radius: 1px;
+    height: 5px;
+    width: 0px;
+    left: 39%;
+    top: 20.5%;
+    display: flex;
+    transition:width 0.2s;
+  
+}
+.nav-links a.link6:hover::after{
+ width: 55px;
+}
+
+/*........................................Miain/body................................................*/
+hr.breakline{
+    margin-top: 4%;
+    height: 4px;
+    font-size: 12px;
+    color: orangered;
+}
+/*....................................................image slider.................................*/
+.section1 {
+    width: 100%;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    margin:auto;
+    opacity: 0.5;
+    background:orangered;
+    animation-name: background;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    transition: 0.5s;
+    position: relative;
+    top: 23%;
+  }
+@keyframes background{
+    0%{ background:linear-gradient( orangered)}
+    25%{ background:pink}
+    50%{background: orangered;}
+    75%{background: yellow brown, purple;}
+    100%{background:linear-gradient(to bottom, orangered,pink,brown);}
+}
+
+.img-slider img {
+    height: 200px;
+    width: 250px;
+    margin: 4% 2% 0;
+    opacity: 1;
+    background: transparent;
+    filter: drop-shadow(0 0 2px black);
+  }
+ 
+  .img-slider {
+    display: flex;
+    float: left;
+    position: relative;
+    width: 100%;
+    height: 320px;
+    margin: auto;
+    animation-name: slide;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    transition-duration: 2s;
+  }
+
+
+  @keyframes slide {
+    0% {
+      left: 0px;
+    }
+    15% {
+      left: 50px;
+      transform: scale(1.4);
+    }
+    20% {
+      left: -108px;
+    }
+    32% {
+      left: -108px;
+
+    }
+    35% {
+      left: -216px;
+    }
+    50% {
+      left: -250px;
+    }
+    100% {
+      left: 100px;
+    }
+}
+
+/*..........................................brand logos.............................................*/
+.brands{
+    margin: auto;
+    display: flex;
+     margin-left: 2%;
+    justify-content: space-evenly;
+}
+.brands img{
+width:200px;
+height: 150px;
+cursor: pointer;
+margin: 2%;
+padding: 2%;
+background: white;
+border-radius:35% 10% 35%;
+filter: drop-shadow( 2px 2px 8px rgb(180, 123, 123));
+}
+.brands img:hover{
+    transform:translateY(-10px);
+    box-shadow: 2px 2px 8px black;
+  opacity: 0.8;
+  transition: 0.4s;
+  transform: translate(0px, -8PX);
+
+}
+/*.........................................................................................................*/
+.column{
+    float: left;
+    width: 50%;
+}
+main:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.column-1{
+    width: 50%;
+    padding: 20px;
+   
+}
+.column .other-links{
+    margin: 25px;
+
+}
+.column .other-links a{
+    box-shadow: 0 0 5px black;
+    margin: 12px 20px;
+    padding: 5px;
+    border-radius: 3px;
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+}
+.column .other-links a:hover{
+    opacity: 0.5;
+    box-shadow: 1px 1px 5px rgb(124, 77, 77);
+}
+.column .other-links button{
+    color: rgb(0, 166, 255);
+    border: none;
+    background: none;
+    font-size: 16px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.column .other-links button:hover{
+    color: brown;
+}
+.column .other-links a i{
+    font-size: 16px;
+}
+.column .other-links select{
+    float: right;
+    width: 150px;
+    padding: 5px;
+    border-radius: 3px;
+    outline: none;
+}
+
+.links{
+    padding:1% 4%;
+}
+.links a{
+color:grey;
+font-size: 18px;
+font-weight: block;
+text-decoration: none;
+margin-left: 10px;
+}
+.links a:hover{
+    color: black;
+    text-decoration: underline 4px grey;
+}
+.column h1, p{
+    text-align: center;
+    margin-left: -10%;
+    }
+  
+
+.column-1 ul li{
+    list-style: none;
+    border: 1px solid grey;
+    height: 36px;
+    padding: 8px;
+    margin: 2%;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 1px 1px 8px black;  
+    background: rgb(226, 218, 218);
+}
+.column-1 ul li i{
+    float: right;
+    font-size: 14px;
+}
+.bottom-text h2{
+ text-align: center;
+}
+
+/*..................................................column 2.....................*/
+
+.column-2{
+     display: flex;
+    padding: 20px;
+    width: auto;
+    border-radius: 5px;
+    margin-left: -50%;
+   overflow: hidden;
+}
+
+
+/*...............................Product card.................................*/
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 40%;
+    max-height:340px;
+    margin: 5px;
+    padding-top: 5px;
+    text-align: center;
+    justify-content: center;
+    align-items:flex-end;
+    display: flex;
+    flex-basis: 25%;
+    border: 1px white solid;
+    background: radial-gradient(#ffdede, #fff);
+  }
+
+  .card:hover{
+    border: 1px black solid;
+    transition: 0.5s;
+    transform: translateY(-10px);
+  }
+  .card img{
+    height: 130px;
+    width: 140px;
+    transform: scale(1);
+    filter: drop-shadow(0 0 4px grey);
+    cursor: pointer;
+}
+.card img:hover{
+    transform: scale(1.2);
+    transition-duration: 0.5s;
+}
+.item1 img{
+    height: 120px;
+    width: 160px;
+    float: left;
+    display: flex;
+}
+/*...........................................................................*/
+.card .small-imgs a{
+    text-decoration: none;
+}
+.card .small-imgs img{
+    height: 50px;
+    width: 50px;
+    margin: 2px;
+    padding: 2px;
+    cursor: pointer;
+}
+.card .small-imgs img:hover{
+border: 1px solid grey;
+transform: scale(1.1);
+}
+.small-imgs span{
+    background: none;
+    font-size: 20px;
+}
+/*.................................................................................*/
+
+.card p.price{
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(106, 106, 106);
+}
+.card p.price span{
+    background: none;
+    text-decoration: line-through 3px orangered;
+}
+.card p.discounts{
+    color: orangered;
+    font-size: 20px;
+    font-weight: bold;
+}
+/*.................................................................................*/
+.card p.sale{
+   position: 50%;
+   left: 0%;
+   opacity: 1;
+    background: orangered;
+    border-radius: 1px;
+    padding: 4px;
+    width: 65px;
+    font-size: 20px; 
+}
+.card p.card1{
+    margin: -5% 0;
+}
+.card p.new{
+    background: black;
+    color: white;
+    position: 50%;
+    margin-left: 2%;
+     border-radius: 1px;
+     padding: 4px;
+     width: 65px;
+     font-size: 20px;
+}
+/*..................................................................................*/
+.card button {
+    display:flex;
+    border: none;
+    outline: 0;
+    padding: 2px 8px;
+    color: white;
+    font-weight: bold;
+    background-color: #000;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 2px;
+    width:200px;
+    height: 40px;
+    font-size: 17px;
+    bottom: 0;
+     margin: 0 auto;
+  }
+  .card button i.fa-cart-shopping{
+   margin: 0 5px;
+  }
+  .card button:hover{
+    transition: 0.4s;
+    opacity: 0.5;
+  }
+  /*.................................................................................................*/
+  p.underline{
+   position: relative;
+   margin-left: -20%;
+  }
+  p.underline::before{
+    content: "";
+    position: absolute;
+   background: orangered;
+   bottom: 0;
+   float: left;
+   height: 5px;
+   width: 50px;
+  }
+/*..................................................Page buttons.........................,..........*/
+.column-2 .page-btns{
+    margin-bottom: 5%; 
+}
+.column-2 .page-btns button{
+    font-size: 20px;
+    font-weight: bold;
+    border: 1px orangered solid;
+    margin: 0 10px;
+    padding: 5px;
+    width: 40px;
+    cursor: pointer;
+}
+.column-2 .page-btns a{
+    text-decoration: none;
+}
+.column-2 .page-btns button.btn-1{
+    background: orangered;
+    color: white;
+}
+ 
+.column-2 .page-btns button.btn-1:hover{
+    opacity: 0.5;
+}
+.column-2 .page-btns button:hover{
+    background: orangered;
+    color: white;
+    transition: 0.4s;
+}
+/*...........................................page 2..........................................*/
+.page-2 .page-btns button.btn-1{
+    background: none;
+    color: black;
+}
+.page-2 .page-btns button.btn-2{
+    background: orangered;
+    color: white;  
+}
+.page-2 .page-btns button.btn-2:hover{
+    opacity: 0.5;
+}
+.page-2 .page-btns button.btn-3{
+    background: none;
+    color: white;
+}
+.page-3 .page-btns button.btn-3{
+    background: orangered;
+    color: white;
+}
+
+.card img.new-balance{
+height: 90px;
+width: 160px;
+}
+.page-2 .page-btns button.btn-3{
+    background: orangered;
+    color: white;     
+}
+/*....................................................Body text //Index..................................*/
+.site-info{
+   box-shadow: 1px 1px 5px 1px black;
+   border-radius: 4px;
+    margin: 2%;
+    display: flex;
+}
+.site-info p{
+    margin: 2%;
+    font-size: 16px;
+    text-align: left;
+   justify-content: left;
+}
+.site-info .row{
+    margin: 12px;
+}
+.site-info h1{
+    font-size: 20px;
+}
+  /*............................................Registeration form..............................*/
+  form .registeration-form{
+   
+    padding: 8% 5%;
+    width: 75%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+   box-shadow: 0 0 4px grey;
+  }
+  .registeration-form p{
+   
+    margin: 4%;
+    font-size: 18px;
+  }
+  .registeration-form .names{
+    margin: 5% 1%;
+  }
+  .registeration-form input{
+    width: 360px;
+    background: none;
+    display: flex;
+    
+    margin: 5px;
+  }
+  /*................................................ Account Page...................................................*/
+ .background img{
+    display: flex;
+    float: left;
+ }
+    /*.......................................................Login section............................*/
+    .wrapper{
+        background: rgb(1, 1, 18);
+         width: 400px;
+        height: 450px;
+         overflow-y: hidden;
+         color: white;
+         top: 130px;
+         box-shadow: 1px 1px 6px orangered;
+         border-radius: 15px;
+         padding: 10px;
+         backdrop-filter: blur(38px);
+         position: relative;
+         margin:-25% 40% 12%;
+         }
+         .wrapper .login-form{
+           margin-left: 12%;
+           margin-bottom: 5%;
+           transition: 0.5s ease-in-out;
+           transform: translateY(0);
+           
+         }
+         .login-form h1{
+             text-align: center;
+             background: linear-gradient(90deg,blue, orangered);
+             background-clip: text;
+             color: transparent;
+             margin: 5px 0 20px;
+         }
+       .login-form h1::after{
+         content: '';
+         width: 45px;
+         height: 5px;
+         position: absolute;
+         left: 43%;
+         top: 14%;
+         transform: translateY(-50%);
+         background: white;
+         border-radius: 2px;
+         opacity: 0.8;
+         display: flex;
+       }
+         .inputbox input{
+         width: 84%;
+         height: 30px;
+         font-size: 16px;
+         border: solid 1px;
+         background: transparent;
+         border-radius: 4px;
+         color: white;
+         padding: 10px;
+         margin: 5px 0;
+         outline: none;
+         
+         }
+         ::placeholder{
+         color: rgb(255, 255, 255);
+         padding: 5%;
+         }
+/*.....................................form validation..............................*/
+       input:user-invalid{
+        border: 1px solid red;
+       }
+       input:user-invalid::placeholder{
+        color: red;
+    }
+    input:user-valid{
+        border: 1px solid green;
+        background: gr;
+    }
+    input+span{
+        color: red;
+        display: none;
+        margin: 0 8%;
+    }
+    input:user-invalid+span{
+        display: inline;
+    }
+    input:user-invalid{
+        animation: shake 0.1s linear 20;
+    }
+        @keyframes shake{
+            0%{ transform: translateX(0);}
+        
+            25%{ transform: translateX(-2px);}
+        
+            50%{ transform: translateX(0);}
+        
+            75%{ transform: translateX(2px);}
+        
+            100%{ transform: translateX(0);}
+        }
+         #checkbox{
+             width: 18px;
+             height: 16px;
+             margin-left: 20%;
+             cursor: pointer;
+         }
+         #checkbox2{
+            width: 18px;
+            height: 16px;
+            margin-left: 20%;
+            cursor: pointer;
+        }
+       input[type="checkbox"]{
+        vertical-align: auto;
+       }
+       .inputbox label .b{
+    vertical-align: baseline;
+
+       }
+         .inputbox span{
+             font-weight: bold;
+             margin-top: 15px;
+         }
+         .buttons{
+             display: flex;
+         }
+         .buttons .create-account{
+             height: 32px;
+             text-decoration: none;
+             background: none;
+             font-weight: bold;
+             font-size: 18px;
+             color: white;
+             border: none;
+             box-shadow: -1px 1px 2px brown;  
+             border-radius: 4px;
+             padding: 6px;
+             margin: 5px;
+             cursor: pointer;
+             text-align: center;
+         }
+         .buttons .create-account:hover{
+             background: linear-gradient( to left, orangered, brown);
+             box-shadow: none;
+             transition: 0.2s;
+             opacity: 0.4; 
+         }
+         .buttons .login{
+         border-radius: 2px;
+         width: 100px;
+         height: 32px;
+         cursor: pointer;
+         align-items: center;
+         font-size: 18px;
+         margin: 5px;
+         font-weight: bold;
+         background: linear-gradient( to left, orangered,brown);
+         border: none;
+         color: white;
+         }
+         .buttons .login:hover{
+             background: linear-gradient( to right, orangered,brown);
+             transition: 0.5s;
+             opacity: 0.5;
+         }
+         a.Link{
+         color:aqua;
+         text-decoration: none;
+         font-size: 16px;
+          margin-left: 10%;
+         }
+     
+         a.Link:hover{
+         color:white;
+         text-decoration: underline aqua solid;
+         }
+         h3{
+             opacity: 0.6;
+            font-weight: bold;
+            margin: 0 12%;
+            font-size: 20px;
+         }
+         a.facebook{
+         border: none;
+         border-radius: 5px;
+         cursor: pointer;
+         font-size: 17px;
+         background:none;
+         width: 88%;
+         height: 30px;
+         margin-bottom: 8px;
+         color: white;
+         box-shadow: -1px 1px 2px brown;
+         display: flex;
+         text-align: center;
+         justify-content: center;
+         align-items: center;
+         text-decoration: none;
+         }
+       
+         a.facebook:hover{
+             box-shadow: 1px 1px 2px brown;
+         transition: 0.2s;
+         opacity: 0.5;
+         }
+         .facebook .fa-brands{
+             margin: 10px;
+             font-size: 20px;
+         }
+         .twitter{
+         border: none;
+         border-radius: 5px;
+        box-shadow: 1px 1px 2px brown;
+         width: 88%;
+         height: 30px;
+         cursor: pointer;
+         font-size: 17px;
+         background: none;
+         color: white;
+         text-decoration: none;
+         display: flex;
+         text-align: center;
+         justify-content: center;
+         align-items: center;
+         animation: mymove 5s infinite;
+         }
+        
+         .twitter .fa-brands{
+             margin: 10px;
+             font-size: 20px;
+         }
+         .twitter:hover{
+             box-shadow: -1px 1px 2px brown;
+             transition: 0.2s;
+             opacity: 0.4;
+         }
+            /*.....................................Signup form..........................................*/
+         .wrapper .signup-form{
+            transform: translateY(120%);
+             margin-bottom: 5%;
+             margin: auto;
+             transition: 0.5s ease-in-out;
+         }
+
+         .signup-form h1{
+             text-align: center;
+           margin: 5px 0 20px;
+           background: linear-gradient(90deg,blue, orangered);
+           background-clip: text;
+           color: transparent;
+         }
+         .signup-form h1::after{
+             content: '';
+             width: 55px;
+             height: 4px;
+             position: absolute;
+             left: 42%;
+             top: 15%;
+             transform: translateY(-50%);
+             background: white;
+             border-radius: 2px;
+             opacity: 0.8;
+             display: flex;
+         }
+         .signup-form button{
+             height: 32px;
+             width: 150px;
+             color: white;
+             font-size: 18px;
+             font-weight: bold;
+             cursor: pointer;
+             background: none;
+             border-radius: 5px;
+             border: none;
+             margin: -2% 30%;
+             padding: -8px;
+             background: linear-gradient( to left, orangered, brown);
+         }
+         .signup-form button:hover{
+             opacity: 0.5;
+             color: white;
+             transition: 0.4s;
+             background: linear-gradient( to right, orangered, brown);
+         }
+         .signup-form input{
+             text-align: center;
+             justify-content: center;
+             height: 35px;
+             font-size: 16px;
+             margin:6px 5%;
+         }
+         .inputbox label span{
+             margin-left: -30%;
+         }
+       
+         .signup-form p a{
+             color: aqua;
+             font-size: 16px ;
+             text-decoration:1px underline;
+         }
+         .signup-form #checkbox{
+             width: 18px;
+             height: 16px;
+             margin-left: 32%;
+             cursor: pointer;
+         }
+         .signup-form p a:hover{
+             color:brown;
+             text-decoration: underline 1px white;
+             transition: 0.4s;
+         }
+         .signup-form p{
+             padding-top: 10px;
+         }
+         .signup-form p span.login-btn{
+             border: none;
+             background: linear-gradient( to right, orangered,brown);
+             opacity: 0.3;
+             border-radius: 4px;
+             height: 30px;
+             padding: 5px;
+             cursor: pointer;
+             font-size: 18px;
+             color: white;
+             font-weight: bold;
+             margin-left: 2%;
+         }
+         .signup-form p span.login-btn:hover{
+             background: linear-gradient( to left, orangered,brown);
+             transition: 0.5s;
+             opacity: 1;
+         }
+     
+
+  /*........................................................Other pages.............................*/
+  /*................................................................................................*/
+ 
+  .product-column{
+width: 100%;
+position: relative;
+display: flex;
+justify-content: space-between;
+background: rgb(227, 224, 224);
+  }
+.product-column .product-image img{
+    width: 700px;
+    height: 600px;
+   margin: 0 10%;
+}
+.product-column .product-image img.new-balance{
+    margin: 8% 4%;
+}
+.product-column .tshirt{
+    margin: 2% 10%;
+}
+.product-column .tshirt img{
+    width: 450px;
+    height: 500px; 
+}
+.product-column .clothes img{
+    width: 400px;
+    height: 500px;
+    margin: 2% 10%;
+}
+.product-column .product-image img:hover{
+    transform: scale(1.1);
+    cursor: zoom-in;
+    transition: 0.5s ease-in-out;
+}
+.product-image img.new-balance{
+    height: 400px;
+}
+.product-column .small-images{
+   box-shadow: 1px 1px 4px black;
+   background: whitesmoke;
+    margin: 2%;
+}
+.product-column .clothes{
+    margin-left: 15%;
+}
+.product-column .small-images img{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    cursor: pointer;
+    padding: 5px;
+    margin: 0 auto;
+}
+
+.product-column .small-images img.image-x1{
+    height: 60px;
+}
+.product-column .small-images img.image-4{
+    width: 110px;
+    height: 100px;
+    padding: 0;
+}
+.product-column .small-images img:hover{
+    border: 1px black solid;
+}
+.product-column .product-description{
+   box-shadow: 0 0 4px black;
+   background: whitesmoke;
+   width: 30%;
+   margin: 2%;
+}
+
+.product-column .product-description h2{
+    font-size: 30px;
+    font-weight: bold;
+    padding: 12px;
+}
+.product-description p{
+    margin: 15px 10px;
+    font-size: 18px;
+    text-align: left;
+}
+.product-description p i.fa-star{
+ color: orange;
+ font-size: 20px;
+}
+.product-description p i.fa-star.blackstar{
+    color: black;
+}
+.product-column select{
+    width: 95%;
+    height: 40px;
+    padding: 5px;
+    margin: 10px;
+    font-weight: bold;
+    -webkit-appearance: none;
+  
+}
+/*........................................................................................*/
+.product-details .titles ul{
+    display: flex;
+    float: left;
+}
+.product-details .titles ul li{
+    text-decoration: none;
+    list-style: none;
+    margin: 5px 100px;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.product-details .titles ul i.fa-star{
+    color: orange;
+}
+.product-details .titles ul i.blackstar{
+    color: black;
+}
+.product-details .titles ul li span{
+    color: orangered;
+}
+
+.product-details .titles .title-1:hover{
+    text-decoration: none;
+}
+.product-description .product-size ul {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.product-description .product-size ul li{
+    list-style: none;
+   float: left;
+   display: flex;
+   border: 1px black solid;
+   border-radius: 50%;
+   margin: 5px;
+   padding: 12px;
+   font-size: 18px;
+   cursor: pointer;
+}
+.product-description .product-size ul li:hover{
+  opacity: 0.5;
+    transition: 0.4s;
+}
+.product-description .product-size span{
+    font-weight: bold;
+    font-size: 25px;
+}
+.product-description .product-size{
+    float: left;
+    text-align: left;
+}
+.product-description .chart{
+    font-size: 18px;
+    color:rgb(0, 98, 255);
+    margin: 5% 40%;
+}
+/*......................................Product Add to Cart Button..........................*/
+.product-description .add-cart-btn{
+    width:100% ;
+    height: 40px;
+    background-color: orangered;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    bottom: 0;
+    cursor: pointer;
+    margin: 10% 0;
+}
+.product-description .add-cart-btn:hover{
+   opacity: 0.5;
+    transition: 0.2s;
+}
+.product-description .add-cart-btn i.fa-solid{
+    float: left;
+    font-size: 22px;
+    color: black;
+    margin: 0 6%;
+}
+.product-description .add-cart-btn span{
+    text-decoration: line-through 3px white;
+    padding: 0 4px;
+}
+.product-description button{
+    width: 100%;
+    display: flex;
+    margin: 5% 0;
+    background: black;
+    height: 40px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.product-description button:hover{
+opacity: 0.5;
+transition: 0.5s;
+}
+.product-description button i.fa-solid{
+    margin: 0 5%;
+}
+/*..........................................................................................................*/
+.product-details{
+    margin: 20px 20px;
+  border: 1px grey solid;
+}
+.product-details .details-page{
+    display: block;
+    transition: 0.5s ease-in;
+    transition-duration: 1s;
+}
+.product-details .size-page{
+    display: none;
+    transition: 0.5s ease-in;
+    transition-duration: 1s;
+}
+.product-details .product-reviews{
+    display: none;
+}
+.product-details .product-reviews h2{
+margin: 5px 25%;
+font-size: 32px;
+}
+.product-details .product-reviews h4{
+    color: black;
+    margin: 5px 10px;
+}
+.product-details .product-reviews i.fa-x{
+    color:black;
+    font-size: 15px;
+   background:orangered;
+    border-radius: 50%;
+    padding: 2px;
+    cursor: pointer;
+}
+.product-details .product-reviews a{
+    text-decoration: underline black;
+    font-size: 18px;
+    margin: 0 10px;
+}
+.product-details .product-reviews a.translate{
+    text-decoration: none;
+    color:blue;
+}
+.product-details .product-reviews a.translate:hover{
+    text-decoration: underline 2px solid;
+    transition: 0.5s;
+}
+.product-details .product-reviews i.fa-x:hover{
+    color: white;
+    transition: 0.5s;
+    background: black;
+}
+.product-details .product-reviews p i.fa-star{
+    color: orange;
+}
+.product-details .product-reviews p i.blackstar{
+    color: grey;
+}
+.product-details .product-reviews p i.like{
+    color: orangered;
+    font-size: 18px;
+    cursor: pointer;
+}
+.product-details .product-reviews p span.like{
+    font-size: 18px;
+    font-weight: bold;
+}
+.product-details .product-reviews p i.like:hover{
+    color: black;
+    transition: 0.5s;
+}
+.product-details .product-reviews button{
+    font-size: 20px;
+    height: 50%;
+    width: 360px;
+    font-weight: bold;
+    padding: 10px 0;
+    margin: 10px 36px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 2px;
+}
+.product-details .product-reviews button img{
+width:15%;
+float: left;
+height: 10%;
+margin: 5px 20px;
+}
+.product-reviews .review-comments{
+    margin: 4% 0 1%;
+}
+/*....................................Review //Load more Buttons ........................*/
+
+.product-reviews a.btn41-43 {
+    padding: 10px 25px;
+    background: transparent;
+    outline: none !important;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;  
+  }
+  
+  .btn-41 {
+    border: 4px solid orangered;
+    border-radius: 4px;
+    z-index: 1;
+    color:black;
+  }
+  
+  .btn-41:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    direction: rtl;
+    z-index: -1;
+    background:orangered;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-41:hover {
+    color: rgb(0, 0, 0);
+  }
+  
+  .btn-41:hover:after {
+    left: auto;
+    right: 0;
+    width: 100%;
+  }
+  
+  .btn-41:active {
+    top: 2px;
+  }
+
+  .product-reviews a.load-more-btn{
+    margin-left: 42%;
+  }
+  .product-reviews a.add-review-btn{
+    margin-left: 20%;
+    border: orangered 4px solid;
+    cursor: pointer;
+}
+.product-reviews button.add-review-btn:hover{
+    background: orangered;
+    opacity: 0.8;
+    transition: 0.4s;
+}
+/*.......................................................Ratings /// Reviews...........................*/
+.product-reviews .row{
+    float: left;
+    width: 28%;
+    margin: 20px 12px 0;
+}
+
+.product-reviews .rate-product p i.fa-star{
+    background: none;
+    font-size: 25px;
+    padding: 10px;
+    margin: 5px;
+    border: 1.4px solid grey;
+    cursor: pointer;
+}
+.product-reviews .rate-product p i.fa-star:hover{
+    color: orangered;
+    background: grey;
+}
+.product-reviews p.bigtext{
+    font-size: 100px;
+    font-weight: bold;
+}
+.product-reviews .summary-rates{
+  float: left;
+    
+}
+.product-reviews .row p i.fa-star{
+    font-size: 20px;
+    cursor: pointer;
+}
+.product-reviews .row p i.fa-star .black{
+    color: black;
+}
+
+/*.......................................................volume bars.....................................*/
+
+.volume-bars {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .volume-bar {
+    margin-bottom: 10px;
+  }
+
+  .bar-label {
+    font-weight: bold;
+  }
+
+  .bar {
+    width: 300px;
+    height: 20px;
+    background-color: grey;
+    position: relative;
+    border-radius: 2px;
+  }
+
+  .fill-bar {
+    height: 100%;
+    background-color: orangered;
+    position: absolute;
+  }
+/*.........................................................................................................*/
+.product-details p{
+margin: 20px;
+text-align: left;
+justify-content: left;
+}
+.product-details .size-choices select{
+    width: 25%;
+   height: 40px;
+   outline: none;
+   border: 1px grey solid;
+   border-radius: 2px;
+   margin:5px 30px;
+   display: flex;
+}
+.product-details .size-choices span{
+    font-weight: bold;
+    font-size: 18px;
+    margin: 5px;
+}
+section .column-2 {
+    margin: 1% 1%;
+}
+section  h1{
+    font-size: 36px;
+    text-align: center;
+    font-weight: bold; 
+}
+section h1 span{
+    text-decoration: underline 5px orangered;
+}
+/*.........................................................Title Underlines..........................*/
+.product-details .titles li.title-1::after{
+    content: '';
+    position: absolute;
+    background:orangered;
+    border-radius: 1px;
+    height: 5px;
+    width: 120px;
+    margin-top: 2%;
+    margin-left: -6%;
+    float: left;
+    animation: underline;
+    animation: ease-in-out infinite;
+    animation-duration: 0.4s;
+    transition: 0.2s;
+}
+.product-details .titles li::after{
+    content: '';
+    position: absolute;
+    background:orangered;
+    border-radius: 1px;
+    height: 5px;
+    width: 0px;
+    margin-top: 2%;
+    margin-left: -7%;
+    float: left;
+    animation: underline;
+    animation: ease-in-out infinite;
+    animation-duration: 0.4s;
+    transition: 0.2s;
+}
+@keyframes underline{
+    from{ width: 0px;}
+    to{ width: 50px;}
+}
+.product-details .titles li:hover::after{
+  width: 120px;
+}
+
+/*...............................................................................................*/
+.product-details .titles li.review::after{
+    content: '';
+    position: absolute;
+    background:orangered;
+    border-radius: 1px;
+    height: 5px;
+    width: 0px;
+    margin-top: 2%;
+    margin-left: -18%;
+    float: left;
+    animation: underline;
+    animation: ease-in-out infinite;
+    animation-duration: 0.4s;
+    transition: 0.2s;
+}
+@keyframes underline{
+    from{ width: 0px;}
+    to{ width: 50px;}
+}
+.product-details .titles li.review:hover::after{
+  width: 300px;
+}
+/*......................................................................................*/
+/*..............................................Footer section-......................................*/
+footer.main-footer{
+    background: rgb(3, 1, 17);
+    height: auto;
+    width: 100%;
+    margin: 2% 0 0;
+}
+footer.product-footer{
+    background: black;
+    height: auto;
+    width: 100%;
+    margin:0 0 0;
+}
+footer .first-row{
+    padding-top: 2% ;
+    display: flex;
+    justify-content: space-around;
+}
+footer .first-row a{
+    color: white;
+    font-weight: 500px;
+    font-size: 18px;
+    text-decoration: none;
+    display: flex;
+    float: left;
+    text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: 30px;
+    background: rgb(44, 42, 42);
+    width: 240px;
+    height: 80px;
+    border-radius: 4px;
+}
+footer .first-row i{
+    font-size: 25px;
+}
+footer .first-row a:hover{
+    background: grey;
+    opacity: 0.8;
+}
+
+
+footer .logos{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+footer .logos img{
+    height: 120px;
+    width: auto;
+    display: flex;
+    float: left;
+}
+footer .logos p{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding-right: 3%;
+    margin-top: 4%;
+}
+/*................................................User ratings...........................*/
+.user-rates-1{
+    display: none;
+}
+
+.user-rates p{
+   font-size: 18px;
+   text-align: center;
+   justify-content: center;
+   align-items: center; 
+   margin:0 2%;
+}
+.user-rates .rates{
+    text-align: center;
+    box-shadow: 1px 1px 2px orangered, -1.5PX -1.5PX 2PX orange;
+    width: 18%;
+    background: black;
+    color: white;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: -4%;
+    padding: 14px;
+}
+.rates span.one{
+    font-size: 20px;
+    font-weight: bold;
+}
+.rates i{
+    color: rgb(216, 142, 6);
+    font-size: 20px;
+}
+/*......................................................................................*/
+  /*..........................................footer links..............................*/
+  .footer-links{
+    display: flex;
+    margin: 2%;
+  }
+  .footer-links h2{
+    color: whitesmoke;
+    justify-content: left;
+    text-align: left;
+    margin:0 auto 16px;
+  }
+  .footer-links h3{
+    color: whitesmoke;
+    justify-content: left;
+    text-align: left;
+    margin:0 auto 16px;
+  }
+  .footer-links h5{
+    text-decoration: underline 5px orangered solid;  
+    margin: -8px 12px 12px;
+    display: none;
+  }
+  .footer-column{
+    float: left;
+    width: 50%; 
+  }
+.footer-column a{
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    margin:2px;
+   
+   letter-spacing: 1px;
+}
+.footer-column a:hover{
+    color: orangered;
+}
+  .social-media .fa-brands{
+    font-size: 22px;
+    color: white;
+    margin: 2%;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 1px 1px 2px 0px orange;
+    width: 38px;
+    height: 38px;
+    padding: 8px;
+  }
+  .social-media .fa-brands:hover{
+   color: orangered;
+   opacity: 0.5;
+  }
+  .payment-methods img{
+    height: 50px;
+    width: 60px;
+    border-radius: 4px;
+   margin: 2% 5%;
+cursor: context-menu;
+  }
+  .help-center a.account{
+color: orangered;
+font-size: 20px;
+user-select: none;
+  }
+  .help-center a.account:hover{
+    color: whitesmoke;
+  }
+
+  /*.............................................Footer title underlines......................*/
+  footer .footer-links h2.title-1::after{
+    content: '';
+    position: absolute;
+    background:orangered;
+    border-radius: 1px;
+    height: 5px;
+    width: 100px;
+    margin-top: 2%;
+    margin-left: -14%;
+}
+footer .footer-links h2.title-2::after{
+    content: '';
+    position: absolute;
+    background:orangered;
+    border-radius: 1px;
+    height: 5px;
+    width: 80px;
+    margin-top: 2%;
+    margin-left: -5.5%;
+}
+footer .footer-links h2.title-3::after{
+    content: '';
+    position: absolute;
+    background:orangered;
+    border-radius: 1px;
+    height: 5px;
+    width: 100px;
+    margin-top: 2%;
+    margin-left: -8%;
+}
+footer .footer-links h2.title-4::after{
+    content: '';
+    position: absolute;
+    background:orangered;
+    border-radius: 1px;
+    height: 5px;
+    width: 80px;
+    margin-top: 2%;
+    margin-left: -7%;
+}
+footer .footer-links h2.title-5::after{
+    content: '';
+    position: absolute;
+    background:orangered;
+    border-radius: 1px;
+    height: 5px;
+    width: 100px;
+    margin-top: 2%;
+    margin-left: -12%;
+}
+footer .footer-links h2.title-6::after{
+    content: '';
+    position: absolute;
+    background:orangered;
+    border-radius: 1px;
+    height: 5px;
+    width: 100px;
+    margin-top: 2%;
+    margin-left: -7%;
+}
+  /*.........................................last row.................................*/
+  footer .last-row{
+    background:radial-gradient(#fff, #ffd6d6);
+    width: 100%;
+    height: 80px;
+    bottom: 0;
+    left: 0;
+  
+  }
+  .last-row p{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 10px;
+  }
+  .last-row p span{
+color: orangered;
+margin-bottom: 5px;
+  }
+
+
+/*..................................................................Star rates.....................................*/
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .container {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .container svg {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 50px;
+    transition: all 0.3s;
+    fill: #666;
+  }
+  
+  .container svg:hover {
+    transform: scale(1.1);
+  }
+  
+  .container input:checked ~ svg {
+    fill: #ffeb49;
+  }
+  
+/*..................................................................................Heart //Favourite.............................*/
+
+  .heart-container {
+    --heart-color: orangered;
+    position: relative;
+    width: 50px;
+    height: 100px;
+    transition: 0.3s;
+  }
+  
+  .heart-container .checkbox {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 20;
+    cursor: pointer;
+  }
+  
+  .heart-container .svg-container {
+    width: 75%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .heart-container .svg-outline,
+          .heart-container .svg-filled {
+    fill: var(--heart-color);
+    position: absolute;
+  }
+  
+  .heart-container .svg-filled {
+    animation: keyframes-svg-filled 1s;
+    display: none;
+  }
+  
+  .heart-container .svg-celebrate {
+    position: absolute;
+    animation: keyframes-svg-celebrate .5s;
+    animation-fill-mode: forwards;
+    display: none;
+    stroke: var(--heart-color);
+    fill: var(--heart-color);
+    stroke-width: 2px;
+  }
+  
+  .heart-container .checkbox:checked~.svg-container .svg-filled {
+    display: block
+  }
+  
+  .heart-container .checkbox:checked~.svg-container .svg-celebrate {
+    display: block
+  }
+  
+  @keyframes keyframes-svg-filled {
+    0% {
+      transform: scale(0);
+    }
+  
+    25% {
+      transform: scale(1.2);
+    }
+  
+    50% {
+      transform: scale(1);
+      filter: brightness(1.5);
+    }
+  }
+  
+  @keyframes keyframes-svg-celebrate {
+    0% {
+      transform: scale(0);
+    }
+  
+    50% {
+      opacity: 1;
+      filter: brightness(1.5);
+    }
+  
+    100% {
+      transform: scale(1.4);
+      opacity: 0;
+      display: none;
+    }
+  }
+
+
+
+
+
+
+  /* ....................................Media querry for Extra small devices (phones, 600px and down) ............................*/
+
+  /*.......................................Media querry for menu....................................................................*/
+  @media only screen and (max-width:600px){
+   .navbar{
+    width: 100%;
+   }
+    .nav-elements img.website-logo{
+       height:90px;
+       width: 160px;
+     display: flex;
+     mix-blend-mode: screen;
+     margin: 5% 0;
+    }
+    .nav-elements form{
+        display: none;
+    }
+    .nav-elements .navbar-link{
+        display: none;
+    }
+    .nav-elements .languages{
+        display: none;
+    }
+    .nav-elements .user{
+        display: none;
+    }
+ 
+    .nav-elements a.home{
+        display: none;
+    }
+    .nav-elements a.home-link{
+        display: block;
+        color: brown;
+        text-align: center;
+        align-items: center;
+    }
+    .nav-elements a.about{
+        display: none;
+    }
+    .nav-links{
+        display:none;
+    }
+    .other-links{
+      display: none;
+      float: left;
+    }
+    .column{ 
+    display: contents;
+    }
+    /*-----------------------------------------------Shopping cart-----------------------------*/
+    .nav-elements .shoppingcart{
+        font-size: 36px;
+        color: brown;
+        display: flex;
+        float: right;
+    }
+.shopping-cart{
+    margin: -4% 0 3%;
+    height: 50vh;
+}
+.shopping-cart hr{
+    display: block;
+}
+.shopping-cart h1::after{
+    margin: 2% -4%;
+}
+.shopping-cart .cart-btns button{
+    height: 36px;
+}
+    .nav-elements a.home::after{
+        content: '';
+        position: absolute;
+        background: linear-gradient(90deg,red, blue, orangered);
+        background-clip: content-box;
+        color: transparent;
+        border-radius: 1px;
+        height: 5px;
+        width: 0px;
+        margin-left: 10px;
+        top: 8%;
+        display: flex;
+        transition: 0.5s;
+        transition-duration: 0.2s;
+        animation: underline;
+        animation:infinite ease;
+}
+/*...............................................Menu---------------------------------------------------*/
+.navbar .menu{
+    display: block;
+    margin:7% 2%;
+    color: brown;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 36px;
+    font-weight: bold;
+    float: left;
+    display: flex;
+}
+
+.menu-links{
+    display: none;
+    background:white;
+    width: 100%;
+    height: 72vh;
+    margin-top: -5%;
+    margin-bottom:-8px;
+    overflow-y: hidden;
+}
+.menu-links-other-pages{
+    margin-bottom: 12px;
+}
+.menu-links .account-link{
+    background: black;
+    width: 100%;
+    height: 7vh;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+}
+.menu-links .account-link a{
+    color:white;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    margin: 10px 5px;
+}
+.menu-links .account-link a i.fa-user{
+    color: white;
+    font-weight: bold;
+    font-weight: 500px;
+    margin: 2px 5px;
+    text-align: center;
+    font-size: 28px;
+    justify-content: center;
+}
+.menu-links .account-link a span{
+    text-decoration: underline 2px solid;
+    margin: 0 5px;
+}
+.menu-links i.fa-x{
+  font-size: 28px;
+  font-weight: bold;
+  color: brown;
+  float: right;
+  margin-right:5%;
+  margin-top: 1%;
+  border-radius: 50%;
+  padding: 6px 8px;
+  box-shadow: -1px 1px 4px white;
+}
+
+.menu-links ul li{
+    list-style: none;
+    margin:15px 12px;
+    display: flex;
+}
+.menu-links ul li a{
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+    background: none;
+}
+.menu-links ul h2{
+    text-align: center;
+    font-size: 28px;
+}
+.menu-links ul li a.link{
+    font-size: 20px;
+}
+.menu-links ul li a.logout{
+    font-weight: bold;
+    font-size: 28px;
+}
+.menu-links button.close-menu{
+    color: white;
+    border: 1px solid black;
+    display: none;
+}
+
+    /*...............................................Media querry for main body..........................*/
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    main .section1{
+        height: 60px;
+        margin-top: -12px;
+    }
+.column-1{
+    display: none;
+}
+.column-2{
+    display: contents;
+   padding: 20px;
+   width: auto;
+   border-radius: 5px;
+}
+    main .section1 img{
+        width: 60px;
+        height: 50px;
+    }
+    @keyframes slide {
+        0% {
+          left: 0px;
+        }
+        15% {
+          left: 50px;
+          transform: scale(1.1);
+        }
+        20% {
+          left: -108px;
+        }
+        32% {
+          left: -108px;
+    
+        }
+        35% {
+          left: -216px;
+        }
+        50% {
+          left: -250px;
+        }
+        100% {
+          left: 100px;
+        }
+    }
+    .brands img{
+        width: 5opx;
+        height: 40px;
+        margin: 4px;
+        justify-content: space-between;
+    }
+
+    .links{
+       margin-left: -18px;
+    }
+    .links a{
+        font-size: 18px;
+    }
+
+       /*...............................................Media querries for product cards...........................*/
+       .card{
+        width: 280px;
+        margin-top: 5%;
+        margin-left: 15%;
+        margin-bottom: 4%;
+        height: 400px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+       }
+       .card img{
+        width: 100px;
+        height: 100px;
+       }
+       .card .small-imgs img{
+        width: 50px;
+        height: 40px;
+        margin: auto;
+       }
+.item1 .small-imgs{
+ display: contents;
+}
+.card .item1 button{
+    margin-left: 16%;
+    margin-top: 20%;
+}
+.card button{
+    margin: auto;
+    position: relative;
+    width: 200px;
+    margin-left: 9%;
+    bottom: 0;
+    display: flex;
+
+}
+.card .Nike-green p button{
+    margin-top: 20% ;
+}
+.card h2{
+    font-size: 18px;
+}
+.user-rates.rates{
+       display: flex;
+    }
+
+
+.size-page .size-choices select{
+    width: 50%;
+    margin: 12px auto;
+}
+/*...............................................Media querries for footer section...........................*/
+    footer.main-footer{
+        width: 100%;
+    }
+.site-info{
+        display: contents;
+        width: fit-content;
+    }
+    .site-info p{
+         font-size: 14px;
+         margin: auto;
+        }
+
+  footer .first-row{
+    display: inline-block;
+  }
+.first-row a i{
+    margin-right: 5px;
+}
+  footer .first-row a{
+    margin: 12px 16%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 60px;
+  }
+  footer .footer-column{
+   float: none;
+   width: 100%;
+   text-align: center;
+   justify-content: center;
+   align-items: center;
+   margin: auto;
+   margin-left: 5%;
+  }
+  footer .footer-column h2{
+    font-size: 18px;
+    text-align: center;
+    margin: 10px;
+    letter-spacing: 3px;
+  }
+  footer .footer-column h2.title-2{
+    letter-spacing: 5px;
+  }
+  footer .footer-column h3{
+    text-align: center;
+  }
+  /*.....................title under lines.............................*/
+  footer .footer-column h2.title-1::after{
+    margin-top: 6%;
+    margin-left: -40%;
+    width: 80px;
+  }
+  footer .footer-column h2.title-2::after{
+    margin-top: 6%;
+    margin-left: -15%;
+    width: 40px;
+  }
+  footer .footer-column h2.title-3::after{
+    margin-top: 6%;
+    margin-left: -22%;
+    width: 45px;
+  }
+  footer .footer-column h2.title-4::after{
+    margin-top: 6%;
+    margin-left: -25%;
+    width: 50px;
+  }
+  footer .footer-column h2.title-5::after{
+    margin-top: 6%;
+    margin-left: -36%;
+    width: 60px;
+  }
+  footer .footer-column h2.title-6::after{
+    margin-top: 6%;
+    margin-left: -28%;
+    width: 60px;
+  }
+  .footer-links{
+    display: inline-block;
+  }
+
+
+  .user-rates-1{
+    display: block;
+}
+ .user-rates{
+    display: none;
+ }
+ footer .logos img{
+    height: 50px;
+    width: 80px;
+ }
+footer .logos p{
+    font-size: 18px;
+    width: fit-content;
+    margin-left: 5px;
+ }
+ footer .logos p span{
+    display: none;
+ }
+
+ /*.......................................login page...............................................*/
+.wrapper{
+margin:auto auto 52%;
+width: auto;
+height: 450px;
+width: 100%;
+  
+
+}
+section .bkg-images img{
+margin: auto;  
+display: none;
+}
+.login-form .create-account{
+    font-size: 18px;
+    width: auto;
+    margin: auto;
+}
+.signup-form label p{
+   margin-left: 5px;
+}
+
+/*.................................................................Other pages.........................*/
+.product-column{
+    display: contents;
+}
+.product-column .product-image img{
+    width: 240px;
+    height: 250px;
+    margin: auto;
+    display:flex;
+}
+.product-column .product-image img.new-balance{
+    height: 180px;
+    width: 320px;
+    margin: 5%;
+}
+.product-column .small-images{
+    width: 80%;
+    margin: auto;
+}
+.product-column .product-description{
+    width: 90%;
+    margin: 4% auto;
+}
+
+.product-column .product-description a.chart {
+   text-align: center;
+ margin: auto 30%;
+ 
+}
+.product-details{
+    width: 90%;
+    margin: auto;
+}
+.product-details .titles ul{
+  display: inline-block;
+}
+.product-details .titles ul li{
+    font-size: 20px;
+    text-align: left;
+    justify-content: left;
+}
+.product-details .titles ul li.title-1{
+    font-size: 25px;
+    margin: 2% 2%;
+}
+.product-details .titles ul li.title-2{
+    font-size: 25px;
+    margin: 5% 2%;
+}
+.product-details .titles .review{
+    margin: 5% 20px;
+    font-size: 25px;
+}
+.product-details .titles li.title-1::after{
+    content: '';
+    position: absolute;
+    background:orangered;
+    border-radius: 1px;
+    height: 5px;
+    width: 50px;
+    margin-top: 8%;
+    margin-left: -16%;
+    float: left;
+    animation: underline;
+    animation: ease-in-out infinite;
+    animation-duration: 0.4s;
+    transition: 0.2s;
+}
+.product-details .titles li.title-2::after{
+    content: '';
+    position: absolute;
+    background:orangered;
+    border-radius: 1px;
+    height: 5px;
+    width: 50px;
+    margin-top: 8%;
+    margin-left: -18%;
+    float: left;
+    animation: underline;
+    animation: ease-in-out infinite;
+    animation-duration: 0.4s;
+    transition: 0.2s;
+}
+.product-details .titles li.review::after{
+    content: '';
+    position: absolute;
+    background:orangered;
+    border-radius: 1px;
+    height: 5px;
+    width: 100px;
+    margin-top: 8%;
+    margin-left: -60%;
+    float: left;
+    animation: underline;
+    animation: ease-in-out infinite;
+    animation-duration: 0.4s;
+    transition: 0.2s;
+}
+.product-details .titles li.review:hover::after{
+    width: 240px;
+    margin-left: -70%;
+}
+.review-comments button.nike{
+    width: 100%;
+    padding: 0;
+    margin: auto;
+}
+.product-reviews h2.sub-title{
+    font-size: 22px;
+    margin: 4% auto;
+    text-align: center;
+}
+.review-comments a.load-more-btn{
+margin: 2% auto 2%;
+justify-content: center;
+align-items: center;
+text-align: center;
+width: 100%;
+}
+.product-reviews .row{
+    display: contents;
+}
+.product-reviews .row h3{
+    text-align: center;
+    font-size: 25px;
+    text-decoration: underline 2px black;
+}
+.product-reviews .volume-bars{
+    margin:auto;
+    width: fit-content;
+}
+.product-reviews .summary-rates p{
+    text-align: center;
+}
+.product-reviews .summary-rates .small-text p{
+    justify-content: center;
+    text-align: center;
+}
+
+
+}
+
+
+
+
+
+  /*.................................DESIGNED  & DEVELOPED ......................................................................//
+  //............................................................BY................................................................//
+ //........................................................ .........GRIFFIN.......................................................//
+//............................................................................TECHNOLOGIES...........................................//
+//..............................................................................................2024................................../*
