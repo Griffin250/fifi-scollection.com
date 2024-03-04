@@ -1890,7 +1890,23 @@ user-select: none;
   .help-center a.account:hover{
     color: whitesmoke;
   }
-
+/*..................................................Terms and Policies...................................*/
+/*.........................................................................................................*/
+section.Terms-and-Policies{
+margin: 5% 5%;
+}
+section .Terms-and-Policies p span{
+    font-weight: bold;
+}
+.Terms-and-Policies ol.question-list li{
+    margin: 12px 25%;
+}
+.Terms-and-Policies ol.question-list li a{
+color: black;
+font-weight: bold;
+font-size: 18px;
+text-decoration: none;
+}
   /*.............................................Footer title underlines......................*/
   footer .footer-links h2.title-1::after{
     content: '';
