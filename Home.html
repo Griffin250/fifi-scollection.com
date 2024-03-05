@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fifi's Collection</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="website icon" type="png" href="Images/FC-icon.png">
+    <script src="https://kit.fontawesome.com/969f6c4469.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-----------------------------------Navigation bar-------------------------------------------------->
+    <header>
+    <nav class="navbar" id="Navbar" role="navigation">
+
+    <div class="menu" id="Menu" onclick="openMenu()"> 
+        <i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="nav-elements">
+        <a href="index.html"> <img class="website-logo" src="Images/Fifi's-Collection.jpg"> </a>
+        
+    <div class="shoppingcart" title="Your Cart" id="Cart" onclick="openCart()">
+            <i class="fa-solid fa-cart-shopping" title="Your Cart"></i>  
+    </div> 
+
+    <form action=""> 
+        <label for="search">
+        <input type="search" name="search" id="search" placeholder="Search here...">
+        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i> </button>
+    </label>
+</form>
+        <a href="index.html" class="home navbar-link"> Home <br></a>
+        <a href="Aboutus.html" target="_blank" class="about navbar-link"> About<br> </a>
+        
+    <div class="languages">
+    <select class="languages" id="Languages"> 
+        <option>English</option>
+        <option> French </option>
+        <option>Swahili</option>
+        <option>Arabic</option>
+    </select>
+</div>
+    <a href="Account.html" class="user">  
+    <i class="fa-regular fa-user" title="Your Account" onclick="openPage()"></i> </a>
+</div>
+
+ <div class="nav-links">
+    <hr>
+    <a href="" class="link1"> SALE</a>
+    <a href="" class="link2"> MEN</a>
+    <a href="" class="link3"> WOMEN</a>
+    <a href="" class="link4"> T-SHIRTS</a>
+    <a href="" class="link5"> NEW-IN</a>
+    <a href="" class="link6"> BRANDS</a>
+
+    <!-------------------------------------------------------------------Shopping cart----------------------------->
+    <div class="icons">
+    <div class="cart" title="Your Cart" id="Cart" onclick="openCart()">
+        <i class="fa-solid fa-cart-shopping" title="Your Cart"> <span> 0 </span></i>  
+    </div> 
+    <div class="favourites">
+        <i class="fa-regular fa-heart" title="Favourites"></i>
+    </div></div>
+</div>
+</nav>
+<!-----------------------------------------------------------Menu --------------------------------------------------->
+<div class="menu-links" id="MenuLinks">
+<div class="account-link"> 
+    <hr>
+    <i class="fa-solid fa-x" id="closeButton" onclick="closeMenu()" title="Close Menu"></i>
+     <a href="Account.html"><i class="fa-regular fa-user"></i> 
+    <span>Login </span>  or  <span>  Create Account</span> </span></a></p>
+</div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Aboutus.html" target="_blank">About</a></li>
+        <li><a href="#Contact">Contact</a></li>
+        <li><a href="#">Shopping Cart</a></li>
+        <hr>
+        <h2>Shop by Category</h2>
+            <li><a href="" class="link1 link"> Sale</a> </li>
+            <hr>
+            <li><a href="" class="link2 link"> Men</a> </li>
+            <hr>
+            <li> <a href="" class="link3 link"> Women</a> </li>
+            <hr>
+            <li><a href="" class="link2 link"> Kids</a> </li>
+            <hr>
+            <li><a href="" class="link4 link"> T-shirts</a> </li>
+            <hr>
+            <li> <a href="" class="link5 link"> New-In</a> </li>
+            <hr>
+            <li> <a href="" class="link6 link"> Brands</a> </li> 
+    </ul>
+</div></header>
+<!-----------------------------------------------------------------------Shopping Cart---------------------------->
+<div class="shopping-cart" id="shoppingCart">
+    <hr>
+    <h1>Your Shopping Cart</h1>
+    <div class="cart-list">
+<h2>..hmmm your cart is empty...</h2>
+    </div>
+    <div class="cart-btns">
+        <button class="close" id="closeButton" onclick="closeCart()">CLOSE</button>
+        <button class="checkout" id="checkoutButton"> CHECKOUT</button>
+    </div>
+</div>
+</div>
+<!--------------------------------------Home page-------------------------------------------------------------------->
+<section class="main-page">  
+<div class="row">
+<div class="col-2">
+  <h1>
+    Give Your Look <br />
+    A New Fashion!
+  </h1>
+  <p>
+    Success isn't always about greatness. It's about consistency.<br/> <br>
+    Consistent  hard work gains success. Greatness will come.
+  </p>
+  <a href="index.html" class="explore-btn">Explore Now →</a>
+</div>
+<div class="col-2">
+  <img src="https://i.ibb.co/QpTmdX5/image1.png" alt="" />
+</div>
+</div>
+</div>
+</div>
+<hr class="breakline">
+
+  <!------------------------------------------- Featured categories-------------------------------------- -->
+  <div class="categories">
+    <div class="small-container">
+      <div class="row">
+        <div class="col-3">
+          <img src="https://i.ibb.co/sqnY1pG/category-1.jpg" alt="" />
+        </div>
+        <div class="col-3">
+          <img src="https://i.ibb.co/GCJLQRQ/category-2.jpg" alt="" />
+        </div>
+        <div class="col-3">
+          <img src="https://i.ibb.co/wYsXqP5/category-3.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- ---------------------------------------offer----------------------------------------------------- -->
+  <div class="offer">
+    <div class="small-container">
+      <div class="row">
+        <div class="col-2">
+          <img src="https://i.ibb.co/HF5TncZ/exclusive.png" alt="" class="offer-img" />
+        </div>
+        <div class="col-2">
+          <p>Exclusively Available on Fifi's collection</p>
+          <h1>Smart Band 4</h1>
+          <small>The Mi Smart Band 4 features a 39.9% larger (than Mi Band 3)
+            AMOLED color full-touch display with adjustable brightness, so
+            everything is clear as can be.</small>
+          <br />
+          <a href="#" class="explore-btn">Buy Now →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!----------------------------------------------- Testimonial ------------------------------------------>
+  <div class="testimonial">
+    <div class="small-container">
+      <div class="row">
+        <div class="col-3">
+          <i class="fas fa-quote-left"></i>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Perferendis, quae molestias error id est voluptatibus quos amet
+            numquam aspernatur nam cumque ullam? Veritatis eveniet et, maxime
+            eaque soluta quas modi.
+          </p>
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <img src="https://i.ibb.co/zfXD2Tx/user-1.png" alt="" />
+          <h3>Marta W.</h3>
+        </div>
+  
+        <div class="col-3">
+          <i class="fas fa-quote-left"></i>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Perferendis, quae molestias error id est voluptatibus quos amet
+            numquam aspernatur nam cumque ullam? Veritatis eveniet et, maxime
+            eaque soluta quas modi.
+          </p>
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <img src="Images/Clothing/FC_T-Shirts-2.png" alt="" class="FC-image" />
+          <h3>Fifi Jeremy.</h3>
+        </div>
+  
+        <div class="col-3">
+          <i class="fas fa-quote-left"></i>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Perferendis, quae molestias error id est voluptatibus quos amet
+            numquam aspernatur nam cumque ullam? Veritatis eveniet et, maxime
+            eaque soluta quas modi.
+          </p>
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <img src="https://i.ibb.co/jZ3tQqK/user-3.png" alt="" />
+          <h3>Vika Z.</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ---------------------------------------Company brands -------------------------------------->
+  <div class="company-brands">
+    <div class="small-container">
+      <div class="row">
+        <div class="col-5">
+          <img src="https://i.ibb.co/Gfwzz1S/logo-godrej.png" alt="" />
+        </div>
+  
+        <div class="col-5">
+          <img src="https://i.ibb.co/vjrRZFM/logo-oppo.png" alt="" />
+        </div>
+  
+        <div class="col-5">
+          <img src="https://i.ibb.co/3zs234S/logo-coca-cola.png" alt="" />
+        </div>
+  
+        <div class="col-5">
+          <img src="https://i.ibb.co/7Wt343W/logo-paypal.png" alt="" />
+        </div>
+  
+        <div class="col-5">
+          <img src="https://i.ibb.co/GVSNwJD/logo-philips.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+</section>
+<!-----------------------------------------Footer section--------------------------------------------------->
+<footer class="main-footer" id="footer">
+    <div class="first-row">
+        <a href=""> <i class="fa-regular fa-circle-question"></i>  Help & Contact Us</a>
+        <a href=""> <i class="fa-solid fa-location-dot"></i> Track my Order</a>
+        <a href=""> <i class="fa-solid fa-truck"></i> Shipping & Delivery</a>
+        <a href=""> <i class="fa-solid fa-person-walking-arrow-loop-left"></i> Returns & Refunds</a>
+    </div>
+    <!-----------------------------------------------------Footer links------------------------------------------>
+    <div class="footer-links">
+    <div class="footer-column">
+    <h2 class="title-1">LEGAL INFORMATION</h2>
+    <a href="">Refund Rules</a><br>
+    <a href="">Return Rules</a><br>
+    <a href="Terms$Policies.html" target="_blank"> Terms & Conditions</a><br>
+    <a href=""> Privacy Policy</a><br>
+    <a href="">Transparency Act</a><br>
+    <a href=""> Cookie Settings</a>
+    </div>
+    
+    <div class="footer-column">
+    <h2 class="title-2">ABOUT</h2>
+    <a href="">Store Locator</a><br>
+    <a href=""> All Stores</a><br>
+    <a href="">  About Fifi's collection</a><br>
+    <a href=""> Press Contacts</a><br>
+    <a href="">Careers</a><br>
+    <a href="">LEED</a>
+        </div>
+       
+    <div class="footer-column">
+    <h2 class="title-3">FOLLOW US </h2>
+    <div class="social-media">
+        <i class="fa-brands fa-facebook" title="Facebook"></i>
+        <i class="fa-brands fa-instagram" title="Instagram"></i>
+        <i class="fa-brands fa-x-twitter" title="Twitter"></i>
+        <i class="fa-brands fa-whatsapp" title="Whatsapp"></i>
+    </div><br><br>
+    <h2 class="title-4" id="Contact">CONTACT US</h2>
+    <a href="mailto:fificollection@gmail.com"> E-mail: fifi'scollection@gmail.com</a><br><br>
+    <h3>For Urgent Help:</h3>
+    <a href="Tel:+122-4589-4599">Tel: +122-4589-4599</a>
+        </div>
+    
+    <div class="footer-column">
+    <div class="payment-methods">
+        <h2 class="title-5">PAYMENT METHODS</h2>
+        <img src="Images/Mastercard-logo.svg.webp" alt="">
+        <img src="Images/Paypal.jpeg" alt=""><br>
+        <img src="Images/Vizacard.png" alt="">
+        <img src="Images/Google-pay.png">
+    </div></div>
+    
+        <div class="footer-column">
+        <div class="help-center">
+            <h2 class="title-6">HELP CENTER</h2>
+            <a href="">Membership Policy</a><br>
+            <a href="Terms-and-Policies.html" target="_blank">Privacy Policy</a><br>
+            <a href="">Customer services</a><br><br>
+            <a href="Account.html" class="account">Login</a><br>
+            <a href="Account.html" class="account">Register</a><br>
+           
+    
+        </div></div>
+    </div>
+    <div class="logos">
+        <img src="Images/3D-Logo.jpg">
+        <p>© 2024 Fifi'scollection.com, Inc All Rights Reserved</p>
+    </div>
+    <div class="last-row">
+        <p>Prices subject to change without notice! Products shown may not be available in our stores!</p>
+        <p>The content of this site is copyright-protected and is the property of Fifi's Collection FC. FC is committed to accessibility.</p>
+        <p><span>TOLL-FREE support line (855-466-7467) for assistance</span></P>
+    </div>
+    </footer>
+    <!-----------------------------------------Javascript----------------------------------------------------->
+        <script src="index.js"> </script>
+</body></html>
