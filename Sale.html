@@ -10,7 +10,8 @@
 </head>
 <body>
 <!-----------------------------------Navigation bar-------------------------------------------------->
-    <header>
+<!-----------------------------------Navigation bar-------------------------------------------------->
+<header>
     <nav class="navbar" id="Navbar" role="navigation">
 
     <div class="menu" id="Menu" onclick="openMenu()"> 
@@ -29,7 +30,7 @@
         <button type="submit"><i class="fa-solid fa-magnifying-glass"></i> </button>
     </label>
 </form>
-        <a href="" class="home navbar-link"> Home <br></a>
+        <a href="index.html" class="home navbar-link"> Home <br></a>
         <a href="#footer" class="about navbar-link"> About<br> </a>
         
     <div class="languages">
@@ -73,9 +74,9 @@
 </div>
     <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="Aboutus.html">About</a></li>
+        <li><a href="#footer">About</a></li>
         <li><a href="#Contact">Contact</a></li>
-        <li><a href="#">Shopping Cart</a></li>
+        <li><a href="#" class="logout">Logout <i class="fa-solid fa-right-from-bracket"></i></a></li>
         <hr>
         <h2>Shop by Category</h2>
             <li><a href="Sale.html" class="link1 link"> Sale</a> </li>
@@ -105,39 +106,59 @@
         <button class="checkout" id="checkoutButton"> CHECKOUT</button>
     </div>
 </div>
-</header>
-<section class="about-us">
-    <h2>WE ARE ALL ABOUT FASHION!</h2>
-    <p>With more than 2500 stores across the world, Foot Locker is the leading global athletic footwear and apparel retailer.
-     Our close partnerships with the ultimate top brands mean that we will constantly provide you with the best, most exclusive ranges of products there is.
-     At Foot Locker, we live sneakers, we breathe sneakers, we dream sneakers… Sneakers are all 
-     we think about and nothing makes us more proud than being able to keep our followers up to date with the latest trends.</p>
+<!-------------------------------------------------------------------------------------------------------------->
 
-     <p>For more than 30 years, our collections have been curated by sneaker heads for sneaker heads. 
-    Only the best, most relevant and exciting products ever make it onto our shelves and onto our online catalogues.
-     “If it is at Foot locker, then it is approved!” This is the word on the street. 
-     Whether you are a long time dedicated sneaker lover or casually searching for a fresh new pair of shoes, Foot Locker has you covered, from the feet up. 
-    Don’t forget to peek into our fantastic range of apparel and accessories too! And keep in mind: 
-    most of our products you won’t be able to find anywhere else!</p>
-    <p> On European soil only, Foot Locker means more than 620 stores in premium locations, across 20 countries and closing in on 30 years of history.
-     Foot Locker Europe also means an elevated digital experience for our ever-increasing fan base,
-     throughout a brand-new exciting website and vibrant interactive social media platforms.</p>
-
-     <p>Last but not least, Foot Locker is an established intricate element of the European street culture, sneaker scene and athletic lifestyle. 
-    We thrive to always give back to the community and we are involved in countless events and happenings throughout the continent. 
-    Parties, sport competitions, social gatherings, sneaker shows… There is always a Foot Locker event going on, at any time.</p>
-
-    <p>Stay tuned and keep your sneaker lifestyle alive and kicking with Foot Locker!</p>
-
-    <h2>COMPANY INFO</h2>
-    <p>FootLocker Europe.com B.V.<br>
-        Ir.D.S. Tuijnmanweg 3-5, 4131 PN Vianen<br>
-        The Nederlands<br>
-        KvK 67223702 </p>
-</section>
+<div class="column-2">
+        <div class="card"> 
+                    <div class="item2">
+                        <p class="sale">SALE</p>
+                                <img src="Images/Nike_-yellow_-removebg-preview.png" alt="Nike-Air" title="Nike-Air">
+                                <h2> Nike Airforce 1'07</h2>
+                                <p class="price">$24.99 <span>$34.99</span></p>
+                                <p class="discounts">15% Off</p>
+                                <p>Men's Fashion Shoes</p>
+                                <p><button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button></p>
+                    </div> </div>
+        
+        
+         <div class="card"> 
+                        <div class="item4">
+                            <p class="sale">SALE</p>
+                                   <a href="Vans Display.html"><img src="Images/Vans Old skool.png" alt="Nike-Air" title="Vans"></a>
+                                    <h2>Vans Old Skool</h2>
+                                    <p class="price">$34.99 <span>$50.45</span></p>
+                                    <h4>1 color -Men's shoes</h4>
+                                    <p class="discounts">15% Off</p>
+                                    <p><button> <i class="fa-solid fa-cart-shopping"></i> Add to Cart</button></p>
+                        </div></div>
+                    
+                 
+            <div class="card"> 
+                            <div class="item2">
+                                    <p class="sale">SALE</p>
+                                            <img src="Images/Nike_black.png" alt="Nike-Air" title="Nike-Air">
+                                            <h2> Nike Air 4'16 </h2>
+                                            <p class="price">$149.99 <span> $199.99</span></p>
+                                            <p class="discounts">25% Off</p>
+                                            <p><button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button></p>
+                            </div> </div>
+        
+        
+             <div class="card"> 
+                            <div class="item4">
+                                    <p class="sale">SALE</p>
+                                            <img src="Images/Lowcoaster2.png" alt="Nike-Air" title="Best sneaker">
+                                                <h2>Lowcoatser </h2>
+                                                <p class="price">$100.00 <span>$120.00</span></p>
+                                                <p class="discounts">12% Off</p>
+                                                <p><button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button></p>
+                             </div>  </div>
+        
+                            </div>
+        
 
 <!-----------------------------------------Footer section--------------------------------------------------->
-<footer class="main-footer" id="footer">
+<footer class="product-footer" id="footer">
     <div class="first-row">
         <a href=""> <i class="fa-regular fa-circle-question"></i>  Help & Contact Us</a>
         <a href=""> <i class="fa-solid fa-location-dot"></i> Track my Order</a>
@@ -145,65 +166,66 @@
         <a href=""> <i class="fa-solid fa-person-walking-arrow-loop-left"></i> Returns & Refunds</a>
     </div>
     <!-----------------------------------------------------Footer links------------------------------------------>
-    <div class="footer-links">
+<div class="footer-links">
     <div class="footer-column">
-    <h2 class="title-1">LEGAL INFORMATION</h2>
-    <a href="">Refund Rules</a><br>
-    <a href="">Return Rules</a><br>
-    <a href="Terms$Policies.html" target="_blank"> Terms & Conditions</a><br>
-    <a href=""> Privacy Policy</a><br>
-    <a href="">Transparency Act</a><br>
-    <a href=""> Cookie Settings</a>
+<h2 class="title-1">LEGAL INFORMATION</h2>
+<a href="">Refund Rules</a><br>
+<a href="">Return Rules</a><br>
+<a href=""> Terms & Conditions</a><br>
+<a href=""> Privacy Policy</a><br>
+<a href="">Transparency Act</a><br>
+<a href=""> Cookie Settings</a>
     </div>
-    
     <div class="footer-column">
-    <h2 class="title-2">ABOUT</h2>
-    <a href="">Store Locator</a><br>
-    <a href=""> All Stores</a><br>
-    <a href="">  About Fifi's collection</a><br>
-    <a href=""> Press Contacts</a><br>
-    <a href="">Careers</a><br>
-    <a href="">LEED</a>
-        </div>
+<h2 class="title-2">ABOUT</h2>
+<a href="">Store Locator</a><br>
+<a href=""> All Stores</a><br>
+<a href="">  About Fifi's collection</a><br>
+<a href=""> Press Contacts</a><br>
+<a href="">Careers</a><br>
+<a href="">LEED</a>
+    </div>
+   
+    <div class="footer-column">
+<h2 class="title-3">FOLLOW US </h2>
+<div class="social-media">
+    <i class="fa-brands fa-facebook" title="Facebook"></i>
+    <i class="fa-brands fa-instagram" title="Instagram"></i>
+    <i class="fa-brands fa-x-twitter" title="Twitter"></i>
+    <i class="fa-brands fa-whatsapp" title="Whatsapp"></i>
+</div><br><br>
+<h2 class="title-4" id="Contact">CONTACT US</h2>
+<a href="mailto:fificollection@gmail.com"> E-mail: fifi'scollection@gmail.com</a><br><br>
+<h3>For Urgent Help:</h3>
+<a href="Tel:+122-4589-4599">Tel: +122-4589-4599</a>
+    </div>
+    <div class="footer-column">
+<div class="payment-methods">
+    <h2 class="title-5">PAYMENT METHODS</h2>
+    <img src="Images/Mastercard-logo.svg.webp" alt="">
+    <img src="Images/Paypal.jpeg" alt=""><br>
+    <img src="Images/Vizacard.png" alt="">
+    <img src="Images/Google-pay.png">
+  
+</div>
+    </div>
+    <div class="footer-column">
+    <div class="help-center">
+        <h2 class="title-6">Help Center</h2>
+        <h5>&HilbertSpace;&HilbertSpace;&HilbertSpace;</h5>
+        <a href="">Membership Policy</a><br>
+        <a href="">Privacy Policy</a><br>
+        <a href="">Customer services</a><br><br>
+        <a href="Account.html" class="account">Login</a><br>
+        <a href="Account.html" class="account">Register</a><br>
        
-    <div class="footer-column">
-    <h2 class="title-3">FOLLOW US </h2>
-    <div class="social-media">
-        <i class="fa-brands fa-facebook" title="Facebook"></i>
-        <i class="fa-brands fa-instagram" title="Instagram"></i>
-        <i class="fa-brands fa-x-twitter" title="Twitter"></i>
-        <i class="fa-brands fa-whatsapp" title="Whatsapp"></i>
-    </div><br><br>
-    <h2 class="title-4" id="Contact">CONTACT US</h2>
-    <a href="mailto:fificollection@gmail.com"> E-mail: fifi'scollection@gmail.com</a><br><br>
-    <h3>For Urgent Help:</h3>
-    <a href="Tel:+122-4589-4599">Tel: +122-4589-4599</a>
-        </div>
-    
-    <div class="footer-column">
-    <div class="payment-methods">
-        <h2 class="title-5">PAYMENT METHODS</h2>
-        <img src="Images/Mastercard-logo.svg.webp" alt="">
-        <img src="Images/Paypal.jpeg" alt=""><br>
-        <img src="Images/Vizacard.png" alt="">
-        <img src="Images/Google-pay.png">
-    </div></div>
-    
-        <div class="footer-column">
-        <div class="help-center">
-            <h2 class="title-6">HELP CENTER</h2>
-            <a href="">Membership Policy</a><br>
-            <a href="Terms-and-Policies.html" target="_blank">Privacy Policy</a><br>
-            <a href="">Customer services</a><br><br>
-            <a href="Account.html" class="account">Login</a><br>
-            <a href="Account.html" class="account">Register</a><br>
-           
+
     
         </div></div>
     </div>
     <div class="logos">
         <img src="Images/3D-Logo.jpg">
-        <p>© 2024 Fifi'scollection.com, Inc All Rights Reserved</p>
+        <p>© 2024 Fifi'scollection.com, Inc. All Rights Reserved</p>
     </div>
     <div class="last-row">
         <p>Prices subject to change without notice! Products shown may not be available in our stores!</p>
