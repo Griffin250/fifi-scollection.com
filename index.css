@@ -650,7 +650,7 @@ select{
   }
   
   .col-2 h1 {
-    font-size: 50px;
+    font-size: 40px;
     line-height: 60px;
     margin: 25px 0;
   }
@@ -661,10 +661,11 @@ select{
     display: inline-block;
     background: #ff523b;
     color: #ffffff;
-    padding: 8px 30px;
+    padding: 8px 10px;
     margin: 30px 30%;
     border-radius: 30px;
     transition: background 0.5s;
+    font-weight: bold;
   }
   
   .explore-btn:hover {
