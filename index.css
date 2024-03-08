@@ -1138,6 +1138,8 @@ transform: scale(1.1);
     font-size: 20px;
     font-weight: bold;
     border: 1px orangered solid;
+    color: black;
+    background: none;
     margin: 0 10px;
     padding: 5px;
     width: 40px;
