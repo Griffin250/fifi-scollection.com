@@ -661,11 +661,13 @@ select{
     display: inline-block;
     background: #ff523b;
     color: #ffffff;
-    padding: 8px 10px;
+    padding: 8px 20px;
     margin: 30px 30%;
     border-radius: 30px;
+    width: 160px;
     transition: background 0.5s;
     font-weight: bold;
+    text-align: center;
   }
   
   .explore-btn:hover {
