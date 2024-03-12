@@ -1133,6 +1133,59 @@ transform: scale(1.1);
    height: 5px;
    width: 50px;
   }
+  /*.................................................Order status...............................................*/
+.order-status{
+    margin: 10%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .order-status form{
+    margin: 25px auto;
+  }
+  .order-status form div{
+    margin: 12px auto;
+  }
+  .order-status form div label{
+    font-weight: bold;
+    font-size: 18px;
+  }
+  .order-status form div input{
+    width: 400px;
+    height: 40px;
+    padding: 5px 12px;
+    border-radius: 2px;
+   outline: none;
+  }
+  .order-status form button{
+width: 400px;
+height: 50px;
+margin-left: 130px;
+background: black;
+color: white;
+font-weight: bold;
+border: none;
+border-radius: 2px;
+cursor: pointer;
+font-size: 20px;
+  }
+  .order-status form button:hover{
+    opacity: 0.6;
+    transition: 0.4s;
+  }
+  .order-status p{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    color: black;
+    margin: 16px auto;
+  }
+  .order-status a{
+    font-size: 20px;
+    color:rgb(39, 39, 246);
+    text-decoration: underline;
+  }
 /*..................................................Page buttons.........................,..........*/
 .column-2 .page-btns{
     margin-bottom: 5%; 
@@ -2883,6 +2936,11 @@ footer .logos p{
  footer .logos p span{
     display: none;
  }
+
+   /*.................................................Order status...............................................*/
+.order-status form button{
+  margin: auto;
+}
 
  /*.......................................login page...............................................*/
 .wrapper{
