@@ -2320,7 +2320,13 @@ font-weight: bold;
 font-size: 18px;
 text-decoration: none;
 }
-
+.Terms-and-Policies ol.question-list li a:hover{
+  color: orangered;
+}
+section.Terms-and-Policies ul li span{
+  font-weight: bold;
+  font-size: 20px;
+}
 /*..................................................ABOUT US..............................................*/
 /*.........................................................................................................*/
 section.about-us{
