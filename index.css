@@ -43,7 +43,7 @@ html{
 .nav-elements a.home::after{
         content: '';
         position: absolute;
-        background: linear-gradient(90deg,red, blue, orangered);
+        background:whitesmoke;
         background-clip: content-box;
         color: transparent;
         border-radius: 1px;
@@ -72,7 +72,7 @@ html{
 .nav-elements a.about::after{
     content: '';
     position: absolute;
-    background: linear-gradient(90deg, orangered, blue, brown);
+    background:whitesmoke;
     background-clip: content-box;
     color: transparent;
     border-radius: 1px;
@@ -1320,7 +1320,7 @@ width: 160px;
          }
          .login-form h1{
              text-align: center;
-             background: linear-gradient(90deg,blue, orangered);
+             background:white;
              background-clip: text;
              color: transparent;
              margin: 5px 0 20px;
@@ -1535,7 +1535,7 @@ width: 160px;
          .signup-form h1{
              text-align: center;
            margin: 5px 0 20px;
-           background: linear-gradient(90deg,blue, orangered);
+           background: white;
            background-clip: text;
            color: transparent;
          }
