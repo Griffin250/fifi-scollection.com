@@ -2291,8 +2291,8 @@ footer .first-row a{
     justify-content: space-evenly;
     margin-left: 30px;
     background: rgb(44, 42, 42);
-    width: 240px;
-    height: 80px;
+    width: 250px;
+    height: 60px;
     border-radius: 4px;
 }
 footer .first-row i{
@@ -2364,12 +2364,15 @@ footer .logos p{
     justify-content: left;
     text-align: left;
     margin:0 auto 16px;
+    font-size: 16px;
   }
   .footer-links h3{
-    color: whitesmoke;
+    color:orangered;
+    font-weight: bold;
     justify-content: left;
     text-align: left;
     margin:0 auto 16px;
+    font-size: 16px;
   }
   .footer-links h5{
     text-decoration: underline 5px orangered solid;  
@@ -2382,7 +2385,7 @@ footer .logos p{
   }
 .footer-column a{
     color: white;
-    font-size: 16px;
+    font-size: 14px;
     text-decoration: none;
     margin:2px;
    
@@ -2392,26 +2395,26 @@ footer .logos p{
     color: orangered;
 }
   .social-media .fa-brands{
-    font-size: 22px;
+    font-size: 18px;
     color: white;
     margin: 2%;
     cursor: pointer;
     border-radius: 50%;
     box-shadow: 1px 1px 2px 0px orange;
-    width: 38px;
-    height: 38px;
-    padding: 8px;
+    width: 30px;
+    height: 30px;
+    padding: 7px;
   }
   .social-media .fa-brands:hover{
    color: orangered;
    opacity: 0.5;
   }
   .payment-methods img{
-    height: 50px;
-    width: 60px;
+    height: 40px;
+    width: 50px;
     border-radius: 4px;
    margin: 2% 5%;
-cursor: context-menu;
+cursor: pointer;
   }
   .help-center a.account{
 color: orangered;
@@ -2457,60 +2460,60 @@ section.about-us{
     position: absolute;
     background:orangered;
     border-radius: 1px;
-    height: 5px;
-    width: 100px;
-    margin-top: 2%;
-    margin-left: -14%;
+    height: 3px;
+    width: 80px;
+    margin-top: 1.6%;
+    margin-left: -8%;
 }
 footer .footer-links h2.title-2::after{
     content: '';
     position: absolute;
     background:orangered;
     border-radius: 1px;
-    height: 5px;
-    width: 80px;
-    margin-top: 2%;
-    margin-left: -5.5%;
+    height: 3px;
+    width: 60px;
+    margin-top: 1.6%;
+    margin-left: -4%;
 }
 footer .footer-links h2.title-3::after{
     content: '';
     position: absolute;
     background:orangered;
     border-radius: 1px;
-    height: 5px;
-    width: 100px;
-    margin-top: 2%;
-    margin-left: -8%;
+    height: 3px;
+    width: 80px;
+    margin-top: 1.6%;
+    margin-left: -6%;
 }
 footer .footer-links h2.title-4::after{
     content: '';
     position: absolute;
     background:orangered;
     border-radius: 1px;
-    height: 5px;
-    width: 80px;
-    margin-top: 2%;
-    margin-left: -7%;
+    height: 3px;
+    width: 75px;
+    margin-top: 1.6%;
+    margin-left: -6%;
 }
 footer .footer-links h2.title-5::after{
     content: '';
     position: absolute;
     background:orangered;
     border-radius: 1px;
-    height: 5px;
-    width: 100px;
-    margin-top: 2%;
-    margin-left: -12%;
+    height: 3px;
+    width: 80px;
+    margin-top: 1.6%;
+    margin-left: -9%;
 }
 footer .footer-links h2.title-6::after{
     content: '';
     position: absolute;
     background:orangered;
     border-radius: 1px;
-    height: 5px;
-    width: 100px;
-    margin-top: 2%;
-    margin-left: -7%;
+    height: 3px;
+    width: 80px;
+    margin-top: 1.6%;
+    margin-left: -6%;
 }
   /*.........................................last row.................................*/
   footer .last-row{
