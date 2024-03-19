@@ -463,10 +463,11 @@ select{
   .col-2 img {
     max-width: 100%;
     padding: 50px 0;
+    filter: drop-shadow(10px 5px grey);
   }
   
   .col-2 h1 {
-    font-size: 50px;
+    font-size: 60px;
     line-height: 60px;
     margin: 25px 0;
   }
@@ -674,6 +675,7 @@ select{
     background: #563434;
   }
 
+
   /*..........................................................................................................*/
 
   .categories {
@@ -781,10 +783,126 @@ select{
   }
 
 
+/*.......................................Nike collections....................................................*/
+.nike-page .nike-collection{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 12%;
+}
 
-  
+.nike-page .nike-collection .nike-header h1{
+  font-size: 100px;
+  line-height: 70px;
+  font-family: pyxidium quick;
+  background: linear-gradient(to right, #c72092,#6c14d0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  top: 45px;
+  left: 5%;
+}
+
+.nike-page .nike-collection .nike-header h1 span{
+  font-size: 80px;
+  background: linear-gradient(to right, #c72092,#6c14d0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+}
+
+.nike-page .nike-collection p{
+  width: 600px;
+  text-align: justify;
+  line-height: 21px;
+  position: relative;
+  top: 85px;
+  left: 5%;
+}
+
+.nike-page .nike-collection .main_image img{
+  background-image: url(Images/Nike-page/BackgroundImage-removebg-preview.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 600px;
+  position: relative;
+  left: 10px;
+  top: 75px;
+  opacity: 0.6;
+}
+.nike-page .nike-collection .main_image img:hover{
+  opacity: 1;
+  transition: 0.4s;
+}
+.nike-page .social_icon{
+  position: absolute;
+  top: 80%;
+  left: 98%;
+  transform: translate(-50%,-50%);
+  font-size: 20px;
+}
+
+.nike-page .social_icon i{
+  margin: 8px 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.nike-page .social_icon i:hover{
+  color: #c72092;
+}
+
+.nike-page .button{
+  margin:2% 20% 5%;
+  width: 160px;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 30px;
+  background: linear-gradient(to right,#c72092 , #6c14d0);
+}
+.nike-page .button a{
+  color: white;
+  text-decoration: none;
+}
+
+.nike-page .button i{
+  color: white;
+  margin-left: 5px;
+  transition: 0.3s;
+}
+.nike-page .button:hover{
+  transform: translateX(6px);
+  opacity: 0.6;
+  transition: 0.4s;
+}
+
+.nike-page .button:hover i{
+  transform: translateX(6px);
+  opacity: 0.6;
+  transition: 0.4s;
+}
+/*....................................................Deals page-............................................*/
+.deals-page{
+  background: orangered;
+  width: 98%;
+ padding: 5%;
+ opacity: 0.7;
+ cursor: pointer;
+ margin: auto;
+}
+.deals-page:hover{
+  opacity: 1;
+  transition: 0.4s;
+}
+.deals-page h1{
+  font-size: 120px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  color: white;
+}
   /*..........................................................................................................*/
-/*........................................Miain/body..........................................................*/
+/*........................................Miain page..........................................................*/
 hr.breakline{
     margin-top: 4%;
     height: 4px;
@@ -2789,7 +2907,43 @@ margin-bottom: 5px;
       margin-left: -1px;
         font-size: 18px;
     }
-
+/*.................................................Nike collections //Deals Page............................................*/
+    .deals-page{
+      background: orangered;
+      width: 98%;
+    }
+    .deals-page h1{
+      font-size: 36px;
+      line-height: 100px;
+    }
+  
+    .nike-page .nike-collection{
+      overflow-x: scroll;
+    }
+    .nike-page .nike-collection .nike-header h1{
+      font-size: 60px;
+      top: 0;
+    }
+    .nike-page .nike-collection .nike-header h1 span{
+      font-size: 40px;
+      margin-left: 10px;
+    }
+    .nike-page .nike-collection p{
+      text-align: center;
+      line-height: 12px;
+      top: 8px;
+      float:calc(-50%);
+    }
+    .nike-page .nike-collection .main_image img{
+      background-image: url(Images/Nike-page/BackgroundImage-removebg-preview.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 250px;
+      position: relative;
+      left: -10%;
+      top: 50px;
+      opacity: 0.6;
+    }
        /*...............................................Media querries for product cards...........................*/
        .card{
         width: 280px;
