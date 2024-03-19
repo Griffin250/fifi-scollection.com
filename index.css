@@ -2910,11 +2910,11 @@ margin-bottom: 5px;
 /*.................................................Nike collections //Deals Page............................................*/
     .deals-page{
       background: orangered;
-      width: 98%;
+      width: 100%;
+      padding: 50px 0;
     }
     .deals-page h1{
       font-size: 36px;
-      line-height: 100px;
     }
   
     .nike-page .nike-collection{
