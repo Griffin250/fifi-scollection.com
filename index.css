@@ -1185,11 +1185,11 @@ transform: scale(1.1);
 }
 .card p.price span{
     background: none;
-    text-decoration: line-through 3px orangered;
+    text-decoration: line-through 2px orangered;
 }
 .card p.discounts{
     color: orangered;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
 }
 /*.................................................................................*/
