@@ -1132,7 +1132,9 @@ margin-left: 10px;
     border: 1px white solid;
     background: radial-gradient(#ffdede, #fff);
   }
-
+.card h2{
+  font-size: 18px;
+}
   .card:hover{
     border: 1px black solid;
     transition: 0.5s;
@@ -1177,9 +1179,9 @@ transform: scale(1.1);
 /*.................................................................................*/
 
 .card p.price{
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
-    color: rgb(106, 106, 106);
+    color: rgb(111, 108, 108);
 }
 .card p.price span{
     background: none;
