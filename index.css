@@ -1856,6 +1856,9 @@ background: rgb(227, 224, 224);
 .product-image #image2, #image3, #image4, #image5, #image6, #image7, #image8{
   display:none;
 }
+.product-image .image2, .image3, .image4, .image5, .image6, .image7, .image8{
+display: none;
+}
 
 .product-column .product-image img.new-balance{
     margin: 8% 4%;
@@ -3702,6 +3705,12 @@ display: none;
 /*.................................................................Other pages.........................*/
 .product-column{
     display: contents;
+}
+.product-image #image2, #image3, #image4, #image5, #image6, #image7, #image8{
+  display:none;
+}
+.product-image .image2, .image3, .image4, .image5, .image6, .image7, .image8{
+display: none;
 }
 .product-column .product-image img{
     width: 240px;
