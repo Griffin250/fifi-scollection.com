@@ -83,3 +83,11 @@ password2. type = checkbox2.checked ? "text" : "password";
   Main.style.display = "block";
   siteInfo.style.display = "block";
  }
+
+
+   /*...............................Product image displays ON/OFF........................................*/
+function displayImage(imageNumber) {
+  var largeImage = document.getElementById("image1");
+  var smallImage = document.getElementById("image" + imageNumber);
+  largeImage.src = smallImage.src; // Update large image source
+}
