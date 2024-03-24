@@ -1161,6 +1161,11 @@ margin-left: 10px;
   width: 150px;
   height: 180px;
 }
+.item10 img{
+  width: 120px;
+  margin-top: -6%;
+  height: 180px;
+}
 /*...........................................................................*/
 .card .small-imgs a{
     text-decoration: none;
@@ -1859,17 +1864,17 @@ background: rgb(227, 224, 224);
 .product-column .product-image img{
     width: 700px;
     height: 600px;
-   margin: 0 10%;
+   margin: 2% 10%;
 }
 .product-column .product-3 img{
   width: 100%;
   height: auto;
  margin: 0 10%;
 }
-.product-image #image2, #image3, #image4, #image5, #image6, #image7, #image8{
+.product-image #image2, #image3, #image4, #image5, #image6, #image7, #image8, #image9, #image10{
   display:none;
 }
-.product-image .image2, .image3, .image4, .image5, .image6, .image7, .image8{
+.product-image .image2, .image3, .image4, .image5, .image6, .image7, .image8.image9, .image10{
 display: none;
 }
 
@@ -1900,6 +1905,9 @@ display: none;
    box-shadow: 1px 1px 4px black;
    background: whitesmoke;
     margin: 2%;
+    height: 650px;
+    width: 150px;
+    overflow: scroll;
 }
 .product-column .clothes{
     margin-left: 15%;
@@ -3737,9 +3745,17 @@ display: none;
     margin: 5%;
 }
 .product-column .small-images{
-    width: 80%;
+    width: 70%;
     margin: auto;
+    height: 360px;
+    overflow: auto;
 }
+.item10 img{
+  width: 100px;
+  margin-top: -16%;
+  height: 150px;
+}
+
 .product-column .product-description{
     width: 90%;
     margin: 4% auto;
