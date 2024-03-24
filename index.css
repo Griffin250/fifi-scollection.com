@@ -1161,9 +1161,10 @@ margin-left: 10px;
   width: 150px;
   height: 180px;
 }
-.canvas img{
-  width: 100px;
+.item12 img{
+  width: 160px;
   height: 200px;
+  margin-top: -8%;
 }
 .item10 img{
   width: 120px;
@@ -3758,6 +3759,12 @@ display: none;
   width: 100px;
   margin-top: -16%;
   height: 150px;
+}
+.item12 img{
+  width: 150px;
+  height: 220px;
+  margin-top: -12%;
+  margin-bottom: -15%;
 }
 
 .product-column .product-description{
