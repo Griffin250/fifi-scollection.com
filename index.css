@@ -1157,6 +1157,10 @@ margin-left: 10px;
     float: left;
     display: flex;
 }
+.item3 img{
+  width: 150px;
+  height: 180px;
+}
 /*...........................................................................*/
 .card .small-imgs a{
     text-decoration: none;
@@ -1167,6 +1171,10 @@ margin-left: 10px;
     margin: 2px;
     padding: 2px;
     cursor: pointer;
+}
+.card .item3 .small-imgs img{
+  height: 64px;
+  width: 50px;
 }
 .card .small-imgs img:hover{
 border: 1px solid grey;
@@ -1852,6 +1860,11 @@ background: rgb(227, 224, 224);
     width: 700px;
     height: 600px;
    margin: 0 10%;
+}
+.product-column .product-3 img{
+  width: 100%;
+  height: auto;
+ margin: 0 10%;
 }
 .product-image #image2, #image3, #image4, #image5, #image6, #image7, #image8{
   display:none;
