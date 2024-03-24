@@ -1161,6 +1161,10 @@ margin-left: 10px;
   width: 150px;
   height: 180px;
 }
+.canvas img{
+  width: 100px;
+  height: 200px;
+}
 .item10 img{
   width: 120px;
   margin-top: -6%;
