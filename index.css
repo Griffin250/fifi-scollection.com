@@ -1910,7 +1910,7 @@ display: none;
    box-shadow: 1px 1px 4px black;
    background: whitesmoke;
     margin: 2%;
-    height: 650px;
+    max-height: 500px;
     width: 150px;
     overflow: scroll;
 }
