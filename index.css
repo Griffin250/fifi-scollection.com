@@ -10,7 +10,7 @@ html{
     scroll-behavior: smooth;
 }
 .navbar{
-    background: black;
+    background:#1a1a1a;
     height: 100px;
     width: 100%;
     margin-bottom:3.2% ;
@@ -31,8 +31,9 @@ html{
 .nav-elements a img{
     height: 100px;
     width: 300px;
-    mix-blend-mode: screen;
+    mix-blend-mode:screen;
 }
+
 .nav-elements a{
     text-decoration: none;
     color: white;
@@ -162,7 +163,7 @@ html{
 
 .nav-links{
     margin-top: -7px;
-    background:black;
+    background:#1a1a1a;
     width: 100%;
     height: 60px;
 }
@@ -2823,7 +2824,7 @@ margin: auto;
 
 /*...................................................Footer section-.................................................*/
 footer.main-footer{
-    background: rgb(3, 1, 17);
+    background: #1a1a1a;
     height: auto;
     width: 100%;
     margin: 2% 0 0;
