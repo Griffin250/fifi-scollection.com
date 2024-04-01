@@ -1531,7 +1531,7 @@ width: 160px;
  }
     /*.......................................................Login section............................*/
     .wrapper{
-        background: rgb(1, 1, 18);
+        background:#1a1a1a;
          width: 400px;
         height: 450px;
          overflow-y: hidden;
@@ -1730,29 +1730,30 @@ width: 160px;
              margin: 10px;
              font-size: 20px;
          }
-         .twitter{
-         border: none;
-         border-radius: 5px;
-        box-shadow: 1px 1px 2px brown;
-         width: 88%;
-         height: 30px;
-         cursor: pointer;
-         font-size: 17px;
-         background: none;
-         color: white;
-         text-decoration: none;
-         display: flex;
-         text-align: center;
-         justify-content: center;
-         align-items: center;
-         animation: mymove 5s infinite;
-         }
-        
-         .twitter .fa-brands{
-             margin: 10px;
-             font-size: 20px;
-         }
-         .twitter:hover{
+    
+         .google{
+          border: none;
+          border-radius: 5px;
+         box-shadow: 1px 1px 2px brown;
+          width: 88%;
+          height: 30px;
+          cursor: pointer;
+          font-size: 17px;
+          background: none;
+          color: white;
+          text-decoration: none;
+          display: flex;
+          text-align: center;
+          justify-content: center;
+          align-items: center;
+          animation: mymove 5s infinite;
+          }
+        a.google img{
+          height: 24px;
+          margin-right: 8px;
+        }
+  
+         .google:hover{
              box-shadow: -1px 1px 2px brown;
              transition: 0.2s;
              opacity: 0.4;
