@@ -2875,6 +2875,7 @@ footer .logos img{
     width: auto;
     display: flex;
     float: left;
+    mix-blend-mode: screen;
 }
 footer .logos p{
     color: white;
