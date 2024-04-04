@@ -121,7 +121,7 @@
     </div>
     <div class="cart-btns">
         <button class="close" id="closeButton" onclick="closeCart()">CLOSE</button>
-        <button class="checkout" id="checkoutButton"> CHECKOUT</button>
+        <button class="checkout" id="checkoutButton" onclick="checkout()"> CHECKOUT</button>
     </div>
 </div>
 
@@ -138,8 +138,8 @@
     <div class="login-form" id="loginForm"> 
          <h1>Login</h1>
     <form action="index.html" method="get" id="login">
-        <div class="inputbox"> 
-            <input type="text/email" name="name / Email" id="name" placeholder="Username / Email" required  pattern="Admin">  <i class="fa-solid fa-user"></i>
+    <div class="inputbox"> 
+    <input type="text/email" name="name / Email" id="userName" placeholder="Username / Email" required  pattern="Admin">  <i class="fa-solid fa-user"></i>
     </div><br>
     
     <div class="inputbox">
@@ -154,7 +154,7 @@
     <div>
     <div class="buttons"> 
             <span id="createAccount" class="create-account" onclick="opensignupForm()">  CREATE ACCOUNT </span>
-            <a href=""><button class="login" type="submit"> LOGIN</button></a> 
+            <a href=""><button class="login" type="submit" id="loginButton"> LOGIN</button></a> 
     </div>         
     </div>  <br>  
     <h4> &UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;Or
@@ -274,6 +274,7 @@
     </footer>
     <!-----------------------------------------Javascript----------------------------------------------------->
         <script src="index.js"> </script>
+        <script src="script.js" type="module"> </script>
     </body>
     </html>
     

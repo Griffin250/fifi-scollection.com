@@ -91,3 +91,10 @@ function displayImage(imageNumber) {
   var smallImage = document.getElementById("image" + imageNumber);
   largeImage.src = smallImage.src; // Update large image source
 }
+
+
+//...................checkout proccess.....................................................................
+function checkout(){
+  alert("Checkout process will be implemented Here!");
+  shoppingCart.style.display = "none"
+}
