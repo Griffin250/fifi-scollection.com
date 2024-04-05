@@ -39,7 +39,7 @@
         <a href="index.html"> <img class="website-logo" src="Images/Fifi's-Collection.jpg"> </a>
         
     <div class="shoppingcart" title="Your Cart" id="Cart" onclick="openCart()">
-            <i class="fa-solid fa-cart-shopping" title="Your Cart"></i>  
+            <i class="fa-solid fa-cart-shopping non-empty" title="Your Cart"></i>  
     </div> 
 
     <form action=""> 
@@ -75,7 +75,7 @@
     <!-------------------------------------------------------------------Shopping cart----------------------------->
     <div class="icons">
     <div class="cart" title="Your Cart" id="Cart" onclick="openCart()">
-        <i class="fa-solid fa-cart-shopping" title="Your Cart"> <span> 0 </span></i>  
+        <i class="fa-solid fa-cart-shopping non-empty" title="Your Cart"></i>  
     </div> 
     <div class="favourites">
         <i class="fa-regular fa-heart" title="Favourites"></i>
@@ -87,17 +87,20 @@
 <div class="account-link"> 
     <hr>
     <i class="fa-solid fa-x" id="closeButton" onclick="closeMenu()" title="Close Menu"></i>
-     <a href="Account.html"><i class="fa-regular fa-user"></i> 
-    <span>Login </span>  or  <span>  Create Account</span> </span></a></p>
+    <div id="accountLink"> <a href="#loginForm"> <span>Login </span>  or  <span>  Create Account</span> </a></div>
+   
+    <div id="message"> 
+        <h2> <i class="fa-regular fa-user"></i> Hi, <span id="userName"></span> <br> </h2>
+     </div>
 </div>
     <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="Aboutus.html">About</a></li>
         <li><a href="#Contact">Contact</a></li>
-        <li><a href="#" class="logout">Logout <i class="fa-solid fa-right-from-bracket"></i></a></li>
+        <button class="logout" id="signOutButton">Logout <i class="fa-solid fa-right-from-bracket"></i></button>
         <hr>
         <h2>Shop by Category</h2>
-            <li><a href="" class="link1 link"> Sale</a> </li>
+            <li><a href="Sale.html" class="link1 link"> Sale</a> </li>
             <hr>
             <li><a href="" class="link2 link"> Men</a> </li>
             <hr>
@@ -132,6 +135,7 @@
 <img src="Images/Nike dunk low blue-black.webp" alt="" class="bkg-image3">
 <img src="Images/Air_4_jordan_colored.png" alt="" class="bkg-image4">
 </div>
+
 <!--------------------------------------------------Login form and Signup form------------------------------------------------>
 
 <div class="wrapper">
@@ -159,8 +163,8 @@
     </div>  <br>  
     <h4> &UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;Or
         &UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;</h4><br>
-    <a class="facebook" href="https://www.facebook.com" title="Facebook"> <i class="fa-brands fa-facebook" style="color: #0659ea;"></i> Log in with Facebook</a>
-    <a class="google" href="" title="Google" id="Google"> <img src="Images/Google_.png">  Log in with Google </a>
+    <button class="facebook" title="Facebook" type="button"> <i class="fa-brands fa-facebook"></i> Log in with Facebook </button>
+    <button class="google" title="Google" id="signInButton" type="button"> <img src="Images/Google_.png">  Log in with Google </button>
     </form></div>
     
     <!-------------------------------------------signup form---------------------------------->
@@ -274,7 +278,77 @@
     </footer>
     <!-----------------------------------------Javascript----------------------------------------------------->
         <script src="index.js"> </script>
-        <script src="script.js" type="module"> </script>
+       <script type="module">
+    // Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
+
+import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged } 
+from "https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js";
+
+// Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyA_eoEmY61zizbmj_A2pI1ooA1Q25V8GBI",
+    authDomain: "auth-af925.firebaseapp.com",
+    databaseURL: "https://auth-af925-default-rtdb.firebaseio.com",
+    projectId: "auth-af925",
+    storageBucket: "auth-af925.appspot.com",
+    messagingSenderId: "361329399575",
+    appId: "1:361329399575:web:4c1c8ac95a0573380cc952"
+  };
+
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth();
+const provider = new GoogleAuthProvider()
+
+const signInButton = document.getElementById("signInButton");
+const signOutButton = document.getElementById("signOutButton");
+const accountLink = document.getElementById("accountLink");
+const message = document.getElementById("message");
+const userName = document.getElementById("userName");
+const userEmail = document.getElementById("userEmail");
+
+signOutButton.style.display = "none";
+message.style.display = "none";
+accountLink.style.display = "block";
+
+const userSignIn = async() => {
+  signInWithPopup(auth, provider)
+  .then((result) => {
+      const user = result.user
+      console.log(user);
+  }).catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message
+  })
+}
+
+const userSignOut = async() => {
+  signOut(auth).then(() => {
+      alert("You have signed out successfully!");
+  }).catch((error) => {})
+}
+
+onAuthStateChanged(auth, (user) => {
+  if(user) {
+    signOutButton.style.display = "block";
+    signInButton.style.display = "none";
+    accountLink.style.display = "none";
+    message.style.display = "block";
+    userName.innerHTML = user.displayName;
+    userEmail.innerHTML = user.email
+  } else {
+    signOutButton.style.display = "none";
+    message.style.display = "none";
+    accountLink.style.display = "block";
+    signInButton.style.display = "block";
+  }
+})
+
+signInButton.addEventListener('click', userSignIn);
+signOutButton.addEventListener('click', userSignOut);
+
+       </script>
     </body>
     </html>
     

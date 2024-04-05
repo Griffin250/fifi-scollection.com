@@ -1,5 +1,4 @@
 
-
 /*................................................................Details section...................*/
 
 var Size = document.getElementById("SizePage");

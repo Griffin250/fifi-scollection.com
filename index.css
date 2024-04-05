@@ -319,9 +319,9 @@ select{
     cursor: pointer;
     border-radius: 4px;
 }
-.shopping-cart .cart-btns button:hover{
-    opacity: 0.6;
-    transition: 0.4s;
+.shopping-cart .cart-btns button.checkout:hover{
+    opacity: 0.8;
+    transition: 0.4s ease;
 }
 .shopping-cart .cart-btns button.close{
     background: radial-gradient(#fff, #ffd6d6);
@@ -334,6 +334,14 @@ select{
 .shopping-cart .cart-list h2{
   text-align: center;
  padding: 30px;
+}
+.shopping-cart button.checkout .fa-chevron-right{
+  color: black;
+  margin: 0 10px;
+}
+.shopping-cart button.checkout .fa-chevron-right:hover{
+ transform: translateX(5px);
+ transition: 0.4s ease;
 }
 /*..................................................*/
 .total-price{
@@ -1147,7 +1155,58 @@ margin-left: 10px;
    overflow: hidden;
 }
 
-
+/*..................................................Cart page.........................*/
+main.cart-page .column-2{
+ margin: 0 8%;
+  justify-content: space-between;
+  }
+  main.cart-page .cart-headers{
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  main.cart-page .cart-headers h1{
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-left: 1.5rem;
+  }
+  main.cart-page .cart-headers span{
+    font-size: 2rem;
+    margin-right: 1.5rem;
+  }
+  main.cart-page .feautured-product-title h1{
+    text-align: center;
+  }
+  
+  .cart-container{
+    display: flex;
+  }
+  .cart-container .cart-column{
+    flex: 1;
+    border: 1px solid grey;
+    width: 200px;
+    margin: 2%;
+    padding: 12px;
+    height: auto;
+  }
+  .cart-container img{
+   width: 250px; 
+  }
+  .cart-container .item-column{
+    display: flex;
+  }
+  .cart-container .item-column .item-row{
+    flex: 1;
+    text-align: center;
+  }
+  .cart-container .item-column .item-row P{
+    justify-content: left;
+    align-items: left;
+    margin: auto;
+  }
+  .cart-container .product-image{
+    background: rgb(181, 178, 178);
+  }
 /*...............................Product card.................................*/
 .card{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -1733,7 +1792,15 @@ width: 160px;
             margin: 0 12%;
             font-size: 20px;
          }
-         a.facebook{
+
+
+
+
+
+         #message h2{
+          color: white;
+         }
+         button.facebook{
          border: none;
          border-radius: 5px;
          cursor: pointer;
@@ -1743,6 +1810,7 @@ width: 160px;
          height: 30px;
          margin-bottom: 8px;
          color: white;
+        
          box-shadow: -1px 1px 2px brown;
          display: flex;
          text-align: center;
@@ -1750,8 +1818,10 @@ width: 160px;
          align-items: center;
          text-decoration: none;
          }
-       
-         a.facebook:hover{
+       button.facebook i{
+        color: #0659ea;
+       }
+         button.facebook:hover{
              box-shadow: 1px 1px 2px brown;
          transition: 0.2s;
          opacity: 0.5;
@@ -1761,7 +1831,7 @@ width: 160px;
              font-size: 20px;
          }
     
-         .google{
+        button.google{
           border: none;
           border-radius: 5px;
          box-shadow: 1px 1px 2px brown;
@@ -1778,7 +1848,7 @@ width: 160px;
           align-items: center;
           animation: mymove 5s infinite;
           }
-        a.google img{
+        button.google img{
           height: 24px;
           margin-right: 8px;
         }
@@ -3405,6 +3475,7 @@ margin-bottom: 5px;
 }
 .menu-links .account-link{
     background: black;
+    color: white;
     width: 100%;
     height: 7vh;
     margin: auto;
@@ -3462,9 +3533,11 @@ margin-bottom: 5px;
 .menu-links ul li a.link{
     font-size: 20px;
 }
-.menu-links ul li a.logout{
+.menu-links ul button.logout{
     font-weight: bold;
-    font-size: 28px;
+    font-size: 20px;
+    padding: 2px 8px;
+    margin: 0 12px;
 }
 .menu-links button.close-menu{
     color: white;
