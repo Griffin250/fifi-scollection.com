@@ -11,20 +11,212 @@
 
 
 <style> 
-    body{
-        background:radial-gradient(#fff, #ffd6d6);
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+	*{
+		margin: 0;
+		padding: 0;
+		color: #454545;
+	}
+	h1{
+		width: 3%;
+	    position: relative;
+        margin: auto;
+	    cursor: pointer;
+	}
+    h1 i.fa{
+        font-size: 36px;
+        justify-content: center;
+        margin: 0 -40px;
     }
-    .bkg-images img{
-        width: 300px;
-        height: 200px;
-        position:absolute;
-    }
-    .bkg-images{
-        display: flex;
-        margin: 12% 0;
-        margin-left: 40%;
-        position:relative;
-    }
+	h1:before{
+		content: attr(data-count);
+	    color: white;
+	    position: absolute;
+        left: 5px;
+        top: -36px;
+	    font-size: 15px;
+	    text-align: center;
+	    top: 12px;
+        justify-content: center;
+	    width: 20px;
+	    background: red;
+	    border-radius: 50%;
+	    opacity: 0;
+	}
+	h1.zero:before{
+		opacity: 1;
+	}
+		section{
+			margin: 100px auto;
+			width: 90%;
+			height: 400px;
+			display: flex;
+			justify-content: space-around;
+		}
+		section div{
+			width: 22%;
+			height: 93%;
+			background:#f5f5f5;
+			padding: 1%;
+			position: relative;
+		}
+		img{
+			width: 150px;
+			height: 186px;
+		}
+
+		p{
+			margin: 5px;
+		}
+		h6{
+		    width: 50px;
+		    padding: 5px;
+		    margin: 10px;
+            color: black;
+		    font-size: 15px;
+		}
+		button{
+			padding: 5px;
+		    background: red;
+		    border: none;
+		    outline: none;
+		    font-weight: bold;
+		    color: #fafafa;
+		    cursor: pointer;
+		}
+		section div span{
+			position: absolute;
+		    top: 14px;
+		    left: 13px;
+		    background: red;
+		    width: 300px;
+		    height: 186px;
+		    display: none;
+		}
+		section div span img{
+			width: 100%;
+			height: 100%;
+		}
+		section div:nth-child(1)>span.active{
+			animation: first 0.5s ease-in;
+			z-index: 2;
+			display: block;
+
+		}
+		section div:nth-child(2)>span.active{
+			animation: second 0.5s ease-in;
+			z-index: 2;
+			display: block;
+
+		}
+		section div:nth-child(3)>span.active{
+			animation: third 0.5s ease-in;
+			z-index: 2;
+			display: block;
+
+		}
+		section div:nth-child(4)>span.active{
+			animation: four 0.5s ease-in;
+			z-index: 2;
+			display: block;
+
+		}
+		@keyframes first{
+			to{
+				width: 30px;
+			    height: 20px;
+			    left: 1290px;
+			    top: -70px;
+			}
+		}
+		@keyframes second{
+			to{
+				width: 30px;
+			    height: 20px;
+			    left: 948px;
+			    top: -70px;
+			}
+		}
+		@keyframes third{
+			to{
+				width: 30px;
+			    height: 20px;
+			    left: 606px;
+			    top: -70px;
+			}
+		}
+		@keyframes four{
+			to{
+				width: 30px;
+			    height: 20px;
+			    left: 265px;
+			    top: -70px;
+			}
+		}
+
+
+		
+		.select{
+			width: 60%;
+			height: 600px;
+			padding: 4%;
+			background: #222;
+			position: absolute;
+			top: -1000px;
+			right: 5%;
+			transition: 0.5s ease;
+			overflow-y: auto;
+			margin: auto;
+            border-radius: 4px;
+		}
+		.select.display{
+			top: 0px;
+		}
+		.select div{
+			width: 100%;
+			height: 200px;
+			display: flex;
+			padding: 5px;
+			border: 1px solid white;
+			position: relative;
+			margin: 5px auto;
+            display:flex;
+		}
+		.select div img{
+			width: 300px;
+			height: 100%;
+		}
+		.select div p{
+			padding: 35px;
+			color:black;
+            display: flex;
+		}
+		.select div h6{
+			position: absolute;
+			color: black;
+		}
+		.select div button{
+			left: 60%;
+			top: 55%;
+		}
+		.select div span{
+			display: none;
+		}
+        .item{
+            display: grid;
+            width: 200px;
+        }
+
+        .cart{
+            height: 50px;
+            width: 6%;
+        }
+        button.close{
+            margin-bottom:8%;
+            float: right;
+            padding: 10px;
+            border-radius: 4px;
+        }
     </style>
 
 <body>
@@ -70,11 +262,11 @@
     <a href="" class="link4"> T-SHIRTS</a>
     <a href="" class="link5"> NEW-IN</a>
     <a href="" class="link6"> BRANDS</a>
-
+   
     <!-------------------------------------------------------------------Shopping cart----------------------------->
-    <div class="icons">
-    <div class="cart" title="Your Cart" id="Cart" onclick="openCart()">
-        <i class="fa-solid fa-cart-shopping non-empty" title="Your Cart"></i>  
+    <div class="icons cart-page">
+    <div class="cart" title="Your Cart" id="Cart" onclick="">
+        <h1><i class=" fa fa-shopping-cart"></i></h1> 
     </div> 
     <div class="favourites">
         <i class="fa-regular fa-heart" title="Favourites"></i>
@@ -127,78 +319,45 @@
     </div>
 </div>
 
-<section>
-<div class="bkg-images"> 
-<img src="Images/Vans Old skool.png" alt="" class="bkg-image1">
-<img src="Images/NB White-Green.png" alt="" class="bkg-image2">
-<img src="Images/Nike dunk low blue-black.webp" alt="" class="bkg-image3">
-<img src="Images/Air_4_jordan_colored.png" alt="" class="bkg-image4">
-</div>
+<section> 
 
-<!--------------------------------------------------Login form and Signup form------------------------------------------------>
+    <div class="item card">
+        <img src="Images/Air-Jordan-1-Retro-high-1.png">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, quo, modi ea voluptas tempora vero cumque incidunt eum animi</p>
+        <h6>$345.89</h6>
+        <span></span>
+        <button title="<h1>Class</h1>">Add-cart</button>
+        </div>
+        <div class="item card">
+            <img src="Images/Vans Old skool.png">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, quo, modi ea voluptas tempora vero cumque incidunt eum animi</p>
+            <h6>$345.89</h6>
+            <span></span>
+            <button title="<h1>Class</h1>">Add-cart</button>
+            </div>
 
-<div class="wrapper">
-    <div class="login-form" id="loginForm"> 
-         <h1>Login</h1>
-    <form action="index.html" method="get" id="login">
-    <div class="inputbox"> 
-    <input type="text/email" name="name / Email" id="userName" placeholder="Username / Email" required  pattern="Admin">  <i class="fa-solid fa-user"></i>
-    </div><br>
-    
-    <div class="inputbox">
-       <input type="password" name="password" id="password" placeholder="Password" required minlength="5" pattern="Admin12" title="Letters, Numbers and signs are all allowed">  <i class="fa-solid fa-lock"></i> <br>
-        <input type="checkbox" id="checkbox"> 
-        <label for="checkbox"> <b class="b"> Show Pasword </b></label>
-    </div><br>
-    <div class="remember-me">
-    
-    <a class="Link" href="Reset_form.html"> Forgot Password / Username?</a>
-    </div><br>
-    <div>
-    <div class="buttons"> 
-            <span id="createAccount" class="create-account" onclick="opensignupForm()">  CREATE ACCOUNT </span>
-            <a href=""><button class="login" type="submit" id="loginButton"> LOGIN</button></a> 
-    </div>         
-    </div>  <br>  
-    <h4> &UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;Or
-        &UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;</h4><br>
-    <button class="facebook" title="Facebook" type="button"> <i class="fa-brands fa-facebook"></i> Log in with Facebook </button>
-    <button class="google" title="Google" id="signInButton" type="button"> <img src="Images/Google_.png">  Log in with Google </button>
-    </form></div>
-    
-    <!-------------------------------------------signup form---------------------------------->
-   <div class="signup-form" id="signupForm">
-    <h1>Register</h1>
-    <form action="Account.html"> 
-    <div class="inputbox">
-        <input type="text" name="name" id="name" placeholder="Full Name" required>
-        <span>Name required *</span>
-    </div>
-    <div class="inputbox"> 
-        <input type="text" name="Username" id="Username" placeholder="Username" required title="Letters and Numbers are Required*"> 
-        <span> Invalid Username *</span>
-    </div>
-    <div class="inputbox"> 
-        <input type="email" name="email" id="email" placeholder="E-mail" required > 
-        <span>Invalid Email*</span>
-    </div>
-    <div class="inputbox">
-        <input type="password" name="password" id="password2" placeholder="Password" required minlength="5">  
-        <span>Check Password Length*</span><br>
-        <input type="checkbox" id="checkbox2"> 
-        <label for="checkbox" id="checkbox"> <span> Show Pasword </span></label>
-    </div><br>
-    <button type="submit" class="create-account">Create Account</button>
-    <div class="privacy-terms">
-      <label> <p> By registering , you agree with our <a href="Privacy policy.html"> Privacy Policy</a></p></label>  
-    </div>
-  
-    <p> Already have an Account? <span class="login-btn" id="loginButton" onclick="showLoginForm()"> Login here </span> </p>
-</form>
-   </div>
-</div>
+        <div class="item card">
+			<img src="Images/Air-Jordan-1-Retro-high-3.png">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, quo, modi ea voluptas tempora vero cumque incidunt eum animi</p>
+			<h6>$345.89</h6>
+			<span></span>
+			<button>Add-cart</button>
+		</div>
+        
+        <div class="card item item3" > 
+                    <a href="product3.html"><img src="Images/Air-Nike-Red-1.png" alt="Nike-Air" title="Best sneaker"></a>
+                    <h2> Air Jordan - Retro </h2>
+                    <p class="price">$179.99</p>
+                    <span></span>
+                    <h4>Some text about Sneakers</h4>
+                    <button> <i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+            </div>
+            
 </section>
+<div class="select">
+    <button class="close" id="closeButton" onclick="closeCart()">CLOSE</button>
 
+</div>
 
 <!-----------------------------------------Footer section--------------------------------------------------->
 <footer class="main-footer" id="footer">
@@ -278,10 +437,9 @@
     <!-----------------------------------------Javascript----------------------------------------------------->
         <script src="index.js"> </script>
         <script src="script.js" type="module"> </script>
+        <script type="text/javascript" src="main.js"></script>
     </body>
     </html>
-    
-
 
 
 
