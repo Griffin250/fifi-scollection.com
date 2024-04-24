@@ -43,22 +43,28 @@
     </div> 
 
     <form action=""> 
-        <label for="search">
+        <label for="search" class="search-bar">
         <input type="search" name="search" id="search" placeholder="Search here...">
         <button type="submit"><i class="fa-solid fa-magnifying-glass"></i> </button>
     </label>
 </form>
         <a href="index.html" class="home navbar-link"> Home <br></a>
         <a href="#footer" class="about navbar-link"> About<br> </a>
-<!---------------------------------------------------
+<!--------------------------------------------------->
 <div class="user-profile">
     <div id="message" title="Your Profile"> 
-        <h2> Hi, <span id="userName"></span><i class="fa-solid fa-chevron-down"></i> <br> </h2>
+        <h2 onclick="displayProfileFeatures()"> Hi, <span class="display-userName"></span><i class="fa-solid fa-chevron-down" id="chevronDown"></i> <br> </h2>
     </div>
-    <div class="profile-features">
-        <button class="logout" id="signOutBtn">Logout <i class="fa-solid fa-right-from-bracket"></i></button>  
+    <div class="profile-features" id="profileFeatures">
+        <button class="closebutton" onclick="hideProfileFeatures()"><i class="fa-solid fa-x"></i></button>
+        <a href="#"><i class="fa-regular fa-user"></i> Profile </a><br>
+        <a href="#"> <i class="fa-solid fa-bag-shopping"></i> Orders </a><br>
+        <a href="#"><i class="fa-brands fa-bilibili"></i> Billing</a><br>
+        <a href="#"><i class="fa-solid fa-gear"></i>Settings </a>
+        <br><hr>
+        <button class="logout" id="signOutBtn"><i class="fa-solid fa-right-from-bracket"></i> Log out  </button>  
     </div> </div>
-    ...............................------------------------->
+    <!-------------------------------------------------->
     <a href="#" class="user">  
     <i class="fa-regular fa-user" title="Your Account" onclick="openPage()"></i> </a>
 </div>
@@ -88,14 +94,16 @@
     <i class="fa-solid fa-x" id="closeButton" onclick="closeMenu()" title="Close Menu"></i>
     <div id="accountLink"> <a href="#loginForm"><i class="fa-regular fa-user"></i> <span>Login </span>  or  <span>  Create Account</span> </a></div>
    
-    <div id="message"> 
-        <h2> <i class="fa-regular fa-user"></i> Hi, <span id="userName"></span> <br> </h2>
+<div id="message"> 
+        <h2> <i class="fa-regular fa-user"></i> Hi, <span class="display-userName"></span> <br> </h2>
      </div>
 </div>
     <ul class="small-device-menu-links">
         <li><a href="Home.html"> <i class="fa-solid fa-house"></i> Home</a></li>
         <li><a href="Aboutus.html"> <i class="fa-solid fa-circle-info"></i> About</a></li>
         <li><a href="#Contact"> <i class="fa-solid fa-phone"></i> Contact</a></li>
+        
+        <button class="logout" id="loginBtn"> <a class="loginBtn" href="#loginForm"><i class="fa-solid fa-right-from-bracket"></i> Log In </a> </button>
         <button class="logout" id="signOutButton"> <i class="fa-solid fa-right-from-bracket"></i> Logout </button>
         <hr>
         <h2>Shop by Category</h2>
@@ -217,7 +225,10 @@
 <a href=""> Terms & Conditions</a><br>
 <a href=""> Privacy Policy</a><br>
 <a href="">Transparency Act</a><br>
-<a href=""> Cookie Settings</a>
+<a href=""> Cookie Settings</a><br><br>
+<a href="">Membership Policy</a><br>
+<a href="">Privacy Policy</a><br>
+<a href="">Customer services</a><br><br>
     </div>
     <div class="footer-column">
 <h2 class="title-2">ABOUT</h2>
@@ -248,26 +259,26 @@
     <img src="Images/Mastercard-logo.svg.webp" alt="">
     <img src="Images/Paypal.jpeg" alt=""><br>
     <img src="Images/Vizacard.png" alt="">
-    <img src="Images/Google-pay.png">
-  
+    <img src="Images/Google-pay.png"> 
+</div> </div>
+
+<div class="footer-column">
+    <form class="newsletter-form"action="https://api.web3forms.com/submit" method="POST">
+        <span class="newsletter-title">Subscribe to our Newsletter.</span>
+        <p class="description"> 
+          Sign up for our Newsletter to receive exclusive deals and updates! <br>
+          Stay informed about the latest products, promotions, and discounts. Join us Now!</p>
+        <div>
+            <input type="hidden" name="access_key" value="d45e05cc-facb-4197-a915-93ed601a573e">
+          <input placeholder="Enter your email" type="email" name="email" id="email-address" required>
+          <button type="submit" >Subscribe</button>
+        </div>
+      </form> </div>
 </div>
-    </div>
-    <div class="footer-column">
-    <div class="help-center">
-        <h2 class="title-6">Help Center</h2>
-        <h5>&HilbertSpace;&HilbertSpace;&HilbertSpace;</h5>
-        <a href="">Membership Policy</a><br>
-        <a href="">Privacy Policy</a><br>
-        <a href="">Customer services</a><br><br>
-        <a href="Account.html" class="account">Login</a><br>
-        <a href="Account.html" class="account">Register</a><br>
-       
-    
-        </div></div>
-    </div>
     <div class="logos">
         <img src="Images/3D-Logo.jpg">
-        <p>© 2024 Fifi'scollection.com Inc. All Rights Reserved</p>
+        <p class="griffintechs">Developed by: Griffin Techs<span>&copy; </span></p>
+        <p>© 2024 Fifi'scollection.com</p>
     </div>
     <div class="last-row">
         <p>Prices subject to change without notice! Products shown may not be available in our stores!</p>

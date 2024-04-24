@@ -24,7 +24,21 @@ function openPage3(){
   ReviewPage.style.display = "block";
 }
 
-  
+// ......Function to show profile features
+var profileFeatures = document.getElementById("profileFeatures");
+var chevronDown = document.getElementById("chevronDown");
+function displayProfileFeatures() {
+  profileFeatures.style.display = "block";
+  chevronDown.style.rotate = "180deg";
+}
+// ......Function to hide profile features
+var profileFeatures = document.getElementById("profileFeatures");
+function hideProfileFeatures() {
+  profileFeatures.style.display = "none";
+  chevronDown.style.rotate = "360deg";
+}
+
+
   /*............................................Login / Create Account Forms ........................................*/
   let loginForm = document.getElementById("loginForm");
   let signupForm = document.getElementById("signupForm");
@@ -95,8 +109,31 @@ function displayImage(imageNumber) {
 //...................checkout proccess.....................................................................
 function checkout(){
   alert("Checkout process will be implemented Here!");
-  shoppingCart.style.display = "none"
+  shoppingCart.style.display = "none";
 }
+/*--..................checkout process with stripe gateway.................
+var stripe = stripe( //....stripe account required...!!!
+  "pk_test_51P8fyHRogxYobEmx9IGf1WxTmcxBrI5mFf2CDNo1Z65SHiYuqWxKiUFBtuCQHVE61cIbBY07iE8KNem736BYOx5Q00Oz3Ctpfr"
+);
+document.getElementById("checkoutButton").addEventListener("click", function(){
+  stripe.redirectToCheckout({
+    lineItems: [
+      {
+price: " https://buy.stripe.com/test_bIYaI325CbPXbtK4gg"
+      }
+    ]
+  })
+});....*/
+
+
+
+
+
+
+
+
+
+
 
    
 /*--------------------------------------------------------------------------------
@@ -174,6 +211,3 @@ function checkout(){
  signInButton.addEventListener('click', userSignIn);
  signOutButton.addEventListener('click', userSignOut);
  --------------*/
-
-
-

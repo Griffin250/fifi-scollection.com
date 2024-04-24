@@ -4,13 +4,16 @@
     padding: 0;
 }
 :root{
-  --after-content:'4';
+  --after-content:'0';
 }
 body{
     background:radial-gradient(#fff, #ffd6d6);
 }
 html{
     scroll-behavior: smooth;
+}
+.stripe-cards{
+width: 20px;
 }
 .navbar{
     background:#1a1a1a;
@@ -29,15 +32,15 @@ html{
     cursor: pointer;
 }
 .nav-elements a img{
-    height: 100px;
-    width: 300px;
+    height: 80px;
+    width: 200px;
     mix-blend-mode:screen;
 }
 
 .nav-elements a{
     text-decoration: none;
     color: white;
-    font-size: 30px;
+    font-size: 26px;
     font-weight: bold;
 }
 /*...............................Underline @home...............*/
@@ -50,8 +53,8 @@ html{
         border-radius: 1px;
         height: 5px;
         width: 0px;
-        margin-left: 10px;
-        top: 13.5%;
+        margin-left: 10.2px;
+        top: 10.5%;
         display: flex;
         transition: 0.5s;
         transition-duration: 0.2s;
@@ -67,7 +70,12 @@ html{
     }
 }
 .nav-elements a.home:hover::after{
-   width: 50px;
+   width: 45px;
+}
+.nav-elements .google-translate{
+ border: 1px solid;
+ width: 100px;
+ height: 30px;
 }
 /*.................................................underline @ About ..................*/
 .nav-elements a.about::after{
@@ -79,8 +87,8 @@ html{
     border-radius: 1px;
     height: 5px;
     width: 0px;
-    margin-left: 14px;
-    top: 13.5%;
+    margin-left: 15px;
+    top: 10.5%;
     display: flex;
     transition: 0.2s;
     transition-duration: 0.2s;
@@ -92,16 +100,44 @@ html{
     to{ width: 100%;}
 }
 .nav-elements a.about:hover::after{
-    width: 50px;
+    width: 45px;
+}
+/*.................................................underline @ user profile ..................*/
+.user-profile h2::after{
+  content: '';
+  position: absolute;
+  background:whitesmoke;
+  background-clip: content-box;
+  color: transparent;
+  border-radius: 1px;
+  height: 5px;
+  width: 0px;
+  bottom:-28%;
+  margin-left: 25px;
+  display: flex;
+  transition: 0.2s;
+  transition-duration: 0.2s;
+  animation: underline;
+  animation:infinite ease;
+}
+@keyframes underline{
+  from{ width: 0px;}
+  to{ width: 100%;}
+}
+.user-profile h2:hover::after{
+  width: 120px;
 }
 .nav-elements a:hover{
-    color: brown;
-   opacity: 0.8;
+   opacity: 0.4;
+   transition: 0.2s;
+}
+.user-profile h2 span:hover{
+  opacity: 0.6;
    transition: 0.2s;
 }
 
-.nav-elements input{
-    height:40px;
+.nav-elements form input{
+    height:36px;
     width: 380px;
     border: none;
     background: rgb(219, 203, 206);
@@ -110,7 +146,7 @@ html{
     padding: 10px;
     font-size: 16px;
 }
-.nav-elements input:hover{
+.nav-elements form input:hover{
     background: white;
     color: black;
 }
@@ -119,79 +155,146 @@ html{
     color: black;
     padding:8px ;
     font-size: 18px;
-
 }
-.nav-elements a.user{
-    margin-right: -2%;
+.nav-elements button{
+  height: 36.5px;
+  width: 39px;
+  background:black;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 2px;
+  margin-left: -10%;
+}
+.nav-elements button i.fa-magnifying-glass{
+  font-size: 18px;
+  color: white;
+  text-align: center;
 }
 .user-profile{
-  content: 'Your Profile';
-  font-size: 12px;
+  font-size: 13px;
   font-weight: bold;
-  border-radius: 2px;
-  border: none;
-  width: auto;
-  margin-right: -6%;
-  padding: 6px;
+  margin-right: -7.5%;
   text-align: center;
   position:relative;
 }
-.user-profile:hover{
-opacity: 0.6;
-transition: 0.4s;
+#chevronDown{
+  rotate: 0deg;
+  transition: 0.4s ease;
 }
 .user-profile h2 i{
-  margin-left: 5px;
+  margin-left:5px;
 }
 .profile-features{
-  display: contents;
+  position: absolute;
+  background:radial-gradient(#e3e2e2, #d0c4c4, rgb(149, 145, 145));
+  border-radius: 4px;
+  padding: 12px;
+  width: auto;
+  margin: 0px 25px;
+  font-size: 15px;
+}
+.profile-features:hover{
+  box-shadow: 1px 1px 5px rgb(46, 45, 45);
+  transition: 0.4s ease;
+}
+.profile-features:hover{
+  opacity: 1;
+  transition: 0.4s;
+}
+
+.profile-features button.closebutton{
+  float: right;
+  margin: -10%;
+  font-size: 10px;
+  font-weight: bold;
+  background: orangered;
+  opacity: 0.5;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 5px;
+  width: 20px;
+  height: 20px;
+}
+.profile-features button.closebutton:hover{
+  box-shadow: 1px 1px 5px black;
+  opacity: 1;
+  transition: 0.2s;
+}
+.profile-features button.closebutton i{
+  opacity: 0.4;
+}
+.profile-features button.closebutton i:hover{
+  opacity: 1;
+}
+
+.profile-features a{
+  font-weight: 400;
+  font-size: 18px;
+  color: rgb(45, 44, 44);
+  align-items: center;
+  text-align: center;
+justify-content:center;
+}
+.profile-features a:hover{
+  opacity: 1;
+  color: brown;
+}
+.profile-features a i.fa-user{
+  border: none;
+ background: none;
+ box-shadow: none;
+  color: grey;
+  font-size: 16px;
+}
+.profile-features a i.fa-user:hover{
+border: none;
+ background: none;
+ box-shadow: none;
+}
+.profile-features a i{
+ color: grey;
+  font-size: 16px;
+  margin: 0 5px 15px;
+  justify-content: left;
 }
 .profile-features button.logout{
-  color: white;
+  color: rgb(47, 46, 46);
   width: auto;
-  padding:0 10px;
-  margin: auto;
-  font-size: 16px;
+  padding:0 8px;
+  margin:4px auto;
+  font-size: 14px;
   font-weight: bold;
   border-radius: 4px;
-  border: 1px solid white;
+  background: none;
+  opacity: 0.6;
+}
+.profile-features button.logout:hover{
+  opacity: 1;
+  transition: 0.4s;
+}
+#profileFeatures{
   display: none;
+  transition: 0.4s ease;
+}
+.nav-elements a.user{
+  margin-right: -2%;
 }
 .nav-elements i.fa-user{
-    font-size: 30px;
+    font-size: 25px;
     margin-right: -2%;
     color: brown;
     border-radius: 50%;
     box-shadow: 1px 1px 2px 0px grey;
-    padding: 10px;
-}
-
-.nav-elements i.fa-user:active{
-    color: orange;
-    opacity: 0.2;
-    border: orange 1px solid;
+    padding: 8px;
 }
 .nav-elements i.fa-user:hover{
     opacity: 0.8;
     transition: 0.5s;
     background: radial-gradient(#fff, #ffd6d6);
-}
-.nav-elements button{
-    height: 38.4px;
-    width: 39px;
-    background:black;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    cursor: pointer;
-    outline: none;
-    border: none;
-    margin-left: -10.2%;
-}
-.nav-elements button i.fa-magnifying-glass{
-    font-size: 18px;
-    color: white;
-    text-align: center;
 }
 
 .nav-links{
@@ -219,7 +322,6 @@ transition: 0.4s;
     opacity: 0.4;
     color: orangered;
 }
-
 select{
     width: 100px;
     height: 30px;
@@ -244,10 +346,10 @@ select{
 }
 /*............................................................//Cart............//Favourites.................................*/
 .icons .cart{
-    background:radial-gradient(#fff, #ffd6d6);
     border-radius: 4px;
     margin: 5px;
-    width: 120px;
+    width: 100px;
+    margin-right: -5px;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -259,7 +361,7 @@ select{
     border: none;
     box-shadow: none;
     margin:auto;
-    font-size: 33px;
+    font-size: 28px;
 }
 .cart i:hover{
     background: none;
@@ -281,11 +383,11 @@ select{
 
 .non-empty::after{
   content: var(--after-content);
-  font-size: 18px;
-  background:black;
+  font-size: 12px;
+  background:radial-gradient(#fff, #ffd6d6);
   font-weight: bold;
   border-radius: 50%;
-  padding: 9px;
+  padding:8px;
   text-align: center;
   position:relative;
   top: -10px;
@@ -392,7 +494,7 @@ select{
     height: 5px;
     width: 0px;
     left: 2%;
-    top: 20.5%;
+    top: 17.5%;
     display: flex;
     animation: underline;
     animation: ease-in-out infinite;
@@ -415,7 +517,7 @@ select{
     height: 5px;
     width: 0px;
     left: 8.2%;
-    top: 20.5%;
+    top: 17.5%;
     display: flex;
     animation: underline;
     animation-duration: 0.4s;
@@ -438,7 +540,7 @@ select{
     height: 5px;
     width: 0px;
     left: 15%;
-    top: 20.5%;
+    top: 17.5%;
     display: flex;
     transition: 0.2s;
     animation: ease-in-out;
@@ -455,7 +557,7 @@ select{
     height: 5px;
     width: 0px;
     left: 23%;
-    top: 20.5%;
+    top: 17.5%;
     display: flex;
     transition: 0.2s;
 }
@@ -471,7 +573,7 @@ select{
     height: 5px;
     width: 0px;
     left: 31.2%;
-    top: 20.5%;
+    top: 17.5%;
     display: flex;
     transition: 0.2s;
 }
@@ -487,7 +589,7 @@ select{
     height: 5px;
     width: 0px;
     left: 39%;
-    top: 20.5%;
+    top: 17.5%;
     display: flex;
     transition:width 0.2s;
   
@@ -996,7 +1098,7 @@ hr.breakline{
     animation-iteration-count: infinite;
     transition: 0.5s;
     position: relative;
-    top: 23%;
+    margin-top: 0%;
   }
 @keyframes background{
     0%{ background:linear-gradient( orangered)}
@@ -1063,8 +1165,8 @@ hr.breakline{
     justify-content: space-evenly;
 }
 .brands img{
-width:200px;
-height: 150px;
+width:150px;
+height: 120px;
 cursor: pointer;
 margin: 2%;
 padding: 2%;
@@ -1250,7 +1352,8 @@ main.cart-page .column-2{
     display: flex;
     flex-basis: 25%;
     border: 1px white solid;
-    background: radial-gradient(#ffdede, #fff);
+    border-radius: 4px;
+   background: white;
   }
 .card h2{
   font-size: 18px;
@@ -1835,6 +1938,9 @@ width: 160px;
           font-weight: bold;
           float: left;
           color: white;
+         }
+         #message h2 i.fa-chevron-down{
+          font-size: 12px;
          }
          button.facebook{
          border: none;
@@ -3283,7 +3389,9 @@ section.Terms-and-Policies ul li span{
 section.about-us{
     margin: 8% 20%;
 }
-
+.nike-page .social_icon{
+  display: none;
+}
   /*.............................................Footer title underlines......................*/
   footer .footer-links h2.title-1::after{
     content: '';
@@ -3413,11 +3521,11 @@ margin-bottom: 5px;
     width: 100%;
    }
     .nav-elements img.website-logo{
-       height:90px;
-       width: 160px;
-     display: flex;
-     mix-blend-mode: screen;
-     margin: 5% 0;
+    height:90px;
+    width: 160px;
+    display: flex;
+    mix-blend-mode: screen;
+    margin: 5% 0;
     }
     .nav-elements form{
         display: none;
@@ -3599,6 +3707,11 @@ margin-bottom: 5px;
   text-align: center;
   justify-content: center;
   margin: 12px;
+}
+.menu-links ul a.loginBtn{
+color: white;
+font-weight: bold;
+text-decoration: none;
 }
 .menu-links ul button.logout i{
   margin-left: 8px;

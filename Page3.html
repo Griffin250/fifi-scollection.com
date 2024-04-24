@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="index.css">
     <link rel="website icon" type="png" href="Images/FC-icon.png">
     <script src="https://kit.fontawesome.com/969f6c4469.js" crossorigin="anonymous"></script>
+    <script src="https://js.stripe.com/v3/"> </script>
 </head>
 <body>
 <!-----------------------------------Navigation bar-------------------------------------------------->
@@ -32,14 +33,17 @@
         <a href="Home.html" class="home navbar-link"> Home <br></a>
         <a href="Aboutus.html" class="about navbar-link"> About<br> </a>
         
-    <div class="languages">
-    <select class="languages" id="Languages"> 
-        <option>English</option>
-        <option> French </option>
-        <option>Swahili</option>
-        <option>Arabic</option>
-    </select>
-</div>
+      <!--------------------------------------------------->
+<div class="user-profile">
+    <div id="message" title="Your Profile"> 
+        <h2 onclick="displayProfileFeatures()"> Hi, <span class="display-userName"></span><i class="fa-solid fa-chevron-down" id="chevronDown"></i> <br> </h2>
+    </div>
+    <div class="profile-features" id="profileFeatures">
+        <button class="closebutton" onclick="hideProfileFeatures()"><i class="fa-solid fa-x"></i></button>
+        <a href="Account.html"><i class="fa-regular fa-user"></i> Account </a><br>
+        <a href="#"><i class="fa-brands fa-bilibili"></i> Billing</a><br><hr>
+        <button class="logout" id="signOutBtn"><i class="fa-solid fa-right-from-bracket"></i> Log out  </button>  
+    </div> </div>
     <a href="Account.html" class="user">  
     <i class="fa-regular fa-user" title="Your Account" onclick="openPage()"></i> </a>
 </div>
@@ -65,17 +69,23 @@
 </nav>
 <!-----------------------------------------------------------Menu --------------------------------------------------->
 <div class="menu-links menu-links-other-pages" id="MenuLinks">
-<div class="account-link"> 
-    <hr>
-    <i class="fa-solid fa-x" id="closeButton" onclick="closeMenu()" title="Close Menu"></i>
-     <a href="Account.html"><i class="fa-regular fa-user"></i> 
-    <span>Login </span>  or  <span>  Create Account</span> </span></a></p>
-</div>
-    <ul>
-        <li><a href="Home.html">Home</a></li>
-        <li><a href="Aboutus.html">About</a></li>
-        <li><a href="#Contact">Contact</a></li>
-        <li><a href="#">Shopping Cart</a></li>
+    <div class="account-link"> 
+        <hr>
+        <i class="fa-solid fa-x" id="closeButton" onclick="closeMenu()" title="Close Menu"></i>
+        <div id="accountLink"> <a href="#loginForm"><i class="fa-regular fa-user"></i> <span>Login </span>  or  <span>  Create Account</span> </a></div>
+       
+    <div id="message"> 
+            <h2> <i class="fa-regular fa-user"></i> Hi, <span class="display-userName"></span> <br> </h2>
+         </div>
+    </div>
+<ul class="small-device-menu-links">
+    <li><a href="Home.html"> <i class="fa-solid fa-house"></i> Home</a></li>
+    <li><a href="Aboutus.html"> <i class="fa-solid fa-circle-info"></i> About</a></li>
+    <li><a href="#Contact"> <i class="fa-solid fa-phone"></i> Contact</a></li>
+    <li><a href="#">  <i class="fa-solid fa-cart-shopping"> </i> Shopping Cart</a></li>
+    
+    <button class="logout" id="loginBtn"> <a class="loginBtn" href="Account.html"><i class="fa-solid fa-right-from-bracket"></i> Log In </a> </button>
+    <button class="logout" id="signOutButton"> <i class="fa-solid fa-right-from-bracket"></i> Logout </button>
         <hr>
         <h2>Shop by Category</h2>
             <li><a href="Sale.html" class="link1 link"> Sale</a> </li>
@@ -154,97 +164,87 @@
         </select>
     </div>
         <div class="column-2">
-            <div class="card"> 
+            <div class="card stripe-cards"> 
             <div class="item5"> 
-                   <a href="clothes-2.html">  <img src="Images/Clothing/FC-hoodie.png"></a>
-                    <h2>Fashion-Hoodies</h2>
-                    <p class="price">$14.99</p>
-                    <h4>Cotton T-shirt Man</h4>
-                    <p><button> <i class="fa-solid fa-cart-shopping"></i> Add to Cart</button></p>
-                    </div></div>
+                <script async
+                src="https://js.stripe.com/v3/buy-button.js">
+              </script>
+              
+              <stripe-buy-button
+                buy-button-id="buy_btn_1P96uuRogxYobEmxY64YPMie"
+                publishable-key="pk_test_51P8fyHRogxYobEmx9IGf1WxTmcxBrI5mFf2CDNo1Z65SHiYuqWxKiUFBtuCQHVE61cIbBY07iE8KNem736BYOx5Q00Oz3Ctpfr">
+              </stripe-buy-button>
+                    </div></div><br>
             
-            <div class="card"> 
-            <div class="item2">
-                <p class="new">NEW</p>
-                        <img src="Images/Nike_green-removebg-preview.png" alt="Nike-Air" title="Nike-Air">
-                        <h2> Nike Airforce 1 - Green </h2>
-                        <p class="price">$24.99</p>
-                        <p> Men's Fashion Shoes</p>
-                        <p><button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button></p>
-            </div> </div>
+       
             
-            <div class="card"> 
+            <div class="card stripe-cards"> 
             <div class="item3">
                 
-                            <a href="product3.html"> <img src="Images/Sneakers.png" alt="Nike-Air" title="Best sneaker"></a>
-                            <h2> Sneakers  </h2>
-                            <p class="price">  $139.99</p>
-                            <h4>Men's shoes</h4>
-                            <p><button><i class="fa-solid fa-cart-shopping"></i>  Add to Cart</button></p>
-                </div>  </div>
+                <script async
+                src="https://js.stripe.com/v3/buy-button.js">
+              </script>
+              
+              <stripe-buy-button
+                buy-button-id="buy_btn_1P96rTRogxYobEmxrX48gmxB"
+                publishable-key="pk_test_51P8fyHRogxYobEmx9IGf1WxTmcxBrI5mFf2CDNo1Z65SHiYuqWxKiUFBtuCQHVE61cIbBY07iE8KNem736BYOx5Q00Oz3Ctpfr"
+              >
+              </stripe-buy-button>
+                </div>  </div><br>
             
-                <div class="card"> 
+                <div class="card stripe-cards"> 
                 <div class="item4">
-                    <p class="sale">SALE</p>
-                            <a href="NB Display.html"> <img src="Images/NB White-Green.png" class="new-balance" alt="Nike-Air" title="Best sneaker"></a>
-                            <h2>New Balance 480 </h2>
-                            <p class="price">$34.99 <span>$50.45</span></p>
-                            <h4>1 color - Unisex shoes</h4>
-                            <p class="discounts">15% Off</p>
-                            <p><button> <i class="fa-solid fa-cart-shopping"></i> Add to Cart</button></p>
-                </div></div></div>
+                    <script async
+  src="https://js.stripe.com/v3/buy-button.js">
+</script>
+
+<stripe-buy-button
+  buy-button-id="buy_btn_1P96mjRogxYobEmxuuAOAotE"
+  publishable-key="pk_test_51P8fyHRogxYobEmx9IGf1WxTmcxBrI5mFf2CDNo1Z65SHiYuqWxKiUFBtuCQHVE61cIbBY07iE8KNem736BYOx5Q00Oz3Ctpfr">
+</stripe-buy-button>
+                </div></div></div><br>
                 <div class="feaured-products">
                     <h1>Featured Products </h1>
                    <p class="underline"></p>
                 </div>
 
-                    <div class="column-2">
+                    <div class="column-2 stripe-cards">
                         <div class="card"> 
                             <div class="item3"> 
-                                 <a href="Product4.html"> <img src="Images/Nike_dunk_low_blue.png" alt="Nike-Air" title="Best sneaker"></a>
-                                                <div class="small-imgs">
-                                                    <img src="Images/Nike_dunk_low_blue.png" alt="">
-                                                    <img src="Images/Nik dunk low blue-black.png" alt="">
-                                                    <img src="Images/Nike_dunk_low_green.png" alt="">
-                                                    <img src="Images/Nike dunk low blue-black.webp" alt="">
-                                                </div>
-                                                <h2> Nike Dunk Low - Sky Blue</h2>
-                                                <p class="price">$150.00</p>
-                                                <h4> 3 Colours - Unisex shoes</h4>
-                                                <p><button> <i class="fa-solid fa-cart-shopping"></i> Add to Cart</button></p>
-                            </div> </div>
+                                 <script async
+                                 src="https://js.stripe.com/v3/buy-button.js">
+                               </script>
+                               
+                               <stripe-buy-button
+                                 buy-button-id="buy_btn_1P8nxZRogxYobEmxOG7VELx9"
+                                 publishable-key="pk_test_51P8fyHRogxYobEmx9IGf1WxTmcxBrI5mFf2CDNo1Z65SHiYuqWxKiUFBtuCQHVE61cIbBY07iE8KNem736BYOx5Q00Oz3Ctpfr"
+                               >
+                               </stripe-buy-button>
+                            </div> </div><br>
                                
                         <div class="card"> 
                         <div class="item5"> 
-                               <a href="Clothings.html"> <img src="Images/Clothing/FC T-Shirts.png"> </a>
-                                <h2>Premium Fashion-T</h2>
-                                <p class="price">$15.00</p>
-                                <h4>Cotton T-shirt Man</h4>
-                                <p><button> <i class="fa-solid fa-cart-shopping"></i> Add to Cart</button></p>
-                                </div></div>
+                         
+<stripe-buy-button
+     buy-button-id="buy_btn_1P8q4WRogxYobEmxUZGAxDxG"
+     publishable-key="pk_test_51P8fyHRogxYobEmx9IGf1WxTmcxBrI5mFf2CDNo1Z65SHiYuqWxKiUFBtuCQHVE61cIbBY07iE8KNem736BYOx5Q00Oz3Ctpfr">
+    </stripe-buy-button>
+    </div></div><br>
                         
-                    <div class="card"> 
-                    <div class="item2">
-                            <p class="sale">SALE</p>
-                                    <img src="Images/Nike_black.png" alt="Nike-Air" title="Nike-Air">
-                                    <h2> Nike Air 4'16 </h2>
-                                    <p class="price">$149.99 <span> $199.99</span></p>
-                                    <p class="discounts">25% Off</p>
-                                    <p><button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button></p>
-                    </div> </div>
+    <div class="card"> 
+    <div class="item5"> 
+    <script async
+    src="https://js.stripe.com/v3/buy-button.js">
+     </script>
+                                      
+    <stripe-buy-button
+    buy-button-id="buy_btn_1P8qOkRogxYobEmxRvjlE0Fk"
+    publishable-key="pk_test_51P8fyHRogxYobEmx9IGf1WxTmcxBrI5mFf2CDNo1Z65SHiYuqWxKiUFBtuCQHVE61cIbBY07iE8KNem736BYOx5Q00Oz3Ctpfr">
+    </stripe-buy-button>
+    </div></div><br>
                         
               
-                    <div class="card"> 
-                    <div class="item4">
-                            <p class="new">NEW</p>
-                                    <img src="Images/Lowcoaster2.png" alt="Nike-Air" title="Best sneaker">
-                                        <h2>Lowcoatser </h2>
-                                        <p class="price">$100.00</p>
-                                        <p>Men's Gentle Shoes</p>
-                                        <p>1 Color - Dark Green</p>
-                                    
-                                        <p><button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button></p>
-                     </div>  </div>
+
 
 </div> 
             <div class="column-2 page-3">
@@ -257,7 +257,6 @@
             <button><i class="fa-solid fa-arrow-right"></i></button>
 </div></div>
 </div> 
-
 
 <div class="user-rates">
     <p>&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar; 
@@ -375,7 +374,8 @@
 </div>
 <div class="logos">
     <img src="Images/3D-Logo.jpg">
-    <p>© 2024 Fifi'scollection.com, Inc. All Rights Reserved</p>
+    <p class="griffintechs">Developed by: Griffin Techs<span>&copy; </span></p>
+    <p>© 2024 Fifi'scollection.com</p>
 </div>
 <div class="last-row">
     <p>Prices subject to change without notice! Products shown may not be available in our stores!</p>
@@ -385,5 +385,6 @@
 </footer>
 <!-----------------------------------------Javascript----------------------------------------------------->
     <script src="index.js"> </script>
+    <script src="script.js" type="module"> </script>
 </body>
 </html>

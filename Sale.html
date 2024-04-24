@@ -21,7 +21,7 @@
         <a href="index.html"> <img class="website-logo" src="Images/Fifi's-Collection.jpg"> </a>
         
     <div class="shoppingcart" title="Your Cart" id="Cart" onclick="openCart()">
-            <i class="fa-solid fa-cart-shopping" title="Your Cart"></i>  
+            <i class="fa-solid fa-cart-shopping non-empty" title="Your Cart"></i>  
     </div> 
 
     <form action=""> 
@@ -33,14 +33,14 @@
         <a href="index.html" class="home navbar-link"> Home <br></a>
         <a href="#footer" class="about navbar-link"> About<br> </a>
         
-    <div class="languages">
-    <select class="languages" id="Languages"> 
-        <option>English</option>
-        <option> French </option>
-        <option>Swahili</option>
-        <option>Arabic</option>
-    </select>
-</div>
+    <!------------------------------------------------>
+    <div class="user-profile">
+        <div id="message" title="Your Profile"> 
+            <h2> Hi, <span class="display-userName"></span><i class="fa-solid fa-chevron-down"></i> <br> </h2>
+        </div>
+        <div class="profile-features">
+            <button class="logout" id="signOutBtn">Logout <i class="fa-solid fa-right-from-bracket"></i></button>  
+        </div>  </div>
     <a href="Account.html" class="user">  
     <i class="fa-regular fa-user" title="Your Account" onclick="openPage()"></i> </a>
 </div>
@@ -69,14 +69,19 @@
 <div class="account-link"> 
     <hr>
     <i class="fa-solid fa-x" id="closeButton" onclick="closeMenu()" title="Close Menu"></i>
-     <a href="Account.html"><i class="fa-regular fa-user"></i> 
-    <span>Login </span>  or  <span>  Create Account</span> </span></a></p>
+    <div id="accountLink"> <a href="#loginForm"><i class="fa-regular fa-user"></i> <span>Login </span>  or  <span>  Create Account</span> </a></div>
+   
+<div id="message"> 
+        <h2> <i class="fa-regular fa-user"></i> Hi, <span class="display-userName"></span> <br> </h2>
+     </div>
 </div>
 <ul class="small-device-menu-links">
     <li><a href="Home.html"> <i class="fa-solid fa-house"></i> Home</a></li>
     <li><a href="Aboutus.html"> <i class="fa-solid fa-circle-info"></i> About</a></li>
     <li><a href="#Contact"> <i class="fa-solid fa-phone"></i> Contact</a></li>
-    <li><a href="#">  <i class="fa-solid fa-cart-shopping"> </i> Shopping Cart</a></li>
+    
+    <button class="logout" id="loginBtn"> <a class="loginBtn" href="Account.html"><i class="fa-solid fa-right-from-bracket"></i> Log In </a> </button>
+    <button class="logout" id="signOutButton"> <i class="fa-solid fa-right-from-bracket"></i> Logout </button>
         <hr>
         <h2>Shop by Category</h2>
             <li><a href="Sale.html" class="link1 link"> Sale</a> </li>
@@ -235,5 +240,6 @@
     </footer>
     <!-----------------------------------------Javascript----------------------------------------------------->
         <script src="index.js"> </script>
+        <script src="script.js" type="module"> </script>
 </body>
 </html>

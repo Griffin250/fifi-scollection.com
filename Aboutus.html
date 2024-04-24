@@ -20,7 +20,7 @@
         <a href="index.html"> <img class="website-logo" src="Images/Fifi's-Collection.jpg"> </a>
         
     <div class="shoppingcart" title="Your Cart" id="Cart" onclick="openCart()">
-            <i class="fa-solid fa-cart-shopping" title="Your Cart"></i>  
+            <i class="fa-solid fa-cart-shopping non-empty" title="Your Cart"></i>  
     </div> 
 
     <form action=""> 
@@ -29,17 +29,23 @@
         <button type="submit"><i class="fa-solid fa-magnifying-glass"></i> </button>
     </label>
 </form>
-        <a href="" class="home navbar-link"> Home <br></a>
+        <a href="index.html" class="home navbar-link"> Home <br></a>
         <a href="#footer" class="about navbar-link"> About<br> </a>
         
-    <div class="languages">
-    <select class="languages" id="Languages"> 
-        <option>English</option>
-        <option> French </option>
-        <option>Swahili</option>
-        <option>Arabic</option>
-    </select>
-</div>
+<!--------------------------------------------------->
+<div class="user-profile">
+    <div id="message" title="Your Profile"> 
+        <h2 onclick="displayProfileFeatures()"> Hi, <span class="display-userName"></span><i class="fa-solid fa-chevron-down" id="chevronDown"></i> <br> </h2>
+    </div>
+    <div class="profile-features" id="profileFeatures">
+        <button class="closebutton" onclick="hideProfileFeatures()"><i class="fa-solid fa-x"></i></button>
+        <a href="#"><i class="fa-regular fa-user"></i> Account </a><br>
+        <a href="#"> <i class="fa-solid fa-bag-shopping"></i> Orders </a><br>
+        <a href="#"><i class="fa-brands fa-bilibili"></i> Billing</a><br>
+        <a href="#"><i class="fa-solid fa-gear"></i>Settings </a>
+        <br><hr>
+        <button class="logout" id="signOutBtn"><i class="fa-solid fa-right-from-bracket"></i> Log out  </button>  
+    </div> </div>
     <a href="Account.html" class="user">  
 <i class="fa-regular fa-user" title="Your Account" onclick="openPage()"></i> </a>
 </div>
@@ -56,7 +62,7 @@
     <!-------------------------------------------------------------------Shopping cart----------------------------->
     <div class="icons">
     <div class="cart" title="Your Cart" id="Cart" onclick="openCart()">
-        <i class="fa-solid fa-cart-shopping" title="Your Cart"> <span> 0 </span></i>  
+        <i class="fa-solid fa-cart-shopping non-empty" title="Your Cart"></i>  
     </div> 
     <div class="favourites">
         <i class="fa-regular fa-heart" title="Favourites"></i>
@@ -189,17 +195,20 @@
         <img src="Images/Google-pay.png">
     </div></div>
     
-        <div class="footer-column">
-        <div class="help-center">
-            <h2 class="title-6">HELP CENTER</h2>
-            <a href="">Membership Policy</a><br>
-            <a href="Terms-and-Policies.html" target="_blank">Privacy Policy</a><br>
-            <a href="">Customer services</a><br><br>
-            <a href="Account.html" class="account">Login</a><br>
-            <a href="Account.html" class="account">Register</a><br>
-           
+    <div class="footer-column">
+        <form class="newsletter-form"action="https://api.web3forms.com/submit" method="POST">
+            <span class="newsletter-title">Subscribe to our Newsletter.</span>
+            <p class="description"> 
+              Sign up for our Newsletter to receive exclusive deals and updates! <br>
+              Stay informed about the latest products, promotions, and discounts. Join us Now!</p>
+            <div>
+                <input type="hidden" name="access_key" value="d45e05cc-facb-4197-a915-93ed601a573e">
+              <input placeholder="Enter your email" type="email" name="email" id="email-address" required>
+              <button type="submit">Subscribe</button>
+            </div>
+          </form>
+    </div> </div>
     
-        </div></div>
     </div>
     <div class="logos">
         <img src="Images/3D-Logo.jpg">
@@ -213,5 +222,6 @@
     </footer>
     <!-----------------------------------------Javascript----------------------------------------------------->
         <script src="index.js"> </script>
+        <script src="script.js" type="module"> </script>
 </body>
 </html>

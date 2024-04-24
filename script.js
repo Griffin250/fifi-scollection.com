@@ -23,17 +23,53 @@
  
  const signInButton = document.getElementById("signInButton");
  const signOutButton = document.getElementById("signOutButton");
+ const loginBtn = document.getElementById("loginBtn");
  const accountLink = document.getElementById("accountLink");
  const message = document.getElementById("message");
  const userName = document.getElementById("userName");
  const userEmail = document.getElementById("userEmail");
 
+ 
+//................... Function to show user profile
+const showUserProfile = (user) => {
+  message.style.display = "block";
+  signOutButton.style.display = "block";
+  loginBtn.style.display = "none";
+  signInButton.style.display = "none";
+  accountLink.style.display = "none";    
+  userName.innerHTML = user.display-Name;
+  userEmail.innerHTML = user.email;
+};
+
+//....................... Function to hide user profile
+const hideUserProfile = () => {
+  signOutButton.style.display = "none";
+  message.style.display = "none";
+  loginBtn.style.display = "block";
+  accountLink.style.display = "block";
+  signInButton.style.display = "block";
+  userName.innerHTML = "user.display-Name";
+  userEmail.innerHTML = "user.email";
+};
+
+
+if(loginBtn)
+loginBtn.style.display = "none";
+ if(signOutButton)
  signOutButton.style.display = "none";
- message.style.display = "none";
+ message.style.display = "block";
+ if(accountLink)
  accountLink.style.display = "block";
 
  console.log(JSON.parse(localStorage.getItem("user")));
 
+ window.addEventListener('load', () => {
+  let user = JSON.parse(localStorage.getItem("user"));
+  document.querySelectorAll(".display-userName").forEach((elem) => {
+    elem.innerHTML = user.displayName;
+  });
+  console.log('debugging', user);
+ });
  
  const userSignIn = async() => {
    signInWithPopup(auth, provider)
@@ -56,20 +92,28 @@
  onAuthStateChanged(auth, (user) => {
    if(user) {
     console.log('firebase', user);
+     if(signOutButton)
      signOutButton.style.display = "block";
+     if(loginBtn)
+     loginBtn.style.display = "none";
+     if(signInButton)
      signInButton.style.display = "none";
+     if(accountLink)
      accountLink.style.display = "none";
-     message.style.display = "block";
+     message.style.display = "block";    
      userName.innerHTML = user.displayName;
-     userEmail.innerHTML = user.email
+     //userEmail.innerHTML = user.email;
    } else {
      signOutButton.style.display = "none";
      message.style.display = "none";
+     loginBtn.style.display = "block";
      accountLink.style.display = "block";
      signInButton.style.display = "block";
    }
  })
  
+ if(signInButton)
  signInButton.addEventListener('click', userSignIn);
+ if(signOutButton)
  signOutButton.addEventListener('click', userSignOut);
  
