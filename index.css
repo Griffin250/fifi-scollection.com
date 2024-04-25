@@ -7,7 +7,7 @@
   --after-content:'0';
 }
 body{
-    background:radial-gradient(#fff, #ffd6d6);
+    background:radial-gradient(#fff, #f1e3e3);
 }
 html{
     scroll-behavior: smooth;
@@ -31,12 +31,14 @@ width: 20px;
     align-items: center;
     cursor: pointer;
 }
-.nav-elements a img{
+.nav-elements a img.website-logo{
     height: 80px;
     width: 200px;
     mix-blend-mode:screen;
 }
-
+.nav-elements a img.website-logo:hover{
+  opacity: 1;
+}
 .nav-elements a{
     text-decoration: none;
     color: white;

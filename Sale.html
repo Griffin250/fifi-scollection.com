@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fifi's Collection</title>
     <link rel="stylesheet" href="index.css">
-    <link rel="website icon" type="png" href="Images/FC-icon.png">
+    <link rel="website icon" type="png" href="Images/Logos/FC-icon.png">
     <script src="https://kit.fontawesome.com/969f6c4469.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -18,7 +18,7 @@
         <i class="fa-solid fa-bars"></i>
     </div>
     <div class="nav-elements">
-        <a href="index.html"> <img class="website-logo" src="Images/Fifi's-Collection.jpg"> </a>
+        <a href="index.html"> <img class="website-logo" src="Images/Logos/Fifi'scollection-logo.png"> </a>
         
     <div class="shoppingcart" title="Your Cart" id="Cart" onclick="openCart()">
             <i class="fa-solid fa-cart-shopping non-empty" title="Your Cart"></i>  
@@ -32,15 +32,20 @@
 </form>
         <a href="index.html" class="home navbar-link"> Home <br></a>
         <a href="#footer" class="about navbar-link"> About<br> </a>
-        
-    <!------------------------------------------------>
-    <div class="user-profile">
-        <div id="message" title="Your Profile"> 
-            <h2> Hi, <span class="display-userName"></span><i class="fa-solid fa-chevron-down"></i> <br> </h2>
-        </div>
-        <div class="profile-features">
-            <button class="logout" id="signOutBtn">Logout <i class="fa-solid fa-right-from-bracket"></i></button>  
-        </div>  </div>
+  <!--------------------------------------------------->
+<div class="user-profile">
+    <div id="message" title="Your Profile"> 
+        <h2 onclick="displayProfileFeatures()"> Hi, <span class="display-userName"></span><i class="fa-solid fa-chevron-down" id="chevronDown"></i> <br> </h2>
+    </div>
+    <div class="profile-features" id="profileFeatures">
+        <button class="closebutton" onclick="hideProfileFeatures()"><i class="fa-solid fa-x"></i></button>
+        <a href="#"><i class="fa-regular fa-user"></i> Profile </a><br>
+        <a href="#"> <i class="fa-solid fa-bag-shopping"></i> Orders </a><br>
+        <a href="#"><i class="fa-brands fa-bilibili"></i> Billing</a><br>
+        <a href="#"><i class="fa-solid fa-gear"></i>Settings </a>
+        <br><hr>
+        <button class="logout" id="signOutBtn"><i class="fa-solid fa-right-from-bracket"></i> Log out  </button>  
+    </div> </div>
     <a href="Account.html" class="user">  
     <i class="fa-regular fa-user" title="Your Account" onclick="openPage()"></i> </a>
 </div>
@@ -229,7 +234,7 @@
         </div></div>
     </div>
     <div class="logos">
-        <img src="Images/3D-Logo.jpg">
+        <img src="Images/Logos/3D-Logo.jpg">
         <p>© 2024 Fifi'scollection.com, Inc. All Rights Reserved</p>
     </div>
     <div class="last-row">
