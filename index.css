@@ -14,7 +14,57 @@ html{
 }
 .stripe-cards{
 width: 20px;
+}/*...............................Testimonialse...............*/
+.deals-page{
+ animation: fade linear forwards;
+ scale: 0.5;
+ opacity: 0%;
+ animation-timeline: view();
+ animation-range-start: entry -70px;
+ animation-range-end:exit -80px;
 }
+.page-image{
+  animation: fade linear forwards;
+  scale: 0.4;
+  opacity: 40%;
+  animation-timeline: view();
+  animation-range-start: entry -70px;
+  animation-range-end:exit -80px;
+ }
+ .page-text{
+  animation: fade linear forwards;
+  scale: 1;
+  opacity: 50%;
+  animation-timeline: view();
+  animation-range-start: entry -70px;
+  animation-range-end:exit -80px;
+ }
+ .testimonial img, .company-brands img, .categories img{
+  animation: fade linear forwards;
+  scale: 0.4;
+  opacity: 40%;
+  animation-timeline: view();
+  animation-range-start: entry -70px;
+  animation-range-end:exit -80px;
+ }
+ .testimonial .col-3{
+  animation: fade linear forwards;
+  scale: 1;
+  opacity: 50%;
+  animation-timeline: view();
+  animation-range-start: entry -70px;
+  animation-range-end:exit -80px;
+ }
+ 
+
+@keyframes fade{
+100%{
+  scale: 1;
+  opacity: 100%;
+}
+}
+
+
 .navbar{
     background:#1a1a1a;
     height: 100px;
