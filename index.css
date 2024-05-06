@@ -46,6 +46,7 @@ width: 20px;
   animation-timeline: view();
   animation-range-start: entry -70px;
   animation-range-end:exit -80px;
+  transform-origin: bottom;
  }
  .testimonial .col-3{
   animation: fade linear forwards;
@@ -2002,7 +2003,7 @@ width: 160px;
          background:none;
          width: 88%;
          height: 30px;
-         margin-bottom: 8px;
+         margin-bottom:8px;
          color: white;
         
          box-shadow: -1px 1px 2px brown;

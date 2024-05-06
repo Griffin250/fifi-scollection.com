@@ -35,10 +35,10 @@ const showUserProfile = (user) => {
   message.style.display = "block";
   signOutButton.style.display = "block";
   loginBtn.style.display = "none";
-  signInButton.style.display = "none";
+  signInButton.style.display = "block";
   accountLink.style.display = "none";    
   userName.innerHTML = user.display-Name;
-  userEmail.innerHTML = user.email;
+  userEmail.innerHTML = user.email; 
 };
 
 //....................... Function to hide user profile
@@ -63,6 +63,7 @@ loginBtn.style.display = "none";
 
  console.log(JSON.parse(localStorage.getItem("user")));
 
+// Retrieve user data from localStorage on page load
  window.addEventListener('load', () => {
   let user = JSON.parse(localStorage.getItem("user"));
   document.querySelectorAll(".display-userName").forEach((elem) => {
@@ -71,49 +72,57 @@ loginBtn.style.display = "none";
   console.log('debugging', user);
  });
  
+ // Function to sign in user with Google
  const userSignIn = async() => {
    signInWithPopup(auth, provider)
    .then((result) => {
        const user = result.user
        localStorage.setItem("user", JSON.stringify(user));
        console.log(user);
-   }).catch((error) => {
+//Redirect the user to a new page on successful login.......
+       window.location.href = "index.html";
+   })
+   .catch((error) => {
        const errorCode = error.code;
        const errorMessage = error.message
    })
- }
- 
- const userSignOut = async() => {
-   signOut(auth).then(() => {
-       alert("You have signed out successfully!");
-   }).catch((error) => {})
- }
- 
- onAuthStateChanged(auth, (user) => {
-   if(user) {
-    console.log('firebase', user);
-     if(signOutButton)
-     signOutButton.style.display = "block";
-     if(loginBtn)
-     loginBtn.style.display = "none";
-     if(signInButton)
-     signInButton.style.display = "none";
-     if(accountLink)
-     accountLink.style.display = "none";
-     message.style.display = "block";    
-     userName.innerHTML = user.displayName;
-     //userEmail.innerHTML = user.email;
-   } else {
-     signOutButton.style.display = "none";
-     message.style.display = "none";
-     loginBtn.style.display = "block";
-     accountLink.style.display = "block";
-     signInButton.style.display = "block";
+ // ...Check if user is already signed in
+   const currentUser = auth.currentUser;
+   if (currentUser){
+    //...then redirect the user to the home page
+    window.location.href = "index.html";
+    return;
    }
- })
+ }
  
+ // Function to sign out user
+ const userSignOut = async() => {
+   signOut(auth)
+   .then(() => {
+       alert("You have signed out successfully!");
+   })
+   .catch((error) => {})
+ }
+ 
+
+// Listen for authentication state changes
+onAuthStateChanged(auth, (user) => {
+  if(user) {
+    console.log('firebase', user);
+
+    // Update user profile display
+    showUserProfile(user);
+  } 
+  else {
+    // Hide user profile display
+    hideUserProfile();
+  }
+});
+
+// Add event listener for sign in button click
  if(signInButton)
  signInButton.addEventListener('click', userSignIn);
+// Add event listener for sign out button click
  if(signOutButton)
  signOutButton.addEventListener('click', userSignOut);
  
