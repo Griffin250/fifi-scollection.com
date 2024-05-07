@@ -985,28 +985,7 @@ select{
   .rating .far {
     color: #ff523b;
   }
-  /*...............................................Company Brands...........................................................*/
-
-  .company-brands {
-    margin: 100px auto;
-  }
-  
-  .col-5 {
-    width: 160px;
-  }
-  
-  .col-5 img {
-    width: 100%;
-    cursor: pointer;
-    filter: grayscale(100%);
-  }
-  
-  .col-5 img:hover {
-    width: 100%;
-    cursor: pointer;
-    filter: grayscale(0);
-  }
-
+ 
 
 /*.......................................Nike collections....................................................*/
 .nike-page .nike-collection{
@@ -1128,7 +1107,69 @@ select{
 }
 
 
+  /*----------------------------------------------------------company Logo slides---------------------------------------------*/
+  .company-logos{
+    padding:20px 20px;
+    overflow-x:hidden;
+    height: 36vh;
+    white-space: nowrap;
+  }
+  .company-logos .logo-slide{
+  display: inline-block;
+    animation: 25s logo-slide infinite linear;
+   
+  }
+  .company-logos .logo-slide img{
+    width: 12vw;
+    cursor: pointer;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+    mix-blend-mode: color-burn;
+    margin: 12px 10px;
+    padding:20px 20px;
+    
+  }
 
+  .company-logos .logo-slide .HM-logo{
+    width: 10vw;
+      }
+      .company-logos .logo-slide .Amazon-logo{
+width: 16vw;
+  }
+
+  @keyframes logo-slide{
+    from{
+transform:translateX(0%);
+    }
+    to{
+transform:translateX(-100%);
+    }
+  }
+  .company-logos:hover .logo-slide{
+    animation-play-state: paused;
+  }
+
+  .company-logos::before{
+    content: "";
+    background:linear-gradient(to left, rgba(255,255,255,0), #f1e3e3);
+    height:34vh ;
+    width: 250px;
+    position: absolute;
+    left: 0;
+    z-index: 2;
+    margin-top: -15px;
+  }
+
+  .company-logos::after{
+    content: "";
+    background:linear-gradient(to right, rgba(255,255,255,0), #f1e3e3);
+    height:34vh ;
+    width: 250px;
+    position: absolute;
+    right: 0;
+    z-index: 2;
+    margin-top: -15px;
+  }
   /*..........................................................................................................*/
 /*........................................Miain page..........................................................*/
 hr.breakline{
