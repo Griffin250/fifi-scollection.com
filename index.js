@@ -40,16 +40,17 @@ function hideProfileFeatures() {
 
 
   /*............................................Login / Create Account Forms ........................................*/
-  let loginForm = document.getElementById("loginForm");
-  let signupForm = document.getElementById("signupForm");
-  let createAccount = document.getElementById("createAccount");
-  let loginButton = document.getElementById("loginButton");
+  var loginForm = document.getElementById("loginForm");
+  var signupForm = document.getElementById("signupForm");
+  var createAccount = document.getElementById("createAccount");
+  var loginButton1 = document.getElementById("loginButton1");
+  var loginButton2 =document.getElementById("loginButton2");
   
   createAccount.onclick = function(){
       loginForm.style.transform = "translateY(-120%)";
       signupForm.style.transform="translateY(-111%)";
   }
-  loginButton.onclick = function(){
+  loginButton2.onclick = function(){
       signupForm.style.transform="translateY(120%)";
       loginForm.style.transform="translateY(0%)";
   }
