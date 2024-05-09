@@ -14,57 +14,7 @@ html{
 }
 .stripe-cards{
 width: 20px;
-}/*...............................Testimonialse...............*/
-.deals-page{
- animation: fade linear forwards;
- scale: 0.5;
- opacity: 0%;
- animation-timeline: view();
- animation-range-start: entry -70px;
- animation-range-end:exit -80px;
 }
-.page-image{
-  animation: fade linear forwards;
-  scale: 0.4;
-  opacity: 40%;
-  animation-timeline: view();
-  animation-range-start: entry -70px;
-  animation-range-end:exit -80px;
- }
- .page-text{
-  animation: fade linear forwards;
-  scale: 1;
-  opacity: 50%;
-  animation-timeline: view();
-  animation-range-start: entry -70px;
-  animation-range-end:exit -80px;
- }
- .testimonial img, .company-brands img, .categories img{
-  animation: fade linear forwards;
-  scale: 0.4;
-  opacity: 40%;
-  animation-timeline: view();
-  animation-range-start: entry -70px;
-  animation-range-end:exit -80px;
-  transform-origin: bottom;
- }
- .testimonial .col-3{
-  animation: fade linear forwards;
-  scale: 1;
-  opacity: 50%;
-  animation-timeline: view();
-  animation-range-start: entry -70px;
-  animation-range-end:exit -80px;
- }
- 
-
-@keyframes fade{
-100%{
-  scale: 1;
-  opacity: 100%;
-}
-}
-
 
 .navbar{
     background:#1a1a1a;
@@ -696,74 +646,143 @@ select{
     margin: 25px 0;
   }
 
-  /*..........................................................................................................*/
-
-  .categories {
-    margin: 70px 0;
+  /*...................................................Testimonials.......................................................*/
+  .testimony-section{
+    display: flex;
+    overflow-x:hidden;
+    margin: 5% auto;
+   
+   
   }
-  
-  .col-3 {
-    flex-basis: 30%;
-    min-width: 250px;
-    margin-bottom: 30px;
-  }
-  
-  .col-3 img {
-    width: 100%;
-  }
-  
-  .small-container {
-    max-width: 1080px;
-    margin: auto;
-    padding-left: 25px;
-    padding-right: 25px;
-  }
-  
-  .col-4 {
-    flex-basis: 20%;
-    padding: 10px;
-    min-width: 200px;
-    margin-bottom: 50px;
-    transition: transform 0.5s;
-  }
-  
-  .col-4 img {
-    width: 100%;
-  }
-  
-  .title {
+  .testimony-section h2{
     text-align: center;
-    margin: 0 auto 80px;
-    position: relative;
-    line-height: 60px;
-    color: #555;
+    margin: 12px auto 20px ;
+    display: none;
   }
-  .title::after {
-    content: "";
-    background: #ff523b;
-    width: 80px;
-    height: 5px;
-    border-radius: 5px;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%);
+  .testimonials {
+    display: flex;
+   position: relative;
+
+  }
+    
+  .testimony-container {
+    background-color:  #faefef;
+    padding: 20px;
+    margin: 10px 20px;
+    border-radius: 8px;
+    width: 24vw;
+    cursor: pointer;
+    flex-direction: column;
+    box-shadow: 1px 1px 4px rgb(169, 167, 167);
+    animation: 10s testimonial-slides infinite linear;
+  }
+
+  @keyframes testimonial-slides{
+    from{
+transform: translateX(-100%);
+    }
+    to{
+transform: translateX(0%);
+    }
+  }
+.testimonials:hover .testimony-container{
+    animation-play-state: paused;
   }
   
-  h4 {
-    color: #555;
-    font-weight: normal;
-  }
-  
-  .col-4 p {
-    font-size: 14px;
+  .testimony-container p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    margin-left: 15px;
   }
 
   
-  .col-4:hover {
-    transform: translateY(-5px);
+  .testmony-ratings {
+    margin-bottom: 15px;
   }
   
+  .testmony-ratings i {
+    color:orangered; /* Yellow color for stars */
+  }
+  
+  .testmony-ratings i.fas {
+    margin-right: 5px;
+
+  }
+  
+  .testmony-ratings i.far {
+    margin-right: 5px;
+    color: #ccc; /* Light gray color for empty stars */
+  }
+  
+  .testimony-container img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .testimony-container h3 {
+    font-size: 18px;
+   display: inline;
+   text-align: center;
+   justify-content: center;
+  }
+  
+
+
+/*...............................Home page display animations...............*/
+.deals-page h1{
+ animation: fade linear forwards;
+ scale: 0.6;
+ opacity: 100%;
+ animation-timeline: view();
+ animation-range-start: entry -70px;
+ animation-range-end:exit -80px;
+}
+.page-image{
+  animation: fade linear forwards;
+  scale: 0.4;
+  opacity: 40%;
+  animation-timeline: view();
+  animation-range-start: entry -70px;
+  animation-range-end:exit -80px;
+ }
+ .page-text{
+  animation: fade linear forwards;
+  scale: 1;
+  opacity: 50%;
+  animation-timeline: view();
+  animation-range-start: entry -70px;
+  animation-range-end:exit -80px;
+ }
+ .testimonial img, .company-brands img, .categories img{
+  animation: fade linear forwards;
+  scale: 0.4;
+  opacity: 40%;
+  animation-timeline: view();
+  animation-range-start: entry -70px;
+  animation-range-end:exit -80px;
+  transform-origin: bottom;
+ }
+ .testimonial .col-3{
+  animation: fade linear forwards;
+  scale: 1;
+  opacity: 50%;
+  animation-timeline: view();
+  animation-range-start: entry -70px;
+  animation-range-end:exit -80px;
+ }
+ 
+
+@keyframes fade{
+100%{
+  scale: 1;
+  opacity: 100%;
+}
+}
+
+
   /*................................................... Offer......................................................... */
   
   .offer {
@@ -1090,6 +1109,7 @@ select{
 .deals-page{
   background: orangered;
   width: 98%;
+  border-radius:8px ;
  padding: 5%;
  opacity: 0.7;
  cursor: pointer;
@@ -1101,7 +1121,7 @@ select{
 }
 .deals-page h1{
   font-size: 120px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Sedan SC", serif;
   font-weight: bold;
   color: white;
 }
@@ -3926,6 +3946,18 @@ text-decoration: none;
       transform: translate(-50%,-50%);
       font-size: 20px;
     }
+
+  /*...............................................Media querries for testimony section...........................*/
+
+    .testimony-section{
+      display: none;
+    }
+   
+  /*...............................................Media querries for company logo section...........................*/
+
+  .company-logos{
+    display: none;
+  }
        /*...............................................Media querries for product cards...........................*/
        .card{
         width: 280px;
