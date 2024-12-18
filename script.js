@@ -100,6 +100,7 @@ loginBtn.style.display = "none";
    signOut(auth)
    .then(() => {
        alert("You have signed out successfully!");
+       
    })
    .catch((error) => {})
  }

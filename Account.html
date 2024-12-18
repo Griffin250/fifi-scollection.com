@@ -7,25 +7,9 @@
     <link rel="stylesheet" href="index.css">
     <link rel="website icon" type="png" href="Images/Logos/FC-icon.png">
     <script src="https://kit.fontawesome.com/969f6c4469.js" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
 </head>
-
-
-<style> 
-    body{
-        background:radial-gradient(#fff, #f1e3e3);
-    }
-    .bkg-images img{
-        width: 300px;
-        height: 200px;
-        position:absolute;
-    }
-    .bkg-images{
-        display: flex;
-        margin: 12% 0;
-        margin-left: 40%;
-        position:relative;
-    }
-    </style>
 
 <body>
 <!-----------------------------------Navigation bar-------------------------------------------------->
@@ -68,24 +52,7 @@
     <a href="#" class="user">  
     <i class="fa-regular fa-user" title="Your Account" onclick="openPage()"></i> </a>
 </div>
- <div class="nav-links">
-    <hr>
-    <a href="Sale.html" class="link1"> SALE</a>
-    <a href="" class="link2"> MEN</a>
-    <a href="" class="link3"> WOMEN</a>
-    <a href="" class="link4"> T-SHIRTS</a>
-    <a href="" class="link5"> NEW-IN</a>
-    <a href="" class="link6"> BRANDS</a>
 
-    <!-------------------------------------------------------------------Shopping cart----------------------------->
-    <div class="icons">
-    <div class="cart" title="Your Cart" id="Cart" onclick="openCart()">
-        <i class="fa-solid fa-cart-shopping non-empty" title="Your Cart"></i>  
-    </div> 
-    <div class="favourites">
-        <i class="fa-regular fa-heart" title="Favourites"></i>
-    </div></div>
-</div>
 </nav>
 <!-----------------------------------------------------------Menu --------------------------------------------------->
 <div class="menu-links" id="MenuLinks">
@@ -136,36 +103,32 @@
 </div>
 
 <section>
-<div class="bkg-images"> 
-<img src="Images/Vans Old skool.png" alt="" class="bkg-image1">
-<img src="Images/NB White-Green.png" alt="" class="bkg-image2">
-<img src="Images/Nike dunk low blue-black.webp" alt="" class="bkg-image3">
-<img src="Images/Air_4_jordan_colored.png" alt="" class="bkg-image4">
-</div>
 
 <!--------------------------------------------------Login form and Signup form------------------------------------------------>
 
 <div class="wrapper">
     <div class="login-form" id="loginForm"> 
-         <h1>Login</h1>
-    <form action="index.html" method="get" id="login">
+         <h1>Login Here</h1>
+
+    <form action="" method="" id="login">
+        <div id="signUpMessage" class="messageDiv">User account doesnot exist!</div>
     <div class="inputbox"> 
-    <input type="text/email" name="name / Email" id="userName" placeholder="Username / Email" required  pattern="Admin">  <i class="fa-solid fa-user"></i>
+    <input type="email" name="email" id="email" placeholder="Email" required>  <i class="fa-solid fa-user"></i>
     </div><br>
     
     <div class="inputbox">
-       <input type="password" name="password" id="password" placeholder="Password" required minlength="5" pattern="Admin12" title="Letters, Numbers and signs are all allowed">  <i class="fa-solid fa-lock"></i> <br>
+       <input type="password" name="password" id="password" placeholder="Password" required>  <i class="fa-solid fa-lock"></i> <br>
         <input type="checkbox" id="checkbox"> 
-        <label for="checkbox"> <b class="b"> Show Pasword </b></label>
+        <label for="checkbox" class="checkbox">  Show Pasword </label>
     </div><br>
     <div class="remember-me">
     
-    <a class="Link" href="Reset_form.html"> Forgot Password / Username?</a>
+    <a class="Link" href="forgotPassword.html"> Forgot Password / Username?</a>
     </div><br>
     <div>
     <div class="buttons"> 
             <span id="createAccount" class="create-account" onclick="opensignupForm()">  CREATE ACCOUNT </span>
-            <a href=""><button class="login" type="submit" id="loginButton1"> LOGIN</button></a> 
+            <a href=""><button class="login" type="submit" id="loginButton1 submitSignIn"> LOGIN</button></a> 
     </div>         
     </div>  <br>  
     <h4> &UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;&UnderBar;Or
@@ -176,27 +139,32 @@
     
     <!-------------------------------------------signup form---------------------------------->
    <div class="signup-form" id="signupForm">
-    <h1>Register</h1>
-    <form action="Account.html"> 
+    <h1>Register Here</h1><br>
+
+    <form action="" method=""> 
+      
     <div class="inputbox">
-        <input type="text" name="name" id="name" placeholder="Full Name" required>
+        <div id="signUpMessage" class="messageDiv">User account already exist!</div>
+        <input type="text" name="name" id="fName" placeholder="First Name" required min="5">
         <span>Name required *</span>
     </div>
     <div class="inputbox"> 
-        <input type="text" name="Username" id="Username" placeholder="Username" required title="Letters and Numbers are Required*"> 
-        <span> Invalid Username *</span>
+        <input type="text" name="name" id="lName" placeholder="Last Name" required minlength="5">
+        <span> Name required *</span>
     </div>
     <div class="inputbox"> 
-        <input type="email" name="email" id="email" placeholder="E-mail" required > 
+        <input type="email" name="email" id="rEmail" placeholder="E-mail" required > 
         <span>Invalid Email*</span>
     </div>
     <div class="inputbox">
-        <input type="password" name="password" id="password2" placeholder="Password" required minlength="5">  
-        <span>Check Password Length*</span><br>
-        <input type="checkbox" id="checkbox2"> 
-        <label for="checkbox" id="checkbox"> <span> Show Pasword </span></label>
+        <input type="password" name="password" id="rPassword" placeholder="Password" required minlength="5">  
+        <span>Check Password Length*</span>
+    </div>
+    <div class="inputbox">
+        <input type="password" name="password" id="password" placeholder="Confirm Password" required minlength="5">  
+        <span>Check Password Length*</span>
     </div><br>
-    <button type="submit" class="create-account">Create Account</button>
+    <button type="submit" class="create-account" id="submitSignUp">Create Account</button>
     <div class="privacy-terms">
       <label> <p> By registering , you agree with our <a href="Privacy policy.html"> Privacy Policy</a></p></label>  
     </div>
@@ -210,71 +178,9 @@
 
 <!-----------------------------------------Footer section--------------------------------------------------->
 <footer class="main-footer" id="footer">
-    <div class="first-row">
-        <a href=""> <i class="fa-regular fa-circle-question"></i>  Help & Contact Us</a>
-        <a href="Order status.html"> <i class="fa-solid fa-location-dot"></i> Track my Order</a>
-        <a href="Cart.html"> <i class="fa-solid fa-truck"></i> Shipping & Delivery</a>
-        <a href="CartPage.html"> <i class="fa-solid fa-person-walking-arrow-loop-left"></i> Returns & Refunds</a>
-    </div>
+ 
     <!-----------------------------------------------------Footer links------------------------------------------>
-<div class="footer-links">
-    <div class="footer-column">
-<h2 class="title-1">LEGAL INFORMATION</h2>
-<a href="">Refund Rules</a><br>
-<a href="">Return Rules</a><br>
-<a href=""> Terms & Conditions</a><br>
-<a href=""> Privacy Policy</a><br>
-<a href="">Transparency Act</a><br>
-<a href=""> Cookie Settings</a><br><br>
-<a href="">Membership Policy</a><br>
-<a href="">Privacy Policy</a><br>
-<a href="">Customer services</a><br><br>
-    </div>
-    <div class="footer-column">
-<h2 class="title-2">ABOUT</h2>
-<a href="">Store Locator</a><br>
-<a href=""> All Stores</a><br>
-<a href="">  About Fifi's collection</a><br>
-<a href=""> Press Contacts</a><br>
-<a href="">Careers</a><br>
-<a href="">LEED</a>
-    </div>
-   
-    <div class="footer-column">
-<h2 class="title-3">FOLLOW US </h2>
-<div class="social-media">
-    <i class="fa-brands fa-facebook" title="Facebook"></i>
-    <i class="fa-brands fa-instagram" title="Instagram"></i>
-    <i class="fa-brands fa-x-twitter" title="Twitter"></i>
-    <i class="fa-brands fa-whatsapp" title="Whatsapp"></i>
-</div><br><br>
-<h2 class="title-4" id="Contact">CONTACT US</h2>
-<a href="mailto:fificollection@gmail.com"> E-mail: fifi'scollection@gmail.com</a><br><br>
-<h3>For Urgent Help:</h3>
-<a href="Tel:+122-4589-4599">Tel: +122-4589-4599</a>
-    </div>
-    <div class="footer-column">
-<div class="payment-methods">
-    <h2 class="title-5">PAYMENT METHODS</h2>
-    <img src="Images/Mastercard-logo.svg.webp" alt="">
-    <img src="Images/Paypal.jpeg" alt=""><br>
-    <img src="Images/Vizacard.png" alt="">
-    <img src="Images/Google-pay.png"> 
-</div> </div>
 
-<div class="footer-column">
-    <form class="newsletter-form"action="https://api.web3forms.com/submit" method="POST">
-        <span class="newsletter-title">Subscribe to our Newsletter.</span>
-        <p class="description"> 
-          Sign up for our Newsletter to receive exclusive deals and updates! <br>
-          Stay informed about the latest products, promotions, and discounts. Join us Now!</p>
-        <div>
-            <input type="hidden" name="access_key" value="d45e05cc-facb-4197-a915-93ed601a573e">
-          <input placeholder="Enter your email" type="email" name="email" id="email-address" required>
-          <button type="submit" >Subscribe</button>
-        </div>
-      </form> </div>
-</div>
     <div class="logos">
         <img src="Images/Logos/3D-Logo.jpg">
         <p class="griffintechs">Developed by: Griffin Techs<span>&copy; </span></p>
@@ -289,6 +195,7 @@
     <!-----------------------------------------Javascript----------------------------------------------------->
         <script src="index.js"> </script>
         <script src="script.js" type="module"> </script>
+        <script src="firebase.js" type="module"></script>
     </body>
     </html>
  
